@@ -1,0 +1,33 @@
+{
+  "id": 49,
+  "name": "Ecole Marocaine des Sciences de l'Ingénieur EMSI",
+  "country": "Morocco",
+  "gpa": 0,
+  "spots": 10,
+  "diploma": "NO",
+  "language": "French",
+  "extracharge": 0,
+  "overview": "<p><strong>Presentation </strong></p><p>EMSI, established over 39 years ago, is the largest private engineering school in Morocco. EMSI is recognized by the state, provides excellent engineering training, and has 19 campuses throughout Morocco, in Casablanca, Rabat, Marrakech, Fez, and Tangier.&nbsp;</p><p><strong>Campus life</strong>&nbsp;</p><p>EMSI has a total of 18 sites in the Kingdom of Morocco (Casablanca, Rabat, Marrakech, Tangier, and Fez). Each of these sites has numerous classrooms, laboratories, and computing centers equipped with sophisticated, state-of-the-art teaching materials for the needs of practical work, mini-projects, projects, and scientific research.&nbsp;</p><p>More information can be found <a href=\"https://emsi.ma/campus/\" rel=\"noopener noreferrer\" target=\"_blank\"><u>here</u></a>.&nbsp;</p>",
+  "administrative": "<p><strong>1) Application dossier</strong>&nbsp;&nbsp;</p><p>Once the IAFF office has sent your nomination, the partner university will contact you directly by email to start your application. All required documents will have to be uploaded on their platform or sent by email before the deadline (see EMEA Teams channel for each application deadline).&nbsp;</p><p>If you have not received anything yet, it means your nomination has not been sent yet, please be patient.&nbsp;&nbsp;</p><p><strong>To be completed with your Epitech bachelor campus administration during the registration period for Tech4 (usually in April/May):</strong>&nbsp;&nbsp;</p><ul><li>The addendum to the contract.&nbsp;&nbsp;</li><li>EPITECH re-registration dossier.&nbsp;&nbsp;</li></ul><p><strong>2) Visa</strong>&nbsp;&nbsp;</p><p>You will need a visa to study in Morocco. Please check the immigration office of the host country to check the visa process and fees.&nbsp;&nbsp;</p><p>Students in France can use this website as well: <a href=\"https://www.diplomatie.gouv.fr/fr/\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.diplomatie.gouv.fr/fr/</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p><strong>3) Insurance</strong>&nbsp;&nbsp;</p><p>You must register for a private health insurance to cover your full stay. Please check with your parents, bank, or any private insurance company for more information depending on the wanted coverage.&nbsp;&nbsp;</p><p>Please register via the Ministry of Foreign Affairs (Ariane) platform to be aware of any news (terrorist attack, tsunami, earthquake…) in your host country <strong>for French citizens only</strong>: <a href=\"https://pastel.diplomatie.gouv.fr/fildariane/dyn/\" rel=\"noopener noreferrer\" target=\"_blank\">https://pastel.diplomatie.gouv.fr/fildariane/dyn/</a><a href=\"https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html\" rel=\"noopener noreferrer\" target=\"_blank\"> public / login.html</a></p>",
+  "accomodation": "<p>EMSI does not provide accommodation, but the partner can help you find some nice areas to live in.&nbsp;</p>",
+  "courses": "<p><strong>30 ECTS per semester</strong>&nbsp;</p><p><strong>60 ECTS a year&nbsp;</strong></p><p>Students will follow semester 3 and 4 as part of the engineering cycle at EMSI. The curriculum is in French.&nbsp;</p><p>You can choose 3 different specializations in semester 4. Semester 3 is common for everyone.&nbsp;</p><ul><li>IIR (Ingéniérie Informatique et Réseaux)&nbsp;</li><li>IASD (Intelligence Artificielle et Science des Données)&nbsp;</li><li>CIR (Cybersécurité et Infrastructure des Réseaux)&nbsp;</li></ul><p>More details about the courses for each semester can be found <a href=\"https://intra.epitech.eu/file/international/Tech-4/Maquette_IIR_EMSI-(1).xlsx\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p><p><em>The course list is given to you for information. It can change from year to year. If a course is not available when you arrive, EPITECH cannot be held responsible for it.</em>&nbsp;</p>",
+  "cost": "<p>You can use Numbeo to compare the cost of living between any French city and any city EMSI has campuses in.&nbsp;</p><p><a href=\"https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=France&amp;country2=Morocco&amp;city1=Paris&amp;city2=Casablanca\" rel=\"noopener noreferrer\" target=\"_blank\"><u>Here&nbsp;</u></a> you can have a comparison between Paris and Casablanca. Please note that life in Morocco, no matter the city, is generally less expensive.&nbsp;</p>",
+  "image1": "92e3333bb4cab13e2e43263a.jpg",
+  "image2": "7491f00444622adbe86c6adc.jpg",
+  "image3": "2bf1c0ebfedba3148e8e93a8.png",
+  "erasmus": "NO",
+  "semester": "Full-year only",
+  "display": "YES",
+  "updatedAt": "2026-07-01T09:01:59.466Z",
+  "specializations": [
+    "Artificial Intelligence",
+    "Networks",
+    "Security",
+    "Software Development"
+  ],
+  "images": [
+    "https://mya.epitech.eu/uploads/92e3333bb4cab13e2e43263a.jpg",
+    "https://mya.epitech.eu/uploads/7491f00444622adbe86c6adc.jpg",
+    "https://mya.epitech.eu/uploads/2bf1c0ebfedba3148e8e93a8.png"
+  ]
+}

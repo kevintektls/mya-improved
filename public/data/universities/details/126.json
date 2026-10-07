@@ -1,0 +1,34 @@
+{
+  "id": 126,
+  "name": "Cukurova University",
+  "country": "Turkey",
+  "gpa": 0,
+  "spots": 3,
+  "diploma": "NO",
+  "language": "English",
+  "extracharge": 0,
+  "overview": "<p>Çukurova University is a public research university located in Adana, Turkey. The university features sixteen faculties, three colleges, seven vocational colleges, three institutes, and twenty-six research and application centers. Its campus is situated 10 kilometres (6.2 mi) from Adana city center, adjacent to the Seyham Dam Lake. Çukurova University has a teaching staff of 1,903 and provides education to more than 40,000 undergraduate, postgraduate, and doctoral students.</p>",
+  "administrative": "<p><strong>1) Application dossier</strong></p><ul><li>Once the IAFF office has sent your nomination, the partner university will contact you directly by email to start your application. All required documents will have to be uploaded on their platform or sent by email before the deadline (see EMEA Teams channel for each application deadline).</li><li>If you have not received anything yet, it means your nomination has not been sent yet, please be patient.</li><li>To be completed with your Epitech bachelor campus administration during the registration period for Tech4 (usually in April/May):</li><li class=\"ql-indent-1\">The addendum to the contract.</li><li class=\"ql-indent-1\">EPITECH re-registration dossier.</li></ul><p><br></p><p><strong>2) Visa</strong></p><ul><li>For European students, a valid passport/national ID card is sufficient to travel to Europe (exception for the UK) but you will need to ask for a residence permit once arrived on the Turkish territory.</li><li>After you have entered the Republic of Turkey on a student visa, you must obtain a Residence Permit from the Republic of Turkey, Ministry of the Interior, Directorate of Migration Management (İçişleri Bakanlığı Göç İdaresi Genel Müdürlüğü).</li><li>For non-European students or students with non-European citizenship, please check the immigration office of the host country to check the visa process and fees. You will still need to apply for the same residence permit as the EU students.</li><li>More information provided <a href=\"https://erasmus.cu.edu.tr/storage/Erasmus%20D%C3%B6k%C3%BCmanlar%20ve%20Formlar/residentpermit.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</li></ul><p><br></p><p><strong>3) Insurance</strong></p><ul><li>For all students (EU and non-EU):</li><li>You must register for private health insurance to cover your full stay. Please check with your parents, bank, or any private insurance company for more information depending on the wanted coverage.</li><li>The EHIC card (CEAM in French) does <strong>not</strong> work in Turkey.</li></ul><p><br></p><p>Please register via the Ministry of Foreign Affairs (Ariane) platform to be aware of any news (terrorist attack, tsunami, earthquake…) in your host country for French citizens only:</p><p><a href=\"https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html\" rel=\"noopener noreferrer\" target=\"_blank\">https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html</a></p>",
+  "accomodation": "<p>All information about life on campus can be found <a href=\"https://erasmus.cu.edu.tr/storage/Erasmus%20D%C3%B6k%C3%BCmanlar%20ve%20Formlar/lifeoncampus.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p>",
+  "courses": "<p><strong>30 ECTS per semester</strong></p><p><strong>60 ECTS a year</strong></p><p><br></p><p>Students will follow courses from Computer Engineering at the bachelor level that is part of the Engineering faculty.</p><p>Only semesters 7 and 8 are open to EPITECH students and the course \"Python programming\" will not be accepted.</p><p>The course list can be found <a href=\"https://ebs.cu.edu.tr/En/Program/CourseCatalog/555/2024\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p><p><br></p><p>The course list is given to you for information. It can change from year to year. If a course is not available when you arrive, EPITECH cannot be held responsible for it.</p>",
+  "cost": "<p>You can use Numbeo to compare to the cost of living between any city and Adana.</p><p><a href=\"https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=France&amp;country2=Turkey&amp;city1=Paris&amp;city2=Adana\" rel=\"noopener noreferrer\" target=\"_blank\">Here </a>you can have a comparison between Paris and Adana. Generally speaking, life is less expensive than in France but be careful with unexpected expenses.</p><p><br></p><p>All information about life on campus can be found <a href=\"https://erasmus.cu.edu.tr/storage/Erasmus%20D%C3%B6k%C3%BCmanlar%20ve%20Formlar/lifeoncampus.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p>",
+  "image1": "fc59c304b6f0d662b9021124.webp",
+  "image2": "d753f95cbc44c8a7cab22472.jpeg",
+  "image3": "e85e91498b93ca7ee24e9ede.jpeg",
+  "erasmus": "YES",
+  "semester": "Full-year only",
+  "display": "YES",
+  "updatedAt": "2026-07-08T12:57:55.062Z",
+  "specializations": [
+    "Networks",
+    "Robotics",
+    "Security",
+    "Software Development",
+    "Systems Administration"
+  ],
+  "images": [
+    "https://mya.epitech.eu/uploads/fc59c304b6f0d662b9021124.webp",
+    "https://mya.epitech.eu/uploads/d753f95cbc44c8a7cab22472.jpeg",
+    "https://mya.epitech.eu/uploads/e85e91498b93ca7ee24e9ede.jpeg"
+  ]
+}

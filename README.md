@@ -2,11 +2,11 @@
 
 A responsive TypeScript and React catalogue for exploring Epitech partner universities. The interface follows the visual language of the MYA student dashboard and is built with React, Mantine, React Router, and Vite.
 
-The app is a static frontend: school profiles are loaded from a bundled JSON file, and saved schools are kept in the browser. It does not require an API server or a database.
+The app is a static frontend: a lightweight school index loads with the catalogue, and full profiles are fetched from individual JSON files when opened. Saved schools are kept in the browser. It does not require an API server or a database.
 
 ## Repository scope
 
-This `web-app/` directory is the Git repository and the only directory pushed. The checked-in runtime dataset at `public/data/mya-epitech-universities.json` is included, so a clone of this repository can run by itself.
+This `web-app/` directory is the Git repository and the only directory pushed. The checked-in runtime data under `public/data/universities/` is included, so a clone of this repository can run by itself.
 
 ## Quick start
 
@@ -29,6 +29,7 @@ Open the local URL printed by Vite (by default, `http://localhost:5173`). The `/
 | `bun run typecheck` | Check all TypeScript files without emitting output. |
 | `bun run build` | Type-check the project, then create the production site in `dist/`. |
 | `bun run preview` | Serve the production build locally for review. |
+| `bun run data:split -- <source.json>` | Generate the catalogue index and per-university detail files from a MYA export. |
 
 ## Catalogue features
 
@@ -60,22 +61,22 @@ The selected schools, durations, sort order, and strict study area mode are loca
 
 ## School data
 
-The runtime dataset committed with this repository is `public/data/mya-epitech-universities.json`; the app fetches that file when it starts. The current snapshot contains **137 school records**, **44 countries**, and **37 study areas** (retrieved on 2026-10-07).
+The runtime data is split across `public/data/universities/index.json` and `public/data/universities/details/<id>.json`. The index contains fields used for cards, search, filters, and pagination. The app fetches a university's full record only when its profile is opened. The current snapshot contains **137 school records**, **44 countries**, and **37 study areas** (retrieved on 2026-10-07).
 
-Each record can include:
+Each detail file includes:
 
 - Identity and mobility details: `id`, `name`, `country`, `gpa`, `spots`, `diploma`, `language`, `extracharge`, `erasmus`, `semester`, `display`, and `updatedAt`.
 - Study areas in `specializations`.
 - Images in `images`, with legacy `image1`, `image2`, and `image3` fields also retained in the source data.
 - Rich school information in `overview`, `administrative`, `accomodation`, `courses`, and `cost`. The source spells the accommodation key `accomodation`; keep that exact spelling when editing records.
 
-To update the catalogue, replace `public/data/mya-epitech-universities.json` with the refreshed dataset:
+To refresh the catalogue, pass the downloaded MYA export to the splitter. The source file can stay outside this repository:
 
 ```sh
-cp /path/to/mya-epitech-universities.json public/data/mya-epitech-universities.json
+bun run data:split -- /path/to/mya-epitech-universities.json
 ```
 
-The app fetches the JSON without using a browser cache. Profile HTML is sanitized before display: only an allowlist of text and layout elements, HTTP(S) or mail links, HTTP(S) images, and inline PNG, JPEG, GIF, or WebP images are retained. School gallery images are loaded from the URLs stored in the dataset.
+The script regenerates the index and detail files and removes stale numbered detail files. Profile HTML is sanitized before display: only an allowlist of text and layout elements, HTTP(S) or mail links, HTTP(S) images, and inline PNG, JPEG, GIF, or WebP images are retained. School gallery images are loaded from the URLs stored in the dataset.
 
 ## Production build
 
@@ -86,7 +87,7 @@ bun run build
 bun run preview
 ```
 
-The GitHub Actions workflows audit dependencies, run the typecheck, and create a production build for every pull request targeting `main` and every push to `main`. A push to `main` also deploys the production build to GitHub Pages after the same dependency audit. The deploy workflow copies `index.html` to `404.html` so direct links to school profiles and other app routes continue to work after refresh.
+The GitHub Actions workflows audit dependencies, run the typecheck, and create a production build for every pull request targeting `main` and every push to `main`. A push to `main` also deploys the production build to GitHub Pages after the same dependency audit. The deploy workflow copies `index.html` to `404.html` so direct links to school profiles and other app routes continue to work after refresh. Both `/data/universities/index.json` and `/data/universities/details/<id>.json` are deployed as static files.
 
 To enable deployment for a repository, open **Settings → Pages** on GitHub and set the build and deployment source to **GitHub Actions**. GitHub Pages serves this project under `/mya-improved/`; Vite and React Router use that base path automatically in Actions builds. Local development and builds continue to use `/`.
 
@@ -96,7 +97,10 @@ School images are remote URLs from the dataset, so they are not copied into `dis
 
 ```text
 web-app/                                      # Git repository root
-├── public/data/mya-epitech-universities.json  # Runtime catalogue data
+├── public/data/universities/
+│   ├── index.json                             # Summary records for the catalogue
+│   └── details/                               # One complete JSON record per school
+├── scripts/split-universities.ts              # Split an MYA export into runtime data
 ├── src/
 │   ├── app/App.tsx                            # App shell, data loading, and route table
 │   ├── components/schools/                    # Shared school UI components
@@ -127,8 +131,8 @@ The active entry point is `src/main.tsx`. It renders `src/app/App.tsx`, which ow
 
 - React 19
 - TypeScript
-- Vite 7
-- Mantine 8 and Mantine Hooks
+- Vite 8
+- Mantine 9 and Mantine Hooks
 - React Router 7
 - Tabler Icons
 - Bun for package installation and scripts

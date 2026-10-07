@@ -1,0 +1,34 @@
+{
+  "id": 54,
+  "name": "International University of Casablanca",
+  "country": "Morocco",
+  "gpa": 0,
+  "spots": 10,
+  "diploma": "NO",
+  "language": "French",
+  "extracharge": 0,
+  "overview": "<p>The International University of Casablanca (UIC) is a private Moroccan university recognized by the state. It is located in the Moroccan megalopolis (Casablanca).</p><p>In 2014-2015, a new campus was built, covering an area of 10 hectares and offering a welcome space unlike any other.</p><p>The UIC provides high-level training through 6 poles: Faculty of Health Sciences, School of Engineering, Business School, Law, Management in International Hospitality and Executive Training.</p>",
+  "administrative": "<p><strong>1) Application dossier</strong></p><p>Once the IAFF office has sent your nomination, the partner university will contact you directly by email to start your application. All required documents will have to be uploaded on their platform or sent by email before the deadline (see EMEA Teams channel for each application deadline).</p><p>If you have not received anything yet, it means your nomination has not been sent yet, please be patient.</p><p>To be completed with your Epitech bachelor campus administration during the registration period for Tech4 (usually in April/May):</p><ul><li>The addendum to the contract.</li><li>EPITECH re-registration dossier.</li></ul><p><br></p><p><strong>2) Visa</strong></p><p>French students require a visa to study in Morocco! You can come visa-free, but after 90 days, you will be required to leave the country if you don't do the necessary steps for the student visa.</p><p>The host institution will have to give you a document to start the procedure. Make sure to apply as early as possible when you arrive.</p><p>Please check the immigration office of the host country to check the visa process and fees, should you not have the French nationality.</p><p>Students in France can use this website as well: <a href=\"https://www.diplomatie.gouv.fr/fr/\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.diplomatie.gouv.fr/fr/</a></p><p><br></p><p><strong>3) Insurance</strong></p><p>You must register for a private health insurance to cover your full stay. Please check with your parents, bank, or any private insurance company for more information depending on the wanted coverage.</p><p>Please register via the Ministry of Foreign Affairs (Ariane) platform to be aware of any news (terrorist attack, tsunami, earthquake…) in your host country for French citizens only: <a href=\"https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html\" rel=\"noopener noreferrer\" target=\"_blank\">https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html</a></p><p><br></p><p><strong>Campus life</strong></p><p>You will find all relevant information about the campus and events <a href=\"https://www.uic.ac.ma/infrastructures/\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p><p><br></p><p><strong>Getting Around Casablanca</strong></p><p>Public transportation in Casablanca, including buses and trams is available but often requires multiple connections and longer travel times. The city is not highly pedestrian-friendly, so most trips are made by ride-hailing services or taxis. Fares are generally affordable, ranging from approximately €2.50 to €5 for longer journeys, with travel to UIC from the city center taking around 1 hour and 20 minutes.</p><p>It is advisable to budget an additional €6–7 per day for transportation and outings.</p>",
+  "accomodation": "<p>You will find all relevant information about the campus and events <a href=\"https://www.uic.ac.ma/infrastructures/\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p>",
+  "courses": "<p><strong>30 ECTS per semester</strong></p><p><strong>60 ECTS a year</strong></p><p>You will be enrolled in the faculty of Engineering. The following programmes/semesters only can be followed by EPITECH students. You can select one accordingly.</p><p>All programmes are taught in French, except for the Computer Science programme.</p><ul><li><a href=\"https://epitechfr.sharepoint.com/:w:/s/EpitechInternationalRelations/EZaEhTiU66BErsh5SCb6RXgBetStVh6El-lA7yzCLuyJhg?e=0t5ZEB\" rel=\"noopener noreferrer\" target=\"_blank\">Génie informatique</a> (S8 and 9 - semestres 2 and 3 in the syllabi)</li><li><a href=\"https://epitechfr.sharepoint.com/:w:/s/EpitechInternationalRelations/EeWyFi-Mpe5HnVlycLjqPCIBf5yiYD8NSwDMD_AhMWk4Tg?e=wpo8zV\" rel=\"noopener noreferrer\" target=\"_blank\">Computer Science</a> (S5 and S6)</li><li><a href=\"https://epitechfr.sharepoint.com/:w:/s/EpitechInternationalRelations/EVBDSOuvDixOqvpteE_ML6QBTfb2w-4gFx7SIXILkjU2DA?e=1TT2VS\" rel=\"noopener noreferrer\" target=\"_blank\">Génie des systèmes d'information</a> (S3, S4 and S5)</li></ul><p>The course list is given to you for information. It can change from year to year. If a course is not available when you arrive, EPITECH cannot be held responsible for it.</p>",
+  "cost": "<p>You can use Numbeo to compare to the cost of living between any city and Bouskoura, which is in the close suburb of Casablanca by bus.</p><p><a href=\"https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Morocco&amp;country2=France&amp;city1=Casablanca&amp;city2=Paris&amp;tracking=getDispatchComparison\" rel=\"noopener noreferrer\" target=\"_blank\">Here </a>you can have a comparison between Paris and Casablanca.</p>",
+  "image1": "0d54bb13479508a1ff676d6e.webp",
+  "image2": "af7c9376f0dfc7a6c06616fa.webp",
+  "image3": "5a456c079816de87d6ca6189.jpeg",
+  "erasmus": "NO",
+  "semester": "Full-year or semester",
+  "display": "YES",
+  "updatedAt": "2026-07-03T14:08:04.003Z",
+  "specializations": [
+    "Artificial Intelligence",
+    "Cloud Computing",
+    "Mobile Development",
+    "Systems Administration",
+    "Web Development"
+  ],
+  "images": [
+    "https://mya.epitech.eu/uploads/0d54bb13479508a1ff676d6e.webp",
+    "https://mya.epitech.eu/uploads/af7c9376f0dfc7a6c06616fa.webp",
+    "https://mya.epitech.eu/uploads/5a456c079816de87d6ca6189.jpeg"
+  ]
+}
