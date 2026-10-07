@@ -23,7 +23,7 @@ if (!rootElement) throw new Error('Root element not found.');
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <MantineProvider theme={theme}>
-      <BrowserRouter><App /></BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}><App /></BrowserRouter>
     </MantineProvider>
   </React.StrictMode>,
 );

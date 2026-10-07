@@ -25,6 +25,7 @@ Open the local URL printed by Vite (by default, `http://localhost:5173`). The `/
 | --- | --- |
 | `bun install` | Install the dependencies recorded in `bun.lock`. |
 | `bun run dev` | Start the Vite development server. |
+| `bun audit` | Check installed dependencies for known vulnerabilities. |
 | `bun run typecheck` | Check all TypeScript files without emitting output. |
 | `bun run build` | Type-check the project, then create the production site in `dist/`. |
 | `bun run preview` | Serve the production build locally for review. |
@@ -85,7 +86,11 @@ bun run build
 bun run preview
 ```
 
-Deploy the contents of `dist/` to a static host. Configure the host to serve `index.html` for app routes such as `/schools/121`, while serving `/data/mya-epitech-universities.json` as a static file. School images are remote URLs from the dataset, so they are not copied into `dist/`.
+The GitHub Actions workflows audit dependencies, run the typecheck, and create a production build for every pull request targeting `main` and every push to `main`. A push to `main` also deploys the production build to GitHub Pages after the same dependency audit. The deploy workflow copies `index.html` to `404.html` so direct links to school profiles and other app routes continue to work after refresh.
+
+To enable deployment for a repository, open **Settings → Pages** on GitHub and set the build and deployment source to **GitHub Actions**. GitHub Pages serves this project under `/mya-improved/`; Vite and React Router use that base path automatically in Actions builds. Local development and builds continue to use `/`.
+
+School images are remote URLs from the dataset, so they are not copied into `dist/`.
 
 ## Project layout
 

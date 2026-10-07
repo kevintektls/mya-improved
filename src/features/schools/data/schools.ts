@@ -11,7 +11,7 @@ export function normalizeSchools(list: SchoolRecord[]): SchoolRecord[] {
 }
 
 export async function fetchSchools(): Promise<SchoolRecord[]> {
-  const response = await fetch('/data/mya-epitech-universities.json', { cache: 'no-store' });
+  const response = await fetch(`${import.meta.env.BASE_URL}data/mya-epitech-universities.json`, { cache: 'no-store' });
   if (!response.ok) throw new Error('Could not load the school directory.');
   const data = await response.json() as SchoolDirectoryData;
   return normalizeSchools(data.schools || []);
