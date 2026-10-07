@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Navigate, Route, Routes, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useDisclosure } from '@mantine/hooks';
+import type { CSSProperties, ReactNode } from 'react';
 import {
   ActionIcon, Avatar, Badge, Burger, Button, Checkbox, Divider, Drawer, Modal, NavLink,
   Pagination, Popover, Select, Tabs, Text, TextInput, Tooltip,
@@ -11,19 +12,22 @@ import {
   IconFileText, IconFilter, IconHeart, IconLanguage, IconMapPin, IconSearch,
   IconSparkles, IconUsers, IconWorld, IconX,
 } from '@tabler/icons-react';
+import type { SchoolDirectoryData, SchoolRecord } from './types';
 
-const normalizeSchools = (list) => list.map((school) => ({
+type DetailSectionKey = 'overview' | 'administrative' | 'accomodation' | 'courses' | 'cost';
+
+const normalizeSchools = (list: SchoolRecord[]): SchoolRecord[] => list.map((school) => ({
   ...school,
   name: school.name.trim(),
   images: (school.images?.length ? school.images : [school.image1, school.image2, school.image3]
     .filter(Boolean).map((image) => 'https://mya.epitech.eu/uploads/' + image)),
 }));
-const studyOptions = [
+const studyOptions: { value: string; label: string }[] = [
   { value: 'Full-year only', label: 'Full year' },
   { value: 'Semester only', label: 'Semester' },
   { value: 'Full-year or semester', label: 'Flexible duration' },
 ];
-const detailSections = [
+const detailSections: { key: DetailSectionKey; label: string; icon: typeof IconWorld }[] = [
   { key: 'overview', label: 'Overview', icon: IconWorld },
   { key: 'administrative', label: 'Application & admin', icon: IconFileText },
   { key: 'accomodation', label: 'Accommodation', icon: IconBuildingCommunity },
@@ -31,8 +35,11 @@ const detailSections = [
   { key: 'cost', label: 'Cost of living', icon: IconCurrencyEuro },
 ];
 
-function readSaved() {
-  try { return JSON.parse(localStorage.getItem('mya-saved-schools') || '[]'); }
+function readSaved(): number[] {
+  try {
+    const parsed: unknown = JSON.parse(localStorage.getItem('mya-saved-schools') || '[]');
+    return Array.isArray(parsed) ? parsed.filter((id): id is number => typeof id === 'number') : [];
+  }
   catch { return []; }
 }
 
@@ -41,7 +48,7 @@ function App() {
   const location = useLocation();
   const [mobileNavOpened, mobileNav] = useDisclosure(false);
   const [saved, setSaved] = useState(readSaved);
-  const [schools, setSchools] = useState([]);
+  const [schools, setSchools] = useState<SchoolRecord[]>([]);
   const [dataLoading, setDataLoading] = useState(true);
   const [dataError, setDataError] = useState('');
   const [searchOpened, setSearchOpened] = useState(false);
@@ -54,7 +61,7 @@ function App() {
         if (!response.ok) throw new Error('Could not load the school directory.');
         return response.json();
       })
-      .then((data) => setSchools(normalizeSchools(data.schools || [])))
+      .then((data: SchoolDirectoryData) => setSchools(normalizeSchools(data.schools || [])))
       .catch((error) => setDataError(error.message || 'Could not load school data.'))
       .finally(() => setDataLoading(false));
   }, []);
@@ -63,7 +70,7 @@ function App() {
   const specializations = useMemo(() => [...new Set(schools.flatMap((school) => school.specializations || []))].sort((a, b) => a.localeCompare(b)), [schools]);
 
   useEffect(() => {
-    const onKey = (event) => {
+    const onKey = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault(); setSearchOpened(true);
       }
@@ -75,9 +82,9 @@ function App() {
 
   useEffect(() => localStorage.setItem('mya-saved-schools', JSON.stringify(saved)), [saved]);
 
-  const toggleSaved = (id) => setSaved((current) => current.includes(id)
+  const toggleSaved = (id: number) => setSaved((current) => current.includes(id)
     ? current.filter((savedId) => savedId !== id) : [...current, id]);
-  const go = (path) => { navigate(path); mobileNav.close(); setSearchOpened(false); setQuery(''); };
+  const go = (path: string) => { navigate(path); mobileNav.close(); setSearchOpened(false); setQuery(''); };
   const sideGroups = [
     { title: '< OVERVIEW />', links: [
       { label: 'Partner schools', path: '/schools', icon: IconWorld },
@@ -181,7 +188,7 @@ function App() {
   </div>;
 }
 
-function StudentSummary({ schoolCount, countryCount, areaCount }) {
+function StudentSummary({ schoolCount, countryCount, areaCount }: { schoolCount: number; countryCount: number; areaCount: number }) {
   return <section className="student-card catalog-summary">
     <div className="student-identity"><Avatar size={62} radius={6} color="dark" className="student-avatar"><IconWorld size={23} /></Avatar>
       <div className="student-info"><div className="student-heading-row"><h1>GLOBAL OPPORTUNITIES</h1></div>
@@ -196,16 +203,24 @@ function StudentSummary({ schoolCount, countryCount, areaCount }) {
   </section>;
 }
 
-function SchoolDirectory({ schools, countries, specializations, saved, toggleSaved }) {
+interface SchoolDirectoryProps {
+  schools: SchoolRecord[];
+  countries: string[];
+  specializations: string[];
+  saved: number[];
+  toggleSaved: (id: number) => void;
+}
+
+function SchoolDirectory({ schools, countries, specializations, saved, toggleSaved }: SchoolDirectoryProps) {
   const [params, setParams] = useSearchParams();
   const savedOnly = params.get('view') === 'saved';
   const [search, setSearch] = useState('');
-  const [schoolIds, setSchoolIds] = useState([]);
+  const [schoolIds, setSchoolIds] = useState<string[]>([]);
   const [country, setCountry] = useState(params.getAll('country'));
   const [specialization, setSpecialization] = useState(params.getAll('specialization'));
   const [strictStudyAreas, setStrictStudyAreas] = useState(false);
-  const [semester, setSemester] = useState([]);
-  const [sort, setSort] = useState('name');
+  const [semester, setSemester] = useState<string[]>([]);
+  const [sort, setSort] = useState<'name' | 'spots' | 'cost'>('name');
   const [page, setPage] = useState(1);
   const pageSize = 12;
   const schoolOptions = useMemo(() => schools.map((school) => ({ value: String(school.id), label: school.name })), [schools]);
@@ -214,7 +229,7 @@ function SchoolDirectory({ schools, countries, specializations, saved, toggleSav
     setCountry(params.getAll('country'));
     setSpecialization(params.getAll('specialization'));
   }, [params]);
-  const updateParamValues = (key, values) => {
+  const updateParamValues = (key: 'country' | 'specialization', values: string[]) => {
     const next = new URLSearchParams(params);
     next.delete(key);
     values.forEach((value) => next.append(key, value));
@@ -260,7 +275,7 @@ function SchoolDirectory({ schools, countries, specializations, saved, toggleSav
           onChange={(event) => setStrictStudyAreas(event.currentTarget.checked)} disabled={!specialization.length} aria-label="Require all selected study areas" />} />
       <MultiFilter placeholder="Duration" options={studyOptions} value={semester} onChange={setSemester} searchable={false} />
       <Select className="sort-select" data={[{ value: 'name', label: 'A–Z' }, { value: 'spots', label: 'Most places' }, { value: 'cost', label: 'Lowest extra cost' }]}
-        value={sort} onChange={(value) => setSort(value || 'name')} aria-label="Sort schools" />
+        value={sort} onChange={(value) => setSort((value as typeof sort | null) || 'name')} aria-label="Sort schools" />
       {activeCount > 0 && <Button className="clear-filters" variant="subtle" size="xs" leftSection={<IconX size={13} />} onClick={clearFilters}>Clear ({activeCount})</Button>}
     </div>
 
@@ -278,7 +293,17 @@ function SchoolDirectory({ schools, countries, specializations, saved, toggleSav
   </section>;
 }
 
-function MultiFilter({ placeholder, options, value, onChange, searchable = true, badge, headerAction }) {
+interface MultiFilterProps {
+  placeholder: string;
+  options: (string | { value: string; label: string })[];
+  value: string[];
+  onChange: (value: string[]) => void;
+  searchable?: boolean;
+  badge?: string | null;
+  headerAction?: ReactNode;
+}
+
+function MultiFilter({ placeholder, options, value, onChange, searchable = true, badge, headerAction }: MultiFilterProps) {
   const [opened, setOpened] = useState(false);
   const [query, setQuery] = useState('');
   const normalizedOptions = options.map((option) => typeof option === 'string' ? { value: option, label: option } : option);
@@ -287,7 +312,7 @@ function MultiFilter({ placeholder, options, value, onChange, searchable = true,
   const buttonLabel = selectedOptions.length === 0 ? placeholder
     : selectedOptions.length === 1 ? selectedOptions[0].label
       : `${selectedOptions.length} selected`;
-  const toggleOption = (optionValue) => onChange(value.includes(optionValue)
+  const toggleOption = (optionValue: string) => onChange(value.includes(optionValue)
     ? value.filter((item) => item !== optionValue) : [...value, optionValue]);
 
   return <Popover opened={opened} onChange={setOpened} position="bottom-start" offset={4} shadow="md" width={280} withinPortal>
@@ -319,10 +344,10 @@ function MultiFilter({ placeholder, options, value, onChange, searchable = true,
   </Popover>;
 }
 
-function SchoolCard({ school, saved, onToggleSaved, index }) {
+function SchoolCard({ school, saved, onToggleSaved, index }: { school: SchoolRecord; saved: boolean; onToggleSaved: (id: number) => void; index: number }) {
   const navigate = useNavigate();
   const image = school.images?.[0];
-  return <article className="school-card" style={{ '--card-index': index % 8 }}>
+  return <article className="school-card" style={{ '--card-index': index % 8 } as CSSProperties}>
     <button className="school-image-button" onClick={() => navigate('/schools/' + school.id)} aria-label={'Open ' + school.name}>
       {image ? <img className="school-card-image" src={image} alt={school.name + ' campus'} loading="lazy" onError={(event) => { event.currentTarget.style.display = 'none'; }} /> : null}
       <span className="image-index">PARTNER / {String(school.id).padStart(3, '0')}</span>
@@ -349,12 +374,12 @@ function SchoolCard({ school, saved, onToggleSaved, index }) {
   </article>;
 }
 
-function SchoolDetail({ schools, saved, toggleSaved }) {
+function SchoolDetail({ schools, saved, toggleSaved }: { schools: SchoolRecord[]; saved: number[]; toggleSaved: (id: number) => void }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const school = schools.find((item) => String(item.id) === id);
-  const [activeTab, setActiveTab] = useState('overview');
-  const [failedImages, setFailedImages] = useState([]);
+  const [activeTab, setActiveTab] = useState<DetailSectionKey>('overview');
+  const [failedImages, setFailedImages] = useState<number[]>([]);
 
   if (!school) return <section className="page-section"><div className="empty-results"><h3>School not found</h3><Button onClick={() => navigate('/schools')}>Back to schools</Button></div></section>;
   const images = (school.images || []).map((src, index) => ({ src, index })).filter(({ index }) => !failedImages.includes(index));
@@ -388,7 +413,7 @@ function SchoolDetail({ schools, saved, toggleSaved }) {
         <section className="panel detail-copy-panel">
           <div className="detail-tabs-header"><div className="panel-label">SCHOOL INFORMATION<span>_</span></div>
             <span className="last-updated">UPDATED {school.updatedAt ? new Date(school.updatedAt).toLocaleDateString('en-GB') : '—'}</span></div>
-          <Tabs value={activeTab} onChange={(value) => setActiveTab(value || 'overview')} variant="outline" className="detail-tabs">
+        <Tabs value={activeTab} onChange={(value) => setActiveTab((value as DetailSectionKey | null) || 'overview')} variant="outline" className="detail-tabs">
             <Tabs.List>{detailSections.map((section) => { const Icon = section.icon; return <Tabs.Tab key={section.key} value={section.key} leftSection={<Icon size={14} />}>{section.label}</Tabs.Tab>; })}</Tabs.List>
             <Tabs.Panel value={activeTab} pt="lg"><div className="detail-rich-text" dangerouslySetInnerHTML={{ __html: sanitizeHtml(detailHtml) }} /></Tabs.Panel>
           </Tabs>
@@ -415,7 +440,7 @@ function SchoolDetail({ schools, saved, toggleSaved }) {
   </section>;
 }
 
-function CountriesPage({ schools, countries }) {
+function CountriesPage({ schools, countries }: { schools: SchoolRecord[]; countries: string[] }) {
   const navigate = useNavigate();
   const countByCountry = useMemo(() => Object.fromEntries(countries.map((country) => [country, schools.filter((school) => school.country === country).length])), [countries, schools]);
   return <section className="page-section discovery-page">
@@ -428,7 +453,7 @@ function CountriesPage({ schools, countries }) {
   </section>;
 }
 
-function SpecializationsPage({ schools, specializations }) {
+function SpecializationsPage({ schools, specializations }: { schools: SchoolRecord[]; specializations: string[] }) {
   const navigate = useNavigate();
   const countBySpecialization = useMemo(() => Object.fromEntries(specializations.map((item) => [item, schools.filter((school) => school.specializations?.includes(item)).length])), [specializations, schools]);
   return <section className="page-section discovery-page">
@@ -440,14 +465,14 @@ function SpecializationsPage({ schools, specializations }) {
   </section>;
 }
 
-function InfoPage({ title, copy }) {
+function InfoPage({ title, copy }: { title: string; copy: string }) {
   return <section className="page-section discovery-page"><div className="section-heading"><div><div className="eyebrow">MY JOURNEY <span>/</span> STUDENT SPACE</div><h2>{title.toUpperCase()}<span className="title-caret">_</span></h2></div></div>
     <section className="panel info-panel"><IconFileText size={25} /><div><div className="panel-label">STUDENT WORKSPACE<span>_</span></div><h3>{title}</h3><p>{copy}</p></div></section>
   </section>;
 }
 
 const allowedTags = new Set(['P', 'BR', 'STRONG', 'B', 'EM', 'I', 'U', 'UL', 'OL', 'LI', 'H1', 'H2', 'H3', 'H4', 'BLOCKQUOTE', 'A', 'IMG', 'TABLE', 'THEAD', 'TBODY', 'TR', 'TD', 'TH', 'HR', 'SPAN', 'DIV']);
-function sanitizeHtml(html) {
+function sanitizeHtml(html: string): string {
   if (typeof window === 'undefined' || !html) return '';
   const document = new DOMParser().parseFromString(html, 'text/html');
   document.querySelectorAll('script,style,iframe,object,embed,form,svg,math').forEach((node) => node.remove());

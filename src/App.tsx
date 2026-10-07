@@ -57,7 +57,7 @@ function App() {
   const [profileOpened, profile] = useDisclosure(false);
 
   useEffect(() => {
-    const onKeyDown = (event) => {
+    const onKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault();
         search.open();
@@ -70,7 +70,7 @@ function App() {
 
   const navLinks = useMemo(() => [...sideGroups.flatMap((group) => group.links), ...topTabs], []);
   const results = navLinks.filter((item) => item.label.toLowerCase().includes(query.trim().toLowerCase()));
-  const go = (path) => {
+  const go = (path: string) => {
     navigate(path);
     mobileNav.close();
     search.close();
@@ -211,7 +211,7 @@ function StudentCard() {
   );
 }
 
-function RequiredExams({ onNavigate }) {
+function RequiredExams({ onNavigate }: { onNavigate: (path: string) => void }) {
   const [showHistory, setShowHistory] = useState(true);
   return (
     <section className="page-section">
@@ -291,7 +291,7 @@ function ScoreChart() {
   );
 }
 
-function SectionPreview({ title }) {
+function SectionPreview({ title }: { title: string }) {
   return (
     <section className="page-section preview-section">
       <div className="section-heading"><div><div className="eyebrow">STUDENT SPACE <span>/</span> ACADEMIC DETAILS</div><h2>{title.toUpperCase()}<span className="title-caret">_</span></h2></div></div>

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { MantineProvider, createTheme } from '@mantine/core';
 import '@mantine/core/styles.css';
-import App from './SchoolsApp.jsx';
+import App from './SchoolsApp';
 import './styles.css';
 import './schools.css';
 
@@ -17,7 +17,10 @@ const theme = createTheme({
   defaultRadius: 0,
 });
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('Root element not found.');
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <MantineProvider theme={theme}>
       <BrowserRouter><App /></BrowserRouter>
