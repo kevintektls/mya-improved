@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { MantineProvider, createTheme } from '@mantine/core';
 import '@mantine/core/styles.css';
-import App from './SchoolsApp';
-import './styles.css';
-import './schools.css';
+import App from './app/App';
+import './styles/global.css';
+import './styles/schools.css';
 
 const theme = createTheme({
   primaryColor: 'epitech',

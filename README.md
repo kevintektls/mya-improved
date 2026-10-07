@@ -93,19 +93,30 @@ Deploy the contents of `dist/` to a static host. Configure the host to serve `in
 web-app/                                      # Git repository root
 ├── public/data/mya-epitech-universities.json  # Runtime catalogue data
 ├── src/
+│   ├── app/App.tsx                            # App shell, data loading, and route table
+│   ├── components/schools/                    # Shared school UI components
+│   │   ├── MultiFilter.tsx
+│   │   ├── SchoolCard.tsx
+│   │   └── StudentSummary.tsx
+│   ├── features/
+│   │   ├── schools/
+│   │   │   ├── data/                          # Fetch/normalize data and persist saved IDs
+│   │   │   ├── pages/                         # Directory, profile, country, and study-area pages
+│   │   │   ├── utils/sanitizeHtml.ts           # Sanitize rich profile content
+│   │   │   └── types.ts                        # School record types
+│   │   └── student-space/InfoPage.tsx          # Planning and academic placeholder
+│   ├── legacy/AcademicDashboardPrototype.tsx  # Archived, inactive academic dashboard
 │   ├── main.tsx                               # React, router, and Mantine setup
-│   ├── SchoolsApp.tsx                         # Active app shell, routes, and pages
-│   ├── App.tsx                                # Older academic dashboard prototype
-│   ├── types.ts                               # Shared school data types
-│   ├── styles.css                             # Shared dashboard styles
-│   └── schools.css                            # Catalogue, profile, and responsive styles
+│   └── styles/                                # Shared dashboard and catalogue styles
+│       ├── global.css
+│       └── schools.css
 ├── index.html                                 # Vite HTML entry point
 ├── package.json                               # Scripts and dependencies
 ├── tsconfig.json                              # TypeScript compiler configuration
 └── bun.lock                                   # Bun lockfile
 ```
 
-`src/App.tsx` is an older dashboard prototype. The active entry point in `src/main.tsx` renders `SchoolsApp.tsx`.
+The active entry point is `src/main.tsx`. It renders `src/app/App.tsx`, which owns the shared layout and routes. School-specific data, pages, and utilities live under `src/features/schools/`; reusable UI is under `src/components/`. The archived prototype in `src/legacy/` is not part of the active route tree.
 
 ## Tech stack
 
