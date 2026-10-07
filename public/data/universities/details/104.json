@@ -1,0 +1,31 @@
+{
+  "id": 104,
+  "name": "Dakar Institute of Technology",
+  "country": "Senegal",
+  "gpa": 0,
+  "spots": 5,
+  "diploma": "NO",
+  "language": "French",
+  "extracharge": 0,
+  "overview": "<p>The School of Artificial Intelligence and Big Data</p><p>As West Africa’s first Artificial Intelligence engineering school, our mission is to train the next generation of African coders and leaders in the art of using technology for the development of their continent.</p>",
+  "administrative": "<p><strong>1. Application dossier</strong></p><p>Once the IAFF office has sent your nomination, the partner university will contact you directly by email to start your application. All required documents will have to be uploaded on their platform or sent by email before the deadline (see EMEA Teams channel for each application deadline).</p><p>If you have not received anything yet, it means your nomination has not been sent yet, please be patient.</p><p>To be completed with your Epitech bachelor campus administration during the registration period for Tech4 (usually in April/May):</p><ul><li>The addendum to the contract.</li><li>EPITECH re-registration dossier.</li></ul><p><strong>2. Visa</strong></p><p>All students (EU and non-EU) will need a visa to study in Senegal. Please check the immigration office of the host country to check the visa process and fees.</p><p>More information for French students <a href=\"https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/senegal/#entree\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p><p><strong>3. Insurance</strong></p><p>For all students (EU and non-EU)</p><p>You must register for a private health insurance to cover your full stay. Please check with your parents, bank, or any private insurance company for more information depending on the wanted coverage.</p><p>The EHIC card (CEAM in French) does not work in Senegal.</p><p>Please register via the Ministry of Foreign Affairs (Ariane) platform to be aware of any news (terrorist attack, tsunami, earthquake…) in your host country for French citizens only:</p><p><a href=\"https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html\" rel=\"noopener noreferrer\" target=\"_blank\">https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html</a></p><p><strong>Campus life</strong></p><p>More information on DIT website: <a href=\"https://dit.sn/\" rel=\"noopener noreferrer\" target=\"_blank\">https://dit.sn/</a>.</p>",
+  "accomodation": "<p>More information of DIT website: https://dit.sn/.</p>",
+  "courses": "<p><strong>30 ECTS per semester</strong></p><p><strong>60 ECTS a year</strong></p><p>Students will follow courses from two different programmes:</p><ol><li><a href=\"https://epitechfr.sharepoint.com/:b:/s/EpitechInternationalRelations/EZk-FUiH7jlMvRsLgBe9FPQBKsvPcjTnqzR7pJRSJcHUug?e=x6h7At\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>1) Master in Artificial Intelligence</strong></a></li><li>You are not allowed to take UE \"Programming 1\".</li><li><a href=\"https://epitechfr.sharepoint.com/:b:/s/EpitechInternationalRelations/EXZs26liWV9Is1-SYfElzRkBCXx3-UW9i4E8IHCnGX9jvQ?e=AP2UPU\" rel=\"noopener noreferrer\" target=\"_blank\"><strong>Bachelor in Big Data</strong></a></li><li>You are not allowed to take UE \"OS &amp; Web\" and UE \"Programming 1\", \"Programming 2\" and \"Programming 3\".</li></ol><p>The above programmes have been officially approved by the EPITECH academic team. For other courses that have not been approved by EPITECH, you must ask for approval first by ticket at help.epitech.eu to the International Affairs department.</p><p>The course list is given to you for information. It can change from year to year. If a course is not available when you arrive, EPITECH cannot be held responsible for it.</p>",
+  "cost": "<p>You can use Numbeo to compare to the cost of living between any city and Dakar.</p><p><a href=\"https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=France&amp;city1=Paris&amp;country2=Senegal&amp;city2=Dakar\" rel=\"noopener noreferrer\" target=\"_blank\">Here </a>you can have a comparison between Paris and Dakar. Generally speaking, life is less expensive than in France.</p>",
+  "image1": "6b53316e880dee7f26fa87ee.webp",
+  "image2": "7af6057c8bde921b9dfc3c96.webp",
+  "image3": "ef99caa2f7e65540ce948a8d.jpg",
+  "erasmus": "NO",
+  "semester": "Full-year only",
+  "display": "YES",
+  "updatedAt": "2026-07-03T09:51:22.577Z",
+  "specializations": [
+    "Artificial Intelligence",
+    "Big Data"
+  ],
+  "images": [
+    "https://mya.epitech.eu/uploads/6b53316e880dee7f26fa87ee.webp",
+    "https://mya.epitech.eu/uploads/7af6057c8bde921b9dfc3c96.webp",
+    "https://mya.epitech.eu/uploads/ef99caa2f7e65540ce948a8d.jpg"
+  ]
+}

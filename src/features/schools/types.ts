@@ -1,4 +1,4 @@
-export interface SchoolRecord {
+interface SchoolMetadata {
   id: number;
   name: string;
   country: string;
@@ -7,6 +7,17 @@ export interface SchoolRecord {
   diploma: string;
   language: string;
   extracharge: number;
+  erasmus: string;
+  semester: string;
+  display: string;
+  specializations: string[];
+}
+
+export interface SchoolRecord extends SchoolMetadata {
+  coverImage: string | null;
+}
+
+export interface SchoolDetailRecord extends SchoolMetadata {
   overview: string;
   administrative: string;
   accomodation: string;
@@ -15,12 +26,8 @@ export interface SchoolRecord {
   image1?: string;
   image2?: string;
   image3?: string;
-  images?: string[];
-  erasmus: string;
-  semester: string;
-  display: string;
+  images: string[];
   updatedAt: string;
-  specializations: string[];
 }
 
 export interface SchoolDirectoryData {

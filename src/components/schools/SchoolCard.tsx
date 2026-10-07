@@ -13,7 +13,7 @@ interface SchoolCardProps {
 
 export function SchoolCard({ school, saved, onToggleSaved, index }: SchoolCardProps) {
   const navigate = useNavigate();
-  const image = school.images?.[0];
+  const image = school.coverImage;
 
   return <article className="school-card" style={{ '--card-index': index % 8 } as CSSProperties}>
     <button className="school-image-button" onClick={() => navigate('/schools/' + school.id)} aria-label={'Open ' + school.name}>

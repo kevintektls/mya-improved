@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Badge, Button, Tabs } from '@mantine/core';
 import { IconArrowLeft, IconBook2, IconBuildingCommunity, IconCalendar, IconCurrencyEuro, IconFileText, IconHeart, IconLanguage, IconMapPin, IconUsers, IconWorld } from '@tabler/icons-react';
 import type { SchoolRecord } from '../types';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
+import { fetchSchoolDetails } from '../data/schools';
 
 type DetailSectionKey = 'overview' | 'administrative' | 'accomodation' | 'courses' | 'cost';
 const detailSections: { key: DetailSectionKey; label: string; icon: typeof IconWorld }[] = [
@@ -17,11 +18,44 @@ const detailSections: { key: DetailSectionKey; label: string; icon: typeof IconW
 export function SchoolDetail({ schools, saved, toggleSaved }: { schools: SchoolRecord[]; saved: number[]; toggleSaved: (id: number) => void }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const school = schools.find((item) => String(item.id) === id);
+  const summary = schools.find((item) => String(item.id) === id);
+  const [school, setSchool] = useState<Awaited<ReturnType<typeof fetchSchoolDetails>> | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState('');
+  const [retryCount, setRetryCount] = useState(0);
   const [activeTab, setActiveTab] = useState<DetailSectionKey>('overview');
   const [failedImages, setFailedImages] = useState<number[]>([]);
 
-  if (!school) return <section className="page-section"><div className="empty-results"><h3>School not found</h3><Button onClick={() => navigate('/schools')}>Back to schools</Button></div></section>;
+  useEffect(() => {
+    if (!summary) {
+      setLoading(false);
+      return;
+    }
+
+    let cancelled = false;
+    setLoading(true);
+    setLoadError('');
+    setSchool(null);
+    setFailedImages([]);
+    setActiveTab('overview');
+    fetchSchoolDetails(summary.id)
+      .then((details) => {
+        if (!cancelled) setSchool({ ...details, ...summary });
+      })
+      .catch((error: unknown) => {
+        if (!cancelled) setLoadError(error instanceof Error ? error.message : 'Could not load this school profile.');
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+
+    return () => { cancelled = true; };
+  }, [summary, retryCount]);
+
+  if (!summary) return <section className="page-section"><div className="empty-results"><h3>School not found</h3><Button onClick={() => navigate('/schools')}>Back to schools</Button></div></section>;
+  if (loadError) return <section className="page-section"><div className="catalog-load-error"><strong>School profile unavailable</strong><span>{loadError}</span><Button size="xs" variant="default" onClick={() => setRetryCount((count) => count + 1)}>Retry</Button></div></section>;
+  if (loading || !school || school.id !== summary.id) return <div className="catalog-loading"><span className="loading-mark" /> Loading school profile…</div>;
+
   const images = (school.images || []).map((src, index) => ({ src, index })).filter(({ index }) => !failedImages.includes(index));
   const savedThis = saved.includes(school.id);
   const detailHtml = school[activeTab] || '<p>No information is available for this section yet.</p>';

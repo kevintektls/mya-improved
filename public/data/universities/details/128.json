@@ -1,0 +1,35 @@
+{
+  "id": 128,
+  "name": "Istanbul Nisantasi University",
+  "country": "Turkey",
+  "gpa": 0,
+  "spots": 4,
+  "diploma": "NO",
+  "language": "English",
+  "extracharge": 0,
+  "overview": "<p><strong>Istanbul Nişantaşı University</strong> is a private, non-profit educational institution, founded in 2012 and located in Istanbul, Turkey. The university is supported financially by the Nişantaşı Education and Culture Foundation. It started education in the academic term 2010-11 and proposes a lot of faculties in their modern NeoTech campus, a former mall.</p>",
+  "administrative": "<p><strong>1) Application dossier</strong></p><ul><li>Once the IAFF office has sent your nomination, the partner university will contact you directly by email to start your application. All required documents will have to be uploaded on their platform or sent by email before the deadline (see EMEA Teams channel for each application deadline).</li><li>If you have not received anything yet, it means your nomination has not been sent yet, please be patient.</li></ul><p>To be completed with your Epitech bachelor campus administration during the registration period for Tech4 (usually in April/May):</p><ul><li>The addendum to the contract.</li><li>EPITECH re-registration dossier.</li></ul><p><br></p><p><strong>2) Visa</strong></p><ul><li>For European students, a valid passport/national ID card is sufficient to travel to Europe (exception for the UK) but you will need to ask for a residence permit once arrived on the Turkish territory.</li><li>After you have entered the Republic of Turkey on a student visa, you must obtain a Residence Permit from the Republic of Turkey, Ministry of the Interior, Directorate of Migration Management (İçişleri Bakanlığı Göç İdaresi Genel Müdürlüğü).</li><li>For non-European students or students with a non-European citizenship, please check the immigration office of the host country to check the visa process and fees. You will still need to apply for the same residence permit as the EU students.</li><li>More information provided by their welcome guide on page 13/14 <a href=\"https://www.nisantasi.edu.tr/dosyalar/international-file/information_guide_for_exchange_students_nisantasi_university-compressed.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">here</a></li></ul><p><br></p><p><strong>3) Insurance</strong></p><ul><li>For all students (EU and non-EU)</li><li>You must register for a private health insurance to cover your full stay. Please check with your parents, bank, or any private insurance company for more information depending on the wanted coverage.</li><li>The EHIC card (CEAM in French) does not work in Turkey.</li></ul><p><br></p><p>Please register via the Ministry of Foreign Affairs (Ariane) platform to be aware of any news (terrorist attack, tsunami, earthquake…) in your host country for French citizens only:</p><p><a href=\"https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html\" rel=\"noopener noreferrer\" target=\"_blank\">https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html</a></p>",
+  "accomodation": "<p>You will have your courses at the <strong>NeoTech campus</strong> located in the north of Istanbul. It's a really modern campus shaped as a mall with a lot of food options both indoor and outdoor.</p><p>More information on the campus life <a href=\"https://www.nisantasi.edu.tr/dosyalar/international-file/information_guide_for_exchange_students_nisantasi_university-compressed.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">in the student guide</a>.</p>",
+  "courses": "<p><strong>Academic Credits</strong></p><ul><li>30 ECTS per semester</li><li>60 ECTS a year</li></ul><p><br></p><p><strong>Programme</strong></p><p>Students will follow courses from the Software Engineering programme at the bachelor level that is part of the Engineering and Architecture faculty.</p><p>The course list below has been officially approved by the EPITECH academic team. For other courses that have not been approved by EPITECH, you must ask for approval first by ticket at help.epitech.eu to the international relations department.</p><p>Full course catalogue <a href=\"https://ebp.nisantasi.edu.tr/dereceprogramlari/1?lang=en-US\" rel=\"noopener noreferrer\" target=\"_blank\">here</a>.</p><p><br></p><p><strong>Approved Course List</strong></p><ul><li>Software security</li><li>Human computer interaction</li><li>Software economics</li><li>Analysis of algorithms</li><li>Multimedia Information Systems</li><li>Artificial Intelligence</li><li>Image Processing</li><li>Robotics</li><li>Software Development and Maintenance</li><li>Algorithms Analysis</li><li>Graduation Project</li><li>Programming Languages</li><li>Mobile Programming</li><li>Data Mining</li><li>Machine Learning &amp; Pattern Recognition</li><li>Assembly Programming</li><li>Artificial Neural Networks</li><li>Non-technical Aspects of Engineering</li><li>Cybersecurity</li><li>Software Quality Assurance</li><li>Parallel Programming</li><li>Software Application in Industry</li><li>Design Patterns</li></ul><p><br></p><p>The course list is given to you for information. It can change from year to year. If a course is not available when you arrive, EPITECH cannot be held responsible for it.</p>",
+  "cost": "<p>You can use Numbeo to compare to the cost of living between any city and Istanbul.</p><p><a href=\"https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=France&amp;city1=Paris&amp;country2=Turkey&amp;city2=Istanbul\" rel=\"noopener noreferrer\" target=\"_blank\">Here </a>you can have a comparison between Paris and Istanbul. Generally speaking, life is a bit less expensive than in France but be careful with unexpected expenses.</p><p><br></p><p>You will have your courses at the NeoTech campus located in the north of Istanbul. It's a really modern campus shaped as a mall with a lot of food options both indoor and outdoor.</p><p>More information on the campus life <a href=\"https://www.nisantasi.edu.tr/dosyalar/international-file/information_guide_for_exchange_students_nisantasi_university-compressed.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">in the student guide</a>.</p>",
+  "image1": "dd2813a3761bc806dade50b3.webp",
+  "image2": "65b86ff00dd538e7848ef823.jpeg",
+  "image3": "b255f4bb124ffd868404cf9c.jpeg",
+  "erasmus": "YES",
+  "semester": "Full-year only",
+  "display": "YES",
+  "updatedAt": "2026-07-08T12:59:29.284Z",
+  "specializations": [
+    "Artificial Intelligence",
+    "Mobile Development",
+    "Robotics",
+    "Security",
+    "Software Architecture",
+    "Software Development"
+  ],
+  "images": [
+    "https://mya.epitech.eu/uploads/dd2813a3761bc806dade50b3.webp",
+    "https://mya.epitech.eu/uploads/65b86ff00dd538e7848ef823.jpeg",
+    "https://mya.epitech.eu/uploads/b255f4bb124ffd868404cf9c.jpeg"
+  ]
+}

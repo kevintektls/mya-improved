@@ -1,0 +1,34 @@
+{
+  "id": 122,
+  "name": "Bragança Polytechnic University",
+  "country": "Portugal",
+  "gpa": 0,
+  "spots": 2,
+  "diploma": "NO",
+  "language": "English",
+  "extracharge": 0,
+  "overview": "<p>The Polytechnic Institute of Bragança (IPB) is a Portuguese University of Applied Sciences with 8000 students and 500 teachers and researchers. It has an internationalization programme with widely recognized success, including the annual mobility of more than 900 incoming and outgoing students and 300 teaching staff members. Nowadays the IPB is a multicultural institution where 30% of its students are international students from all over the World. IPB is also recognized by its performance in applied research and regional engagement.</p>",
+  "administrative": "<p><strong>1) Application dossier</strong></p><p><br></p><p>Once the IAFF office has sent your nomination, the partner university will contact you directly by email to start your application. All required documents will have to be uploaded on their platform or sent by email before the deadline (see EMEA Teams channel for each application deadline).</p><p>If you have not received anything yet, it means your nomination has not been sent yet, please be patient.</p><p>To be completed with your Epitech bachelor campus administration during the registration period for Tech4 (usually in April/May):</p><ul><li>The addendum to the contract.</li><li>EPITECH re-registration dossier.</li></ul><p><br></p><p><strong>2) Visa</strong></p><p>For European students, a valid passport/national ID card is sufficient to travel to Europe (exception for the UK).</p><p>For non-European students or students with a non-European citizenship, please check the immigration office of the host country to check the visa process and fees.</p><p><br></p><p><strong>3) Insurance</strong></p><p>For European students</p><p>The European Health Insurance Card (CEAM in French) is nominative and individual. This card certifies your rights to the Health Insurance in Europe. To obtain your card, log in to your Ameli account at least two months before your departure. It is free of charge and will be sent to your place within two weeks. You can also download it online.</p><p>For more information: <a href=\"https://www.ameli.fr/assure/droits-demarches/europe-international/protection-sociale-etranger/etudes-etranger\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.ameli.fr/assure/droits-demarches/europe-international/protection-sociale-etranger/etudes-etranger</a></p><p>For non-European students</p><p>You must register for a private health insurance to cover your full stay. Please check with your parents, bank, or any private insurance company for more information depending on the wanted coverage.</p><p><br></p><p><br></p><p>Please register via the Ministry of Foreign Affairs (Ariane) platform to be aware of any news (terrorist attack, tsunami, earthquake…) in your host country for French citizens only: <a href=\"https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html\" rel=\"noopener noreferrer\" target=\"_blank\">https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html</a></p>",
+  "accomodation": "<p>Accommodation is not available for exchange students. IPB advises to have a look at the following company: <a href=\"https://riskivector.com/\" rel=\"noopener noreferrer\" target=\"_blank\">https://riskivector.com/</a></p>",
+  "courses": "<p><strong>60 ECTS a year</strong></p><p><strong>30 ECTS per semester</strong></p><p><br></p><p>Students must choose from the below master's programme in Informatics. This programme is taught in English according to their website but note that it may be possible that professors switch to Portugese sometime, as it's quite common.</p><p><a href=\"https://portalold.ipb.pt/index.php/en/guiaects/degree-programmes/master-programmes-mestre-degree/course?cod_escola=3043&amp;cod_curso=5060\" rel=\"noopener noreferrer\" target=\"_blank\">https://portalold.ipb.pt/index.php/en/guiaects/degree-programmes/master-programmes-mestre-degree/course?cod_escola=3043&amp;cod_curso=5060</a></p><p><br></p><p>The course list is given to you for information. It can change from year to year. If a course is not available when you arrive, EPITECH cannot be held responsible for it.</p>",
+  "cost": "<p>You can use Numbeo to compare to the cost of living between any city and Bragança.</p><p><a href=\"https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=France&amp;country2=Portugal&amp;city1=Paris&amp;city2=Braganca\" rel=\"noopener noreferrer\" target=\"_blank\">Here </a>you can have a comparison between Paris and Riga. Please note that life in Portugal is generally less expensive, especially compared to France.</p>",
+  "image1": "7d7b5cb226e2c7b9107975a6.webp",
+  "image2": "5aa97097162efe5750671428.jpeg",
+  "image3": "45044505d0caf6f95d823d8c.jpeg",
+  "erasmus": "YES",
+  "semester": "Full-year only",
+  "display": "YES",
+  "updatedAt": "2026-07-08T12:55:24.031Z",
+  "specializations": [
+    "Artificial Intelligence",
+    "Databases",
+    "Mobile Development",
+    "Security",
+    "Software Development"
+  ],
+  "images": [
+    "https://mya.epitech.eu/uploads/7d7b5cb226e2c7b9107975a6.webp",
+    "https://mya.epitech.eu/uploads/5aa97097162efe5750671428.jpeg",
+    "https://mya.epitech.eu/uploads/45044505d0caf6f95d823d8c.jpeg"
+  ]
+}
