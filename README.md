@@ -1,6 +1,6 @@
 # Epitech International Mobility
 
-A responsive React catalogue for exploring Epitech partner universities. The interface follows the visual language of the MYA student dashboard and is built with React, Mantine, React Router, and Vite.
+A responsive TypeScript and React catalogue for exploring Epitech partner universities. The interface follows the visual language of the MYA student dashboard and is built with React, Mantine, React Router, and Vite.
 
 The app is a static frontend: school profiles are loaded from a bundled JSON file, and saved schools are kept in the browser. It does not require an API server or a database.
 
@@ -25,7 +25,8 @@ Open the local URL printed by Vite (by default, `http://localhost:5173`). The `/
 | --- | --- |
 | `bun install` | Install the dependencies recorded in `bun.lock`. |
 | `bun run dev` | Start the Vite development server. |
-| `bun run build` | Create the production site in `dist/`. |
+| `bun run typecheck` | Check all TypeScript files without emitting output. |
+| `bun run build` | Type-check the project, then create the production site in `dist/`. |
 | `bun run preview` | Serve the production build locally for review. |
 
 ## Catalogue features
@@ -92,20 +93,35 @@ Deploy the contents of `dist/` to a static host. Configure the host to serve `in
 web-app/                                      # Git repository root
 ├── public/data/mya-epitech-universities.json  # Runtime catalogue data
 ├── src/
-│   ├── main.jsx                               # React, router, and Mantine setup
-│   ├── SchoolsApp.jsx                         # Active app shell, routes, and pages
-│   ├── styles.css                             # Shared dashboard styles
-│   └── schools.css                            # Catalogue, profile, and responsive styles
+│   ├── app/App.tsx                            # App shell, data loading, and route table
+│   ├── components/schools/                    # Shared school UI components
+│   │   ├── MultiFilter.tsx
+│   │   ├── SchoolCard.tsx
+│   │   └── StudentSummary.tsx
+│   ├── features/
+│   │   ├── schools/
+│   │   │   ├── data/                          # Fetch/normalize data and persist saved IDs
+│   │   │   ├── pages/                         # Directory, profile, country, and study-area pages
+│   │   │   ├── utils/sanitizeHtml.ts           # Sanitize rich profile content
+│   │   │   └── types.ts                        # School record types
+│   │   └── student-space/InfoPage.tsx          # Planning and academic placeholder
+│   ├── legacy/AcademicDashboardPrototype.tsx  # Archived, inactive academic dashboard
+│   ├── main.tsx                               # React, router, and Mantine setup
+│   └── styles/                                # Shared dashboard and catalogue styles
+│       ├── global.css
+│       └── schools.css
 ├── index.html                                 # Vite HTML entry point
 ├── package.json                               # Scripts and dependencies
+├── tsconfig.json                              # TypeScript compiler configuration
 └── bun.lock                                   # Bun lockfile
 ```
 
-`src/App.jsx` is an older dashboard prototype. The active entry point in `src/main.jsx` renders `SchoolsApp.jsx`.
+The active entry point is `src/main.tsx`. It renders `src/app/App.tsx`, which owns the shared layout and routes. School-specific data, pages, and utilities live under `src/features/schools/`; reusable UI is under `src/components/`. The archived prototype in `src/legacy/` is not part of the active route tree.
 
 ## Tech stack
 
 - React 19
+- TypeScript
 - Vite 7
 - Mantine 8 and Mantine Hooks
 - React Router 7
