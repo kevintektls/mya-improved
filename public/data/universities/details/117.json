@@ -25,8 +25,13 @@
     "Cloud Computing"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/b41b5a814c58d1a1939284c0.webp",
-    "https://mya.epitech.eu/uploads/170a5405109ad27bc52f749f.jpeg",
-    "https://mya.epitech.eu/uploads/0353643c4c5ec1f0ae1483ba.jpeg"
+    "images/universities/b41b5a814c58d1a1939284c0.webp",
+    "images/universities/170a5405109ad27bc52f749f.webp",
+    "images/universities/0353643c4c5ec1f0ae1483ba.webp"
+  ],
+  "sourceImages": [
+    "b41b5a814c58d1a1939284c0.webp",
+    "170a5405109ad27bc52f749f.jpeg",
+    "0353643c4c5ec1f0ae1483ba.jpeg"
   ]
 }

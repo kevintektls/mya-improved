@@ -25,8 +25,13 @@
     "Bioinformatics"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/9dc7a75461a8f372b22c77e9.png",
-    "https://mya.epitech.eu/uploads/a7797c0fa2a864cfbc569623.png",
-    "https://mya.epitech.eu/uploads/87ee2d18749f0c177aa71a9d.png"
+    "images/universities/9dc7a75461a8f372b22c77e9.webp",
+    "images/universities/a7797c0fa2a864cfbc569623.webp",
+    "images/universities/87ee2d18749f0c177aa71a9d.webp"
+  ],
+  "sourceImages": [
+    "9dc7a75461a8f372b22c77e9.png",
+    "a7797c0fa2a864cfbc569623.png",
+    "87ee2d18749f0c177aa71a9d.png"
   ]
 }

@@ -26,8 +26,13 @@
     "Software Development"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/208afdf8000acc68e1b72488.jpg",
-    "https://mya.epitech.eu/uploads/c73f4b885e8ad0c8f47407d5.jpg",
-    "https://mya.epitech.eu/uploads/3ea8e7cc0b8ef2a97a937b43.webp"
+    "images/universities/208afdf8000acc68e1b72488.webp",
+    "images/universities/c73f4b885e8ad0c8f47407d5.webp",
+    "images/universities/3ea8e7cc0b8ef2a97a937b43.webp"
+  ],
+  "sourceImages": [
+    "208afdf8000acc68e1b72488.jpg",
+    "c73f4b885e8ad0c8f47407d5.jpg",
+    "3ea8e7cc0b8ef2a97a937b43.webp"
   ]
 }

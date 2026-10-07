@@ -24,8 +24,13 @@
     "Big Data"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/6b53316e880dee7f26fa87ee.webp",
-    "https://mya.epitech.eu/uploads/7af6057c8bde921b9dfc3c96.webp",
-    "https://mya.epitech.eu/uploads/ef99caa2f7e65540ce948a8d.jpg"
+    "images/universities/6b53316e880dee7f26fa87ee.webp",
+    "images/universities/7af6057c8bde921b9dfc3c96.webp",
+    "images/universities/ef99caa2f7e65540ce948a8d.webp"
+  ],
+  "sourceImages": [
+    "6b53316e880dee7f26fa87ee.webp",
+    "7af6057c8bde921b9dfc3c96.webp",
+    "ef99caa2f7e65540ce948a8d.jpg"
   ]
 }

@@ -29,8 +29,13 @@
     "Video Games"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/af4ab8afac1ee36678aa10b9.webp",
-    "https://mya.epitech.eu/uploads/415f23f023b1001f78b419aa.jpg",
-    "https://mya.epitech.eu/uploads/f82b06078afd0ec9ad11dc12.jpg"
+    "images/universities/af4ab8afac1ee36678aa10b9.webp",
+    "images/universities/415f23f023b1001f78b419aa.webp",
+    "images/universities/f82b06078afd0ec9ad11dc12.webp"
+  ],
+  "sourceImages": [
+    "af4ab8afac1ee36678aa10b9.webp",
+    "415f23f023b1001f78b419aa.jpg",
+    "f82b06078afd0ec9ad11dc12.jpg"
   ]
 }

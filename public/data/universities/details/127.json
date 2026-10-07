@@ -27,6 +27,9 @@
     "Robotics"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/abb358df2a7bcac46df26217.png"
+    "images/universities/abb358df2a7bcac46df26217.webp"
+  ],
+  "sourceImages": [
+    "abb358df2a7bcac46df26217.png"
   ]
 }

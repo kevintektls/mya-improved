@@ -25,8 +25,13 @@
     "Systems Administration"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/57e36acbc0450c9be996ec8a.webp",
-    "https://mya.epitech.eu/uploads/e129f12344baa38773ab7588.webp",
-    "https://mya.epitech.eu/uploads/c4297d395e13a7ca0406559c.webp"
+    "images/universities/57e36acbc0450c9be996ec8a.webp",
+    "images/universities/e129f12344baa38773ab7588.webp",
+    "images/universities/c4297d395e13a7ca0406559c.webp"
+  ],
+  "sourceImages": [
+    "57e36acbc0450c9be996ec8a.webp",
+    "e129f12344baa38773ab7588.webp",
+    "c4297d395e13a7ca0406559c.webp"
   ]
 }

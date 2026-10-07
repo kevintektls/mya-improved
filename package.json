@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit",
     "preview": "vite preview --host 0.0.0.0",
-    "data:split": "bun run scripts/split-universities.ts"
+    "data:split": "bun run scripts/split-universities.ts",
+    "images:download": "bun run scripts/download-university-images.ts"
   },
   "dependencies": {
     "@mantine/core": "^9.7.1",

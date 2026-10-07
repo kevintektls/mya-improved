@@ -23,8 +23,13 @@
     "Security"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/c9ffa55057f8666fb2662327.png",
-    "https://mya.epitech.eu/uploads/e97ba2b6fca482b2e6d53e62.png",
-    "https://mya.epitech.eu/uploads/124e3d8340fa046cfdf35835.png"
+    "images/universities/c9ffa55057f8666fb2662327.webp",
+    "images/universities/e97ba2b6fca482b2e6d53e62.webp",
+    "images/universities/124e3d8340fa046cfdf35835.webp"
+  ],
+  "sourceImages": [
+    "c9ffa55057f8666fb2662327.png",
+    "e97ba2b6fca482b2e6d53e62.png",
+    "124e3d8340fa046cfdf35835.png"
   ]
 }

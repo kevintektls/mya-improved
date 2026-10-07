@@ -26,8 +26,13 @@
     "Mobile Development"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/22752edebd0029f49a8e9e81.png",
-    "https://mya.epitech.eu/uploads/4279ce45f0e8c33228f0404d.png",
-    "https://mya.epitech.eu/uploads/2489877428b81264f769b116.png"
+    "images/universities/22752edebd0029f49a8e9e81.webp",
+    "images/universities/4279ce45f0e8c33228f0404d.webp",
+    "images/universities/2489877428b81264f769b116.webp"
+  ],
+  "sourceImages": [
+    "22752edebd0029f49a8e9e81.png",
+    "4279ce45f0e8c33228f0404d.png",
+    "2489877428b81264f769b116.png"
   ]
 }

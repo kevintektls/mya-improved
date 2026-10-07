@@ -27,8 +27,13 @@
     "Software Architecture"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/6e57d188f17930fd4f602d11.png",
-    "https://mya.epitech.eu/uploads/9df280d13f500ebecf54b903.png",
-    "https://mya.epitech.eu/uploads/148f44ed975aa0307474919d.png"
+    "images/universities/6e57d188f17930fd4f602d11.webp",
+    "images/universities/9df280d13f500ebecf54b903.webp",
+    "images/universities/148f44ed975aa0307474919d.webp"
+  ],
+  "sourceImages": [
+    "6e57d188f17930fd4f602d11.png",
+    "9df280d13f500ebecf54b903.png",
+    "148f44ed975aa0307474919d.png"
   ]
 }

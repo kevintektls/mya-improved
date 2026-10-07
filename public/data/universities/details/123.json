@@ -24,8 +24,13 @@
     "Artificial Intelligence"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/823f1ee0f79d6ccad8ff00c0.webp",
-    "https://mya.epitech.eu/uploads/bccc49b4a39db56418e41a1d.jpg",
-    "https://mya.epitech.eu/uploads/fa68b8d1ae20eef8f5390b62.jpeg"
+    "images/universities/823f1ee0f79d6ccad8ff00c0.webp",
+    "images/universities/bccc49b4a39db56418e41a1d.webp",
+    "images/universities/fa68b8d1ae20eef8f5390b62.webp"
+  ],
+  "sourceImages": [
+    "823f1ee0f79d6ccad8ff00c0.webp",
+    "bccc49b4a39db56418e41a1d.jpg",
+    "fa68b8d1ae20eef8f5390b62.jpeg"
   ]
 }

@@ -19,7 +19,7 @@
         "Security",
         "Software Architecture"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/3057f922a159dc2edcc5fe5c.webp"
+      "coverImage": "images/universities/3057f922a159dc2edcc5fe5c.webp"
     },
     {
       "id": 110,
@@ -41,7 +41,7 @@
         "Video Games",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/ca826bf7b4b4b86a74a5918d.webp"
+      "coverImage": "images/universities/ca826bf7b4b4b86a74a5918d.webp"
     },
     {
       "id": 144,
@@ -56,7 +56,7 @@
       "semester": "Full-year only",
       "display": "YES",
       "specializations": [],
-      "coverImage": "https://mya.epitech.eu/uploads/f531a075444d3c44101c3e18.jpg"
+      "coverImage": "images/universities/f531a075444d3c44101c3e18.webp"
     },
     {
       "id": 147,
@@ -75,7 +75,7 @@
         "Databases",
         "Project Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/3acf66a8f6ec91bc33be0927.webp"
+      "coverImage": "images/universities/3acf66a8f6ec91bc33be0927.webp"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
         "Business Science",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/1b13756951eddf62984749f6.jpg"
+      "coverImage": "images/universities/1b13756951eddf62984749f6.webp"
     },
     {
       "id": 105,
@@ -114,7 +114,7 @@
         "Security",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/3b6c14c66d5c9d85cbebe33e.png"
+      "coverImage": "images/universities/3b6c14c66d5c9d85cbebe33e.webp"
     },
     {
       "id": 106,
@@ -137,7 +137,7 @@
         "Project Management",
         "Software Architecture"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/9815f40f210490de5b1b04cd.png"
+      "coverImage": "images/universities/9815f40f210490de5b1b04cd.webp"
     },
     {
       "id": 79,
@@ -160,7 +160,7 @@
         "Software Development",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/0da38d305f15d5fb0811ebd5.jpeg"
+      "coverImage": "images/universities/0da38d305f15d5fb0811ebd5.webp"
     },
     {
       "id": 122,
@@ -181,7 +181,7 @@
         "Security",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/7d7b5cb226e2c7b9107975a6.webp"
+      "coverImage": "images/universities/7d7b5cb226e2c7b9107975a6.webp"
     },
     {
       "id": 48,
@@ -201,7 +201,7 @@
         "Networks",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/33af58e636019306d678d57f.png"
+      "coverImage": "images/universities/33af58e636019306d678d57f.webp"
     },
     {
       "id": 86,
@@ -221,7 +221,7 @@
         "Project Management",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/109b632a5fa6f41161a956f6.png"
+      "coverImage": "images/universities/109b632a5fa6f41161a956f6.webp"
     },
     {
       "id": 88,
@@ -241,7 +241,7 @@
         "Databases",
         "Business"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/25cc85d430230c89ffae5b58.png"
+      "coverImage": "images/universities/25cc85d430230c89ffae5b58.webp"
     },
     {
       "id": 55,
@@ -259,7 +259,7 @@
         "Databases",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/6ea2baf044ae3cd1b998a36f.png"
+      "coverImage": "images/universities/6ea2baf044ae3cd1b998a36f.webp"
     },
     {
       "id": 87,
@@ -276,7 +276,7 @@
       "specializations": [
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/6356e2de3bc6a1f27afeaa38.jpg"
+      "coverImage": "images/universities/6356e2de3bc6a1f27afeaa38.webp"
     },
     {
       "id": 21,
@@ -296,7 +296,7 @@
         "Multimédia",
         "Software Architecture"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/a211a2bd7ab67f0cc7b3c7c0.jpeg"
+      "coverImage": "images/universities/a211a2bd7ab67f0cc7b3c7c0.webp"
     },
     {
       "id": 2,
@@ -316,7 +316,7 @@
         "Management",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/eacd0b589faf786aa70151e5.jpg"
+      "coverImage": "images/universities/eacd0b589faf786aa70151e5.webp"
     },
     {
       "id": 98,
@@ -338,7 +338,7 @@
         "Web Development",
         "Artificial Intelligence"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/b99da759d7f69267be18de0a.png"
+      "coverImage": "images/universities/b99da759d7f69267be18de0a.webp"
     },
     {
       "id": 97,
@@ -353,7 +353,7 @@
       "semester": "Full-year only",
       "display": "YES",
       "specializations": [],
-      "coverImage": "https://mya.epitech.eu/uploads/2f131ce4a0059c942d549298.png"
+      "coverImage": "images/universities/2f131ce4a0059c942d549298.webp"
     },
     {
       "id": 56,
@@ -374,7 +374,7 @@
         "Security",
         "Systems Administration"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/dd7fc7360bbf13e7a4baddfb.png"
+      "coverImage": "images/universities/dd7fc7360bbf13e7a4baddfb.webp"
     },
     {
       "id": 140,
@@ -397,7 +397,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/f2640afc2f9dd5fada24357d.png"
+      "coverImage": "images/universities/f2640afc2f9dd5fada24357d.webp"
     },
     {
       "id": 126,
@@ -418,7 +418,7 @@
         "Software Development",
         "Systems Administration"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/fc59c304b6f0d662b9021124.webp"
+      "coverImage": "images/universities/fc59c304b6f0d662b9021124.webp"
     },
     {
       "id": 104,
@@ -436,7 +436,7 @@
         "Artificial Intelligence",
         "Big Data"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/6b53316e880dee7f26fa87ee.webp"
+      "coverImage": "images/universities/6b53316e880dee7f26fa87ee.webp"
     },
     {
       "id": 22,
@@ -454,7 +454,7 @@
         "Mobile Development",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/e04bef5acec21f9a5799775f.webp"
+      "coverImage": "images/universities/e04bef5acec21f9a5799775f.webp"
     },
     {
       "id": 125,
@@ -475,7 +475,7 @@
         "UX Design",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/a2379c2abcfce875c6efe319.png"
+      "coverImage": "images/universities/a2379c2abcfce875c6efe319.webp"
     },
     {
       "id": 73,
@@ -494,7 +494,7 @@
         "Business Science",
         "Project Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/38f487f12c407124ceaf5fa1.jpg"
+      "coverImage": "images/universities/38f487f12c407124ceaf5fa1.webp"
     },
     {
       "id": 3,
@@ -511,7 +511,7 @@
       "specializations": [
         "Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/e4a5004e17569404c8ffb8f3.jpg"
+      "coverImage": "images/universities/e4a5004e17569404c8ffb8f3.webp"
     },
     {
       "id": 72,
@@ -534,7 +534,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/93175395436167e188a22df8.jpg"
+      "coverImage": "images/universities/93175395436167e188a22df8.webp"
     },
     {
       "id": 49,
@@ -554,7 +554,7 @@
         "Security",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/92e3333bb4cab13e2e43263a.jpg"
+      "coverImage": "images/universities/92e3333bb4cab13e2e43263a.webp"
     },
     {
       "id": 70,
@@ -576,7 +576,7 @@
         "Software Development",
         "Artificial Intelligence"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/a0f6f9e2514318ce555c8d47.jpg"
+      "coverImage": "images/universities/a0f6f9e2514318ce555c8d47.webp"
     },
     {
       "id": 1,
@@ -597,7 +597,7 @@
         "Video Games",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/f93e4eb01c2830222a5e7965.jpg"
+      "coverImage": "images/universities/f93e4eb01c2830222a5e7965.webp"
     },
     {
       "id": 15,
@@ -615,7 +615,7 @@
         "Big Data",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/17a1b7558ff5196c38087d3e.png"
+      "coverImage": "images/universities/17a1b7558ff5196c38087d3e.webp"
     },
     {
       "id": 135,
@@ -639,7 +639,7 @@
         "Project Management",
         "Systems Administration"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/7e3b6b5b4b54735480ed76dc.png"
+      "coverImage": "images/universities/7e3b6b5b4b54735480ed76dc.webp"
     },
     {
       "id": 112,
@@ -666,7 +666,7 @@
         "Virtual Reality",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/be4159129a829aee30a4b7b2.webp"
+      "coverImage": "images/universities/be4159129a829aee30a4b7b2.webp"
     },
     {
       "id": 71,
@@ -686,7 +686,7 @@
         "Graphics Programming",
         "Networks"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/8055d850177790fb7c195c81.jpg"
+      "coverImage": "images/universities/8055d850177790fb7c195c81.webp"
     },
     {
       "id": 45,
@@ -709,7 +709,7 @@
         "Robotics",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/84cc4127f868679836554f2c.jpg"
+      "coverImage": "images/universities/84cc4127f868679836554f2c.webp"
     },
     {
       "id": 134,
@@ -730,7 +730,7 @@
         "Networks",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c57592ae61fa9e3343dd15fb.jpg"
+      "coverImage": "images/universities/c57592ae61fa9e3343dd15fb.webp"
     },
     {
       "id": 114,
@@ -749,7 +749,7 @@
         "Software Development",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/24faf8f0e4957a7867441975.webp"
+      "coverImage": "images/universities/24faf8f0e4957a7867441975.webp"
     },
     {
       "id": 84,
@@ -766,7 +766,7 @@
       "specializations": [
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/19945ed5c20cfc59275c7715.png"
+      "coverImage": "images/universities/19945ed5c20cfc59275c7715.webp"
     },
     {
       "id": 34,
@@ -785,7 +785,7 @@
         "Artificial Intelligence",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c957cd8fa73ea60b770f9599.webp"
+      "coverImage": "images/universities/c957cd8fa73ea60b770f9599.webp"
     },
     {
       "id": 35,
@@ -802,7 +802,7 @@
       "specializations": [
         "Robotics"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/4a7af5cb518464f98fa9c270.webp"
+      "coverImage": "images/universities/4a7af5cb518464f98fa9c270.webp"
     },
     {
       "id": 4,
@@ -821,7 +821,7 @@
         "Software Development",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/2758930635febcbc90158e15.jpg"
+      "coverImage": "images/universities/2758930635febcbc90158e15.webp"
     },
     {
       "id": 12,
@@ -849,7 +849,7 @@
         "Systems Administration",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/7d41768dfaeaeffc6c12b19f.jpg"
+      "coverImage": "images/universities/7d41768dfaeaeffc6c12b19f.webp"
     },
     {
       "id": 117,
@@ -868,7 +868,7 @@
         "Big Data",
         "Cloud Computing"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/b41b5a814c58d1a1939284c0.webp"
+      "coverImage": "images/universities/b41b5a814c58d1a1939284c0.webp"
     },
     {
       "id": 23,
@@ -891,7 +891,7 @@
         "Artificial Intelligence",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/514a97df370c321416acfeb1.jpeg"
+      "coverImage": "images/universities/514a97df370c321416acfeb1.webp"
     },
     {
       "id": 17,
@@ -912,7 +912,7 @@
         "Cloud Computing",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/ccb28a2fa1cdbd5f22308902.jpg"
+      "coverImage": "images/universities/ccb28a2fa1cdbd5f22308902.webp"
     },
     {
       "id": 54,
@@ -933,7 +933,7 @@
         "Systems Administration",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/0d54bb13479508a1ff676d6e.webp"
+      "coverImage": "images/universities/0d54bb13479508a1ff676d6e.webp"
     },
     {
       "id": 128,
@@ -955,7 +955,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/dd2813a3761bc806dade50b3.webp"
+      "coverImage": "images/universities/dd2813a3761bc806dade50b3.webp"
     },
     {
       "id": 130,
@@ -976,7 +976,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/632e3000be0aead7ed2babc1.webp"
+      "coverImage": "images/universities/632e3000be0aead7ed2babc1.webp"
     },
     {
       "id": 129,
@@ -996,7 +996,7 @@
         "UX Design",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/9fffeaa714126fcc71516a77.jpg"
+      "coverImage": "images/universities/9fffeaa714126fcc71516a77.webp"
     },
     {
       "id": 26,
@@ -1015,7 +1015,7 @@
         "Software Development",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/1ec171e42e1a86c07b1a6bbe.jpg"
+      "coverImage": "images/universities/1ec171e42e1a86c07b1a6bbe.webp"
     },
     {
       "id": 24,
@@ -1034,7 +1034,7 @@
         "Big Data",
         "Databases"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/190d9171c638f7439201a440.jpg"
+      "coverImage": "images/universities/190d9171c638f7439201a440.webp"
     },
     {
       "id": 57,
@@ -1056,7 +1056,7 @@
         "Networks",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/db5f77ca81fd5c9e0d497911.png"
+      "coverImage": "images/universities/db5f77ca81fd5c9e0d497911.webp"
     },
     {
       "id": 58,
@@ -1073,7 +1073,7 @@
       "specializations": [
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c9ffa55057f8666fb2662327.png"
+      "coverImage": "images/universities/c9ffa55057f8666fb2662327.webp"
     },
     {
       "id": 59,
@@ -1096,7 +1096,7 @@
         "Security",
         "Business"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c075c11fa0ed1d87d4ecbb98.png"
+      "coverImage": "images/universities/c075c11fa0ed1d87d4ecbb98.webp"
     },
     {
       "id": 127,
@@ -1117,7 +1117,7 @@
         "Multimédia",
         "Robotics"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/abb358df2a7bcac46df26217.png"
+      "coverImage": "images/universities/abb358df2a7bcac46df26217.webp"
     },
     {
       "id": 27,
@@ -1141,7 +1141,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/5ae92a743e9fa2a4976e0bcf.webp"
+      "coverImage": "images/universities/5ae92a743e9fa2a4976e0bcf.webp"
     },
     {
       "id": 46,
@@ -1162,7 +1162,7 @@
         "Project Management",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/f894a9e2c29cb36db360aea5.jpg"
+      "coverImage": "images/universities/f894a9e2c29cb36db360aea5.webp"
     },
     {
       "id": 83,
@@ -1179,7 +1179,7 @@
       "specializations": [
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/63c07c2a7bf3da6847e18968.jpg"
+      "coverImage": "images/universities/63c07c2a7bf3da6847e18968.webp"
     },
     {
       "id": 96,
@@ -1197,7 +1197,7 @@
         "Management",
         "Project Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c09ede41d0c5a41a89f4ab77.png"
+      "coverImage": "images/universities/c09ede41d0c5a41a89f4ab77.webp"
     },
     {
       "id": 9,
@@ -1220,7 +1220,7 @@
         "Artificial Intelligence",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/b173ec1df4e0f93f71417ade.jpg"
+      "coverImage": "images/universities/b173ec1df4e0f93f71417ade.webp"
     },
     {
       "id": 29,
@@ -1241,7 +1241,7 @@
         "Multimédia",
         "E-Commerce"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/60df7a22d923cd9a1c33f275.jpg"
+      "coverImage": "images/universities/60df7a22d923cd9a1c33f275.webp"
     },
     {
       "id": 136,
@@ -1264,7 +1264,7 @@
         "Web Development",
         "Business"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/bbc59bfc4541122e0bdaee4b.jpg"
+      "coverImage": "images/universities/bbc59bfc4541122e0bdaee4b.webp"
     },
     {
       "id": 132,
@@ -1285,7 +1285,7 @@
         "Robotics",
         "Software Architecture"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/6e57d188f17930fd4f602d11.png"
+      "coverImage": "images/universities/6e57d188f17930fd4f602d11.webp"
     },
     {
       "id": 133,
@@ -1308,7 +1308,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/a388cfe6fa5849c5da408b22.png"
+      "coverImage": "images/universities/a388cfe6fa5849c5da408b22.webp"
     },
     {
       "id": 82,
@@ -1327,7 +1327,7 @@
         "Project Management",
         "Bioinformatics"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/9dc7a75461a8f372b22c77e9.png"
+      "coverImage": "images/universities/9dc7a75461a8f372b22c77e9.webp"
     },
     {
       "id": 108,
@@ -1351,7 +1351,7 @@
         "Software Development",
         "Bioinformatics"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/62c8751d803584260288d39e.png"
+      "coverImage": "images/universities/62c8751d803584260288d39e.webp"
     },
     {
       "id": 53,
@@ -1370,7 +1370,7 @@
         "Mathematics",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/0cca0346c8dd0c019b0676c4.jpg"
+      "coverImage": "images/universities/0cca0346c8dd0c019b0676c4.webp"
     },
     {
       "id": 146,
@@ -1390,7 +1390,7 @@
         "Software Development",
         "Networks"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/4b59a89bc2e6a41705cd7911.webp"
+      "coverImage": "images/universities/4b59a89bc2e6a41705cd7911.webp"
     },
     {
       "id": 85,
@@ -1407,7 +1407,7 @@
       "specializations": [
         "Artificial Intelligence"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/f28afdc2c27e5dd46545606a.webp"
+      "coverImage": "images/universities/f28afdc2c27e5dd46545606a.webp"
     },
     {
       "id": 123,
@@ -1425,7 +1425,7 @@
         "Distributed Computing",
         "Artificial Intelligence"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/823f1ee0f79d6ccad8ff00c0.webp"
+      "coverImage": "images/universities/823f1ee0f79d6ccad8ff00c0.webp"
     },
     {
       "id": 19,
@@ -1446,7 +1446,7 @@
         "Distributed Computing",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/d16ce82d5c8abb27ac03c3e1.jpg"
+      "coverImage": "images/universities/d16ce82d5c8abb27ac03c3e1.webp"
     },
     {
       "id": 91,
@@ -1467,7 +1467,7 @@
         "Graphics Programming",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/dbe5d589d5dfdc1147ecbd73.png"
+      "coverImage": "images/universities/dbe5d589d5dfdc1147ecbd73.webp"
     },
     {
       "id": 65,
@@ -1491,7 +1491,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/100a558126218b22abb8837e.png"
+      "coverImage": "images/universities/100a558126218b22abb8837e.webp"
     },
     {
       "id": 33,
@@ -1516,7 +1516,7 @@
         "Artificial Intelligence",
         "Virtual Reality"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/8287c55cbe6f34dc7c1daf1f.jpg"
+      "coverImage": "images/universities/8287c55cbe6f34dc7c1daf1f.webp"
     },
     {
       "id": 118,
@@ -1535,7 +1535,7 @@
         "Management",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/cc3a49c89587dc32fc1c8bc2.webp"
+      "coverImage": "images/universities/cc3a49c89587dc32fc1c8bc2.webp"
     },
     {
       "id": 10,
@@ -1575,7 +1575,7 @@
         "Video Games",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c52a5e546167966293f8b11e.jpg"
+      "coverImage": "images/universities/c52a5e546167966293f8b11e.webp"
     },
     {
       "id": 81,
@@ -1595,7 +1595,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/90ba1f6990119c5f642a90a5.png"
+      "coverImage": "images/universities/90ba1f6990119c5f642a90a5.webp"
     },
     {
       "id": 80,
@@ -1614,7 +1614,7 @@
         "International Business",
         "Project Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/00ab9096c84424bdd8562129.png"
+      "coverImage": "images/universities/00ab9096c84424bdd8562129.webp"
     },
     {
       "id": 78,
@@ -1634,7 +1634,7 @@
         "Software Development",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/8e7ff56bc3480a57af2f4b49.png"
+      "coverImage": "images/universities/8e7ff56bc3480a57af2f4b49.webp"
     },
     {
       "id": 119,
@@ -1653,7 +1653,7 @@
         "Multimédia",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/19e4fa5a3a29c5b58841554e.webp"
+      "coverImage": "images/universities/19e4fa5a3a29c5b58841554e.webp"
     },
     {
       "id": 74,
@@ -1682,7 +1682,7 @@
         "Video Games",
         "Virtual Reality"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/8f69c0d7580a4dacb3584b80.jpg"
+      "coverImage": "images/universities/8f69c0d7580a4dacb3584b80.webp"
     },
     {
       "id": 109,
@@ -1701,7 +1701,7 @@
         "International Business",
         "Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/b755c725e4420281410a5dd4.png"
+      "coverImage": "images/universities/b755c725e4420281410a5dd4.webp"
     },
     {
       "id": 52,
@@ -1724,7 +1724,7 @@
         "Software Development",
         "Business Intelligence"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/da4c672baae49b75147a4e00.png"
+      "coverImage": "images/universities/da4c672baae49b75147a4e00.webp"
     },
     {
       "id": 77,
@@ -1743,7 +1743,7 @@
         "Software Development",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/b9c1b075e30caf33d3bf1a48.png"
+      "coverImage": "images/universities/b9c1b075e30caf33d3bf1a48.webp"
     },
     {
       "id": 143,
@@ -1765,7 +1765,7 @@
         "Computer Science",
         "Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/94ec2d0ffa2029cb8fac8b0b.jpg"
+      "coverImage": "images/universities/94ec2d0ffa2029cb8fac8b0b.webp"
     },
     {
       "id": 5,
@@ -1782,7 +1782,7 @@
       "specializations": [
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/11b0416d14be1e7655e95a38.jpg"
+      "coverImage": "images/universities/11b0416d14be1e7655e95a38.webp"
     },
     {
       "id": 90,
@@ -1803,7 +1803,7 @@
         "Mobile Development",
         "Quality"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/86a9322dc423294464a08704.jpg"
+      "coverImage": "images/universities/86a9322dc423294464a08704.webp"
     },
     {
       "id": 102,
@@ -1822,7 +1822,7 @@
         "Software Development",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/506dcd2480c28125c94c10ed.png"
+      "coverImage": "images/universities/506dcd2480c28125c94c10ed.webp"
     },
     {
       "id": 131,
@@ -1842,7 +1842,7 @@
         "Data Mining",
         "Mobile Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/22752edebd0029f49a8e9e81.png"
+      "coverImage": "images/universities/22752edebd0029f49a8e9e81.webp"
     },
     {
       "id": 30,
@@ -1860,7 +1860,7 @@
         "Databases",
         "Artificial Intelligence"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/d61ff6a9817200b93c6d1fa5.webp"
+      "coverImage": "images/universities/d61ff6a9817200b93c6d1fa5.webp"
     },
     {
       "id": 107,
@@ -1882,7 +1882,7 @@
         "Security",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/dc33dbcbd604c5b5e9f2cf92.png"
+      "coverImage": "images/universities/dc33dbcbd604c5b5e9f2cf92.webp"
     },
     {
       "id": 76,
@@ -1904,7 +1904,7 @@
         "Security",
         "International Business"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c3deee043550a23e89646818.png"
+      "coverImage": "images/universities/c3deee043550a23e89646818.webp"
     },
     {
       "id": 120,
@@ -1922,7 +1922,7 @@
         "Project Management",
         "Multimédia"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/f3251807b1113b76cdddbe5b.webp"
+      "coverImage": "images/universities/f3251807b1113b76cdddbe5b.webp"
     },
     {
       "id": 111,
@@ -1947,7 +1947,7 @@
         "Artificial Intelligence",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/715aa3d90551b2d87c294065.png"
+      "coverImage": "images/universities/715aa3d90551b2d87c294065.webp"
     },
     {
       "id": 142,
@@ -1966,7 +1966,7 @@
         "Databases",
         "Data Mining"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/78851b842b280370daba57b3.jpg"
+      "coverImage": "images/universities/78851b842b280370daba57b3.webp"
     },
     {
       "id": 51,
@@ -1986,7 +1986,7 @@
         "Networks",
         "Business"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/4fbbc817dd09b41a81dcb302.jpg"
+      "coverImage": "images/universities/4fbbc817dd09b41a81dcb302.webp"
     },
     {
       "id": 115,
@@ -2004,7 +2004,7 @@
         "Networks",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/a8b6be6a69fb3767afa4794c.png"
+      "coverImage": "images/universities/a8b6be6a69fb3767afa4794c.webp"
     },
     {
       "id": 37,
@@ -2023,7 +2023,7 @@
         "Software Development",
         "Telecommunications"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/e72c1a4fedcdb18d1369f846.webp"
+      "coverImage": "images/universities/e72c1a4fedcdb18d1369f846.webp"
     },
     {
       "id": 113,
@@ -2045,7 +2045,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/a4a9393d59b5e54c70570654.png"
+      "coverImage": "images/universities/a4a9393d59b5e54c70570654.webp"
     },
     {
       "id": 75,
@@ -2063,7 +2063,7 @@
         "Management",
         "Project Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/4e87e141434e5cb54deb134e.png"
+      "coverImage": "images/universities/4e87e141434e5cb54deb134e.webp"
     },
     {
       "id": 38,
@@ -2085,7 +2085,7 @@
         "Artificial Intelligence",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/bedcdb399b47bbf20ed59be2.jpg"
+      "coverImage": "images/universities/bedcdb399b47bbf20ed59be2.webp"
     },
     {
       "id": 41,
@@ -2108,7 +2108,7 @@
         "Artificial Intelligence",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/29caa3c476a9808f0444445f.jpg"
+      "coverImage": "images/universities/29caa3c476a9808f0444445f.webp"
     },
     {
       "id": 42,
@@ -2130,7 +2130,7 @@
         "Software Development",
         "Virtual Reality"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/4ff881f53f75732398b28a25.jpg"
+      "coverImage": "images/universities/4ff881f53f75732398b28a25.webp"
     },
     {
       "id": 43,
@@ -2149,7 +2149,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/27f98974b965b49fb10a9d46.webp"
+      "coverImage": "images/universities/27f98974b965b49fb10a9d46.webp"
     },
     {
       "id": 67,
@@ -2169,7 +2169,7 @@
         "Robotics",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/208afdf8000acc68e1b72488.jpg"
+      "coverImage": "images/universities/208afdf8000acc68e1b72488.webp"
     },
     {
       "id": 44,
@@ -2191,7 +2191,7 @@
         "Robotics",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/faae78f9919f7554f7469fd3.jpg"
+      "coverImage": "images/universities/faae78f9919f7554f7469fd3.webp"
     },
     {
       "id": 92,
@@ -2208,7 +2208,7 @@
       "specializations": [
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/0817c50ffedcea12709b21d1.png"
+      "coverImage": "images/universities/0817c50ffedcea12709b21d1.webp"
     },
     {
       "id": 20,
@@ -2229,7 +2229,7 @@
         "Systems Administration",
         "Multimédia"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c856217044df8571b6300be8.webp"
+      "coverImage": "images/universities/c856217044df8571b6300be8.webp"
     },
     {
       "id": 6,
@@ -2249,7 +2249,7 @@
         "Security",
         "Systems Administration"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/b36efa151e3cbf68a662f7fd.jpg"
+      "coverImage": "images/universities/b36efa151e3cbf68a662f7fd.webp"
     },
     {
       "id": 69,
@@ -2272,7 +2272,7 @@
         "Software Development",
         "Video Games"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/af4ab8afac1ee36678aa10b9.webp"
+      "coverImage": "images/universities/af4ab8afac1ee36678aa10b9.webp"
     },
     {
       "id": 103,
@@ -2292,7 +2292,7 @@
         "Systems Administration",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/6426d2850434c9c3c18b4d92.png"
+      "coverImage": "images/universities/6426d2850434c9c3c18b4d92.webp"
     },
     {
       "id": 89,
@@ -2314,7 +2314,7 @@
         "Video Games",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/73c3eaf7811366ecbbc499af.jpg"
+      "coverImage": "images/universities/73c3eaf7811366ecbbc499af.webp"
     },
     {
       "id": 50,
@@ -2331,7 +2331,7 @@
       "specializations": [
         "Artificial Intelligence"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/993f89e36b7d9b76674bf077.jpg"
+      "coverImage": "images/universities/993f89e36b7d9b76674bf077.webp"
     },
     {
       "id": 93,
@@ -2351,7 +2351,7 @@
         "Project Management",
         "Virtual Reality"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/dd37699e1f53e36123f66305.png"
+      "coverImage": "images/universities/dd37699e1f53e36123f66305.webp"
     },
     {
       "id": 99,
@@ -2370,7 +2370,7 @@
         "Databases",
         "Project Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/75ca6b7a49ade1601920af0c.png"
+      "coverImage": "images/universities/75ca6b7a49ade1601920af0c.webp"
     },
     {
       "id": 100,
@@ -2392,7 +2392,7 @@
         "Software Architecture",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/1706414a3cf69708658a76ea.png"
+      "coverImage": "images/universities/1706414a3cf69708658a76ea.webp"
     },
     {
       "id": 101,
@@ -2407,7 +2407,7 @@
       "semester": "Full-year only",
       "display": "YES",
       "specializations": [],
-      "coverImage": "https://mya.epitech.eu/uploads/683bc3be720eebdb285a34c7.png"
+      "coverImage": "images/universities/683bc3be720eebdb285a34c7.webp"
     },
     {
       "id": 66,
@@ -2426,7 +2426,7 @@
         "Databases",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/8921d2f13e32b1ea722585c0.png"
+      "coverImage": "images/universities/8921d2f13e32b1ea722585c0.webp"
     },
     {
       "id": 68,
@@ -2454,7 +2454,7 @@
         "Systems Administration",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/1909319996483dbece80d007.png"
+      "coverImage": "images/universities/1909319996483dbece80d007.webp"
     },
     {
       "id": 60,
@@ -2472,7 +2472,7 @@
         "Management",
         "Project Management"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c4865728366e5255ecbdd0f3.png"
+      "coverImage": "images/universities/c4865728366e5255ecbdd0f3.webp"
     },
     {
       "id": 145,
@@ -2492,7 +2492,7 @@
         "Artificial Intelligence",
         "Machine Learning"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/adb8126c838df70d152ece1e.jpg"
+      "coverImage": "images/universities/adb8126c838df70d152ece1e.webp"
     },
     {
       "id": 47,
@@ -2512,7 +2512,7 @@
         "Security",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/7a9f2f0a9670659a14ed3380.webp"
+      "coverImage": "images/universities/7a9f2f0a9670659a14ed3380.webp"
     },
     {
       "id": 61,
@@ -2534,7 +2534,7 @@
         "Graphics Programming",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/220d2ddf397119f42f52b714.png"
+      "coverImage": "images/universities/220d2ddf397119f42f52b714.webp"
     },
     {
       "id": 94,
@@ -2554,7 +2554,7 @@
         "Networks",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/37d5448f800fd463b0d9b227.png"
+      "coverImage": "images/universities/37d5448f800fd463b0d9b227.webp"
     },
     {
       "id": 62,
@@ -2577,7 +2577,7 @@
         "Video Games",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/4a1b39b5a65c6fa88e8f199f.png"
+      "coverImage": "images/universities/4a1b39b5a65c6fa88e8f199f.webp"
     },
     {
       "id": 32,
@@ -2596,7 +2596,7 @@
         "Web Development",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/c32986d420d2f3664d642dfa.png"
+      "coverImage": "images/universities/c32986d420d2f3664d642dfa.webp"
     },
     {
       "id": 36,
@@ -2621,7 +2621,7 @@
         "Video Games",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/8353b88a925c39b0b227a253.jpg"
+      "coverImage": "images/universities/8353b88a925c39b0b227a253.webp"
     },
     {
       "id": 95,
@@ -2641,7 +2641,7 @@
         "Software Development",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/e7a501b66058b96fc31bfbbf.png"
+      "coverImage": "images/universities/e7a501b66058b96fc31bfbbf.webp"
     },
     {
       "id": 28,
@@ -2663,7 +2663,7 @@
         "Virtual Reality",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/29eb8cc82a4b5817b5661227.jpg"
+      "coverImage": "images/universities/29eb8cc82a4b5817b5661227.webp"
     },
     {
       "id": 25,
@@ -2682,7 +2682,7 @@
         "Networks",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/5c829f546fd5302d465e538c.jpg"
+      "coverImage": "images/universities/5c829f546fd5302d465e538c.webp"
     },
     {
       "id": 39,
@@ -2710,7 +2710,7 @@
         "Web Development",
         "Security"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/2f56cba824d171f79c87e488.jpg"
+      "coverImage": "images/universities/2f56cba824d171f79c87e488.webp"
     },
     {
       "id": 40,
@@ -2731,7 +2731,7 @@
         "Software Architecture",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/96ca87f76f22f2cf4e3c00cf.jpg"
+      "coverImage": "images/universities/96ca87f76f22f2cf4e3c00cf.webp"
     },
     {
       "id": 63,
@@ -2756,7 +2756,7 @@
         "Video Games",
         "Artificial Intelligence"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/5b5727df9d713c9c78088c33.png"
+      "coverImage": "images/universities/5b5727df9d713c9c78088c33.webp"
     },
     {
       "id": 64,
@@ -2775,7 +2775,7 @@
         "Video Games",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/bc8d4475dd4a324a7cae4143.png"
+      "coverImage": "images/universities/bc8d4475dd4a324a7cae4143.webp"
     },
     {
       "id": 124,
@@ -2795,7 +2795,7 @@
         "Networks",
         "Software Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/d9d3febd5482cac37bcae6ab.webp"
+      "coverImage": "images/universities/d9d3febd5482cac37bcae6ab.webp"
     },
     {
       "id": 116,
@@ -2816,7 +2816,7 @@
         "Robotics",
         "Web Development"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/b86b9014ca077f4dd8b40fe1.png"
+      "coverImage": "images/universities/b86b9014ca077f4dd8b40fe1.webp"
     },
     {
       "id": 31,
@@ -2835,7 +2835,7 @@
         "International Business",
         "Systems Administration"
       ],
-      "coverImage": "https://mya.epitech.eu/uploads/57e36acbc0450c9be996ec8a.webp"
+      "coverImage": "images/universities/57e36acbc0450c9be996ec8a.webp"
     }
   ]
 }

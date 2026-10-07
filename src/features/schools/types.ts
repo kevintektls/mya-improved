@@ -27,6 +27,7 @@ export interface SchoolDetailRecord extends SchoolMetadata {
   image2?: string;
   image3?: string;
   images: string[];
+  sourceImages: string[];
   updatedAt: string;
 }
 

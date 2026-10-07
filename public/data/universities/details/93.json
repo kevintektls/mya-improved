@@ -26,8 +26,13 @@
     "Virtual Reality"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/dd37699e1f53e36123f66305.png",
-    "https://mya.epitech.eu/uploads/9a04b9b9ed90096e1b9911d1.png",
-    "https://mya.epitech.eu/uploads/8b275340e7f2223c3a30fae2.png"
+    "images/universities/dd37699e1f53e36123f66305.webp",
+    "images/universities/9a04b9b9ed90096e1b9911d1.webp",
+    "images/universities/8b275340e7f2223c3a30fae2.webp"
+  ],
+  "sourceImages": [
+    "dd37699e1f53e36123f66305.png",
+    "9a04b9b9ed90096e1b9911d1.png",
+    "8b275340e7f2223c3a30fae2.png"
   ]
 }

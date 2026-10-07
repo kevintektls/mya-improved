@@ -26,8 +26,13 @@
     "Networks"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/8055d850177790fb7c195c81.jpg",
-    "https://mya.epitech.eu/uploads/567626607cb860330a864c15.jpg",
-    "https://mya.epitech.eu/uploads/db69b676cc0c74db192c3ef2.webp"
+    "images/universities/8055d850177790fb7c195c81.webp",
+    "images/universities/567626607cb860330a864c15.webp",
+    "images/universities/db69b676cc0c74db192c3ef2.webp"
+  ],
+  "sourceImages": [
+    "8055d850177790fb7c195c81.jpg",
+    "567626607cb860330a864c15.jpg",
+    "db69b676cc0c74db192c3ef2.webp"
   ]
 }

@@ -23,8 +23,13 @@
     "Robotics"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/4a7af5cb518464f98fa9c270.webp",
-    "https://mya.epitech.eu/uploads/671fe7ddc1bd8cf5daa7f306.webp",
-    "https://mya.epitech.eu/uploads/d6b9d05d6e3c011ff390469e.jpg"
+    "images/universities/4a7af5cb518464f98fa9c270.webp",
+    "images/universities/671fe7ddc1bd8cf5daa7f306.webp",
+    "images/universities/d6b9d05d6e3c011ff390469e.webp"
+  ],
+  "sourceImages": [
+    "4a7af5cb518464f98fa9c270.webp",
+    "671fe7ddc1bd8cf5daa7f306.webp",
+    "d6b9d05d6e3c011ff390469e.jpg"
   ]
 }

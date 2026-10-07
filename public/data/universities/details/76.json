@@ -28,8 +28,13 @@
     "International Business"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/c3deee043550a23e89646818.png",
-    "https://mya.epitech.eu/uploads/8cf8e7a499d222ca7711e96d.png",
-    "https://mya.epitech.eu/uploads/d782a7a610e91b9ad5c595a6.png"
+    "images/universities/c3deee043550a23e89646818.webp",
+    "images/universities/8cf8e7a499d222ca7711e96d.webp",
+    "images/universities/d782a7a610e91b9ad5c595a6.webp"
+  ],
+  "sourceImages": [
+    "c3deee043550a23e89646818.png",
+    "8cf8e7a499d222ca7711e96d.png",
+    "d782a7a610e91b9ad5c595a6.png"
   ]
 }

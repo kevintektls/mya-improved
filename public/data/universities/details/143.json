@@ -28,8 +28,13 @@
     "Management"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/94ec2d0ffa2029cb8fac8b0b.jpg",
-    "https://mya.epitech.eu/uploads/cc828072ad4b85064124b870.jpg",
-    "https://mya.epitech.eu/uploads/f2804f9969217539b7d21ffc.jpg"
+    "images/universities/94ec2d0ffa2029cb8fac8b0b.webp",
+    "images/universities/cc828072ad4b85064124b870.webp",
+    "images/universities/f2804f9969217539b7d21ffc.webp"
+  ],
+  "sourceImages": [
+    "94ec2d0ffa2029cb8fac8b0b.jpg",
+    "cc828072ad4b85064124b870.jpg",
+    "f2804f9969217539b7d21ffc.jpg"
   ]
 }

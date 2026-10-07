@@ -25,8 +25,13 @@
     "Telecommunications"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/e72c1a4fedcdb18d1369f846.webp",
-    "https://mya.epitech.eu/uploads/ab639c9a291a8f8db0994d55.webp",
-    "https://mya.epitech.eu/uploads/68af518965fc8f45dd0be0ee.webp"
+    "images/universities/e72c1a4fedcdb18d1369f846.webp",
+    "images/universities/ab639c9a291a8f8db0994d55.webp",
+    "images/universities/68af518965fc8f45dd0be0ee.webp"
+  ],
+  "sourceImages": [
+    "e72c1a4fedcdb18d1369f846.webp",
+    "ab639c9a291a8f8db0994d55.webp",
+    "68af518965fc8f45dd0be0ee.webp"
   ]
 }

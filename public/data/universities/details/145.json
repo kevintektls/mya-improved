@@ -26,8 +26,13 @@
     "Machine Learning"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/adb8126c838df70d152ece1e.jpg",
-    "https://mya.epitech.eu/uploads/2fc4ee29bffe208655c472df.jpg",
-    "https://mya.epitech.eu/uploads/aa8d2295372abc540005ac6c.jpg"
+    "images/universities/adb8126c838df70d152ece1e.webp",
+    "images/universities/2fc4ee29bffe208655c472df.webp",
+    "images/universities/aa8d2295372abc540005ac6c.webp"
+  ],
+  "sourceImages": [
+    "adb8126c838df70d152ece1e.jpg",
+    "2fc4ee29bffe208655c472df.jpg",
+    "aa8d2295372abc540005ac6c.jpg"
   ]
 }

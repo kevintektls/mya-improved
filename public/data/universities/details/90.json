@@ -27,8 +27,13 @@
     "Quality"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/86a9322dc423294464a08704.jpg",
-    "https://mya.epitech.eu/uploads/1612c05ecc886b0dbe947f62.webp",
-    "https://mya.epitech.eu/uploads/9f05d64f8d2098da35ee1773.jpeg"
+    "images/universities/86a9322dc423294464a08704.webp",
+    "images/universities/1612c05ecc886b0dbe947f62.webp",
+    "images/universities/9f05d64f8d2098da35ee1773.webp"
+  ],
+  "sourceImages": [
+    "86a9322dc423294464a08704.jpg",
+    "1612c05ecc886b0dbe947f62.webp",
+    "9f05d64f8d2098da35ee1773.jpeg"
   ]
 }

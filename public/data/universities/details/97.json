@@ -21,8 +21,13 @@
   "updatedAt": "2026-07-15T13:24:08.452Z",
   "specializations": [],
   "images": [
-    "https://mya.epitech.eu/uploads/2f131ce4a0059c942d549298.png",
-    "https://mya.epitech.eu/uploads/2102f593dad57d1d3e700091.png",
-    "https://mya.epitech.eu/uploads/1da5c82f7d22855632b21c57.png"
+    "images/universities/2f131ce4a0059c942d549298.webp",
+    "images/universities/2102f593dad57d1d3e700091.webp",
+    "images/universities/1da5c82f7d22855632b21c57.webp"
+  ],
+  "sourceImages": [
+    "2f131ce4a0059c942d549298.png",
+    "2102f593dad57d1d3e700091.png",
+    "1da5c82f7d22855632b21c57.png"
   ]
 }

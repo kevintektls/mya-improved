@@ -25,8 +25,13 @@
     "Databases"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/190d9171c638f7439201a440.jpg",
-    "https://mya.epitech.eu/uploads/3fd7555bc74fa98aab6d9bf4.jpg",
-    "https://mya.epitech.eu/uploads/594a0c237b9bf4e888acbf3d.webp"
+    "images/universities/190d9171c638f7439201a440.webp",
+    "images/universities/3fd7555bc74fa98aab6d9bf4.webp",
+    "images/universities/594a0c237b9bf4e888acbf3d.webp"
+  ],
+  "sourceImages": [
+    "190d9171c638f7439201a440.jpg",
+    "3fd7555bc74fa98aab6d9bf4.jpg",
+    "594a0c237b9bf4e888acbf3d.webp"
   ]
 }

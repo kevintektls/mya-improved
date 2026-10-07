@@ -24,8 +24,13 @@
     "Multimédia"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/f3251807b1113b76cdddbe5b.webp",
-    "https://mya.epitech.eu/uploads/92638ce4b11f05a7b621f88a.jpeg",
-    "https://mya.epitech.eu/uploads/a4ae564d04fc9f30f9382094.jpeg"
+    "images/universities/f3251807b1113b76cdddbe5b.webp",
+    "images/universities/92638ce4b11f05a7b621f88a.webp",
+    "images/universities/a4ae564d04fc9f30f9382094.webp"
+  ],
+  "sourceImages": [
+    "f3251807b1113b76cdddbe5b.webp",
+    "92638ce4b11f05a7b621f88a.jpeg",
+    "a4ae564d04fc9f30f9382094.jpeg"
   ]
 }

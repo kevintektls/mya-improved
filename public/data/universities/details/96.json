@@ -24,8 +24,13 @@
     "Project Management"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/c09ede41d0c5a41a89f4ab77.png",
-    "https://mya.epitech.eu/uploads/79d29408c41e508707172a5d.png",
-    "https://mya.epitech.eu/uploads/c74ffedbb2a9f8f9a7c6943c.png"
+    "images/universities/c09ede41d0c5a41a89f4ab77.webp",
+    "images/universities/79d29408c41e508707172a5d.webp",
+    "images/universities/c74ffedbb2a9f8f9a7c6943c.webp"
+  ],
+  "sourceImages": [
+    "c09ede41d0c5a41a89f4ab77.png",
+    "79d29408c41e508707172a5d.png",
+    "c74ffedbb2a9f8f9a7c6943c.png"
   ]
 }

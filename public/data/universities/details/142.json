@@ -25,7 +25,11 @@
     "Data Mining"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/78851b842b280370daba57b3.jpg",
-    "https://mya.epitech.eu/uploads/5ec6206ea47c01a4e9d912df.jpg"
+    "images/universities/78851b842b280370daba57b3.webp",
+    "images/universities/5ec6206ea47c01a4e9d912df.webp"
+  ],
+  "sourceImages": [
+    "78851b842b280370daba57b3.jpg",
+    "5ec6206ea47c01a4e9d912df.jpg"
   ]
 }

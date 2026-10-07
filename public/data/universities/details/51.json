@@ -26,8 +26,13 @@
     "Business"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/4fbbc817dd09b41a81dcb302.jpg",
-    "https://mya.epitech.eu/uploads/0fc3b21014d747d68f08724c.jpg",
-    "https://mya.epitech.eu/uploads/4edb93a94dce747a2ef29c70.png"
+    "images/universities/4fbbc817dd09b41a81dcb302.webp",
+    "images/universities/0fc3b21014d747d68f08724c.webp",
+    "images/universities/4edb93a94dce747a2ef29c70.webp"
+  ],
+  "sourceImages": [
+    "4fbbc817dd09b41a81dcb302.jpg",
+    "0fc3b21014d747d68f08724c.jpg",
+    "4edb93a94dce747a2ef29c70.png"
   ]
 }

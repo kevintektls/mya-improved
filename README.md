@@ -30,6 +30,9 @@ Open the local URL printed by Vite (by default, `http://localhost:5173`). The `/
 | `bun run build` | Type-check the project, then create the production site in `dist/`. |
 | `bun run preview` | Serve the production build locally for review. |
 | `bun run data:split -- <source.json>` | Generate the catalogue index and per-university detail files from a MYA export. |
+| `BURP_PROXY=http://127.0.0.1:8080 bun run images:download` | Download missing MYA image assets through the local Burp proxy. |
+
+The image downloader requires `curl` and `cwebp`. Python 3 with Pillow is used as a fallback for uncommon JPEG color profiles that `cwebp` cannot decode.
 
 ## Catalogue features
 
@@ -61,22 +64,23 @@ The selected schools, durations, sort order, and strict study area mode are loca
 
 ## School data
 
-The runtime data is split across `public/data/universities/index.json` and `public/data/universities/details/<id>.json`. The index contains fields used for cards, search, filters, and pagination. The app fetches a university's full record only when its profile is opened. The current snapshot contains **137 school records**, **44 countries**, and **37 study areas** (retrieved on 2026-10-07).
+The runtime data is split across `public/data/universities/index.json` and `public/data/universities/details/<id>.json`. The index contains fields used for cards, search, filters, and pagination. The app fetches a university's full record only when its profile is opened. Images are committed under `public/images/universities/` and loaded from this site. The current snapshot contains **137 school records**, **44 countries**, and **37 study areas** (retrieved on 2026-10-07).
 
 Each detail file includes:
 
 - Identity and mobility details: `id`, `name`, `country`, `gpa`, `spots`, `diploma`, `language`, `extracharge`, `erasmus`, `semester`, `display`, and `updatedAt`.
 - Study areas in `specializations`.
-- Images in `images`, with legacy `image1`, `image2`, and `image3` fields also retained in the source data.
+- Local WebP paths in `images`; original MYA filenames are retained in `sourceImages` so missing assets can be downloaded again. Legacy `image1`, `image2`, and `image3` filename fields are retained too.
 - Rich school information in `overview`, `administrative`, `accomodation`, `courses`, and `cost`. The source spells the accommodation key `accomodation`; keep that exact spelling when editing records.
 
 To refresh the catalogue, pass the downloaded MYA export to the splitter. The source file can stay outside this repository:
 
 ```sh
 bun run data:split -- /path/to/mya-epitech-universities.json
+BURP_PROXY=http://127.0.0.1:8080 bun run images:download
 ```
 
-The script regenerates the index and detail files and removes stale numbered detail files. Profile HTML is sanitized before display: only an allowlist of text and layout elements, HTTP(S) or mail links, HTTP(S) images, and inline PNG, JPEG, GIF, or WebP images are retained. School gallery images are loaded from the URLs stored in the dataset.
+The splitter regenerates the index and detail files and removes stale numbered detail files. The downloader fetches new image assets through Burp Proxy, converts them to WebP, and skips files already present. Profile HTML is sanitized before display: only an allowlist of text and layout elements, HTTP(S) or mail links, HTTP(S) images, and inline PNG, JPEG, GIF, or WebP images are retained. School gallery images are loaded from the local files in `public/images/universities/`.
 
 ## Production build
 
@@ -91,16 +95,19 @@ The GitHub Actions workflows audit dependencies, run the typecheck, and create a
 
 To enable deployment for a repository, open **Settings → Pages** on GitHub and set the build and deployment source to **GitHub Actions**. GitHub Pages serves this project under `/mya-improved/`; Vite and React Router use that base path automatically in Actions builds. Local development and builds continue to use `/`.
 
-School images are remote URLs from the dataset, so they are not copied into `dist/`.
+School images are bundled under `dist/images/universities/` and served from the same site as the app.
 
 ## Project layout
 
 ```text
 web-app/                                      # Git repository root
+├── public/images/universities/                # Locally hosted, optimized WebP images
 ├── public/data/universities/
 │   ├── index.json                             # Summary records for the catalogue
 │   └── details/                               # One complete JSON record per school
-├── scripts/split-universities.ts              # Split an MYA export into runtime data
+├── scripts/
+│   ├── download-university-images.ts          # Download new assets through Burp Proxy
+│   └── split-universities.ts                  # Split a MYA export into runtime data
 ├── src/
 │   ├── app/App.tsx                            # App shell, data loading, and route table
 │   ├── components/schools/                    # Shared school UI components

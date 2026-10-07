@@ -27,8 +27,13 @@
     "E-Commerce"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/60df7a22d923cd9a1c33f275.jpg",
-    "https://mya.epitech.eu/uploads/3494f07dcacee1e1e2cca211.jpeg",
-    "https://mya.epitech.eu/uploads/f275244a1cb725ba0768a2a5.webp"
+    "images/universities/60df7a22d923cd9a1c33f275.webp",
+    "images/universities/3494f07dcacee1e1e2cca211.webp",
+    "images/universities/f275244a1cb725ba0768a2a5.webp"
+  ],
+  "sourceImages": [
+    "60df7a22d923cd9a1c33f275.jpg",
+    "3494f07dcacee1e1e2cca211.jpeg",
+    "f275244a1cb725ba0768a2a5.webp"
   ]
 }

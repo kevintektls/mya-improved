@@ -29,8 +29,13 @@
     "Business Intelligence"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/da4c672baae49b75147a4e00.png",
-    "https://mya.epitech.eu/uploads/ba790aa2eb14d72610013b59.png",
-    "https://mya.epitech.eu/uploads/4b37070f59c28e6fe7afa7f0.png"
+    "images/universities/da4c672baae49b75147a4e00.webp",
+    "images/universities/ba790aa2eb14d72610013b59.webp",
+    "images/universities/4b37070f59c28e6fe7afa7f0.webp"
+  ],
+  "sourceImages": [
+    "da4c672baae49b75147a4e00.png",
+    "ba790aa2eb14d72610013b59.png",
+    "4b37070f59c28e6fe7afa7f0.png"
   ]
 }

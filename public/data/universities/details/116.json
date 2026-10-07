@@ -27,8 +27,13 @@
     "Web Development"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/b86b9014ca077f4dd8b40fe1.png",
-    "https://mya.epitech.eu/uploads/07b0b985b54c1aea083bd21e.png",
-    "https://mya.epitech.eu/uploads/040038e3a8b7e8c93f8859ce.png"
+    "images/universities/b86b9014ca077f4dd8b40fe1.webp",
+    "images/universities/07b0b985b54c1aea083bd21e.webp",
+    "images/universities/040038e3a8b7e8c93f8859ce.webp"
+  ],
+  "sourceImages": [
+    "b86b9014ca077f4dd8b40fe1.png",
+    "07b0b985b54c1aea083bd21e.png",
+    "040038e3a8b7e8c93f8859ce.png"
   ]
 }

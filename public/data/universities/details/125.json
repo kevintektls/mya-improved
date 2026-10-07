@@ -27,6 +27,9 @@
     "Video Games"
   ],
   "images": [
-    "https://mya.epitech.eu/uploads/a2379c2abcfce875c6efe319.png"
+    "images/universities/a2379c2abcfce875c6efe319.webp"
+  ],
+  "sourceImages": [
+    "a2379c2abcfce875c6efe319.png"
   ]
 }

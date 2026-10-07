@@ -19,16 +19,28 @@ const schools = sourceSchools as SourceSchool[];
 const ids = new Set<number>();
 const detailsDirectory = resolve('public/data/universities/details');
 const indexPath = resolve('public/data/universities/index.json');
-const uploadsBase = 'https://mya.epitech.eu/uploads/';
+const localImageDirectory = 'images/universities/';
 
-function normalizeImages(school: SourceSchool): string[] {
+function sourceImagesFor(school: SourceSchool): string[] {
   const sourceImages = Array.isArray(school.images) && school.images.length > 0
     ? school.images
     : [school.image1, school.image2, school.image3];
 
   return sourceImages
     .filter((image): image is string => typeof image === 'string' && image.length > 0)
-    .map((image) => /^https?:\/\//i.test(image) ? image : `${uploadsBase}${image}`);
+    .map((image) => {
+      const pathname = /^https?:\/\//i.test(image) ? new URL(image).pathname : image;
+      const filename = pathname.split(/[/?#]/).filter(Boolean).pop();
+      if (!filename || !/^[\w.-]+$/.test(filename)) throw new Error(`Invalid image path: ${image}`);
+      return filename;
+    });
+}
+
+function localImagesFor(sourceImages: string[]): string[] {
+  return sourceImages.map((filename) => {
+    const stem = filename.replace(/\.[^.]+$/, '');
+    return `${localImageDirectory}${stem}.webp`;
+  });
 }
 
 const summaries: Record<string, unknown>[] = [];
@@ -42,8 +54,9 @@ for (const source of schools) {
   ids.add(source.id);
 
   const name = source.name.trim();
-  const images = normalizeImages(source);
-  const record = { ...source, name, images };
+  const sourceImages = sourceImagesFor(source);
+  const images = localImagesFor(sourceImages);
+  const record = { ...source, name, images, sourceImages };
 
   summaries.push({
     id: source.id,
