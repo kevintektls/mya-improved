@@ -9,7 +9,6 @@ import {
 import { ComparisonTray } from '../components/schools/ComparisonTray';
 import { StudentSummary } from '../components/schools/StudentSummary';
 import { EpitechLoader } from '../components/ui/EpitechLoader';
-import { InfoPage } from '../features/student-space/InfoPage';
 import { fetchSchools } from '../features/schools/data/schools';
 import { readStudentWorkspace, writeStudentWorkspace } from '../features/schools/data/studentWorkspace';
 import { CountriesPage, SpecializationsPage } from '../features/schools/pages/DiscoveryPages';
@@ -29,7 +28,6 @@ const sideGroups = [
   { title: '< MY JOURNEY />', links: [
     { label: 'Saved schools', path: '/schools?view=saved', icon: IconBookmark },
     { label: 'Planning', path: '/planning', icon: IconCalendar },
-    { label: 'Academic details', path: '/academic/required-exams', icon: IconFileText },
   ] },
 ];
 
@@ -171,7 +169,6 @@ export default function App() {
             <Route path="/compare" element={<SchoolComparePage schools={comparedSchools} onRemove={toggleCompared} onClear={clearCompared} />} />
             <Route path="/countries" element={<CountriesPage schools={schools} countries={countries} />} />
             <Route path="/specializations" element={<SpecializationsPage schools={schools} specializations={specializations} />} />
-            <Route path="/academic/*" element={<InfoPage title="Academic details" copy="Academic records and exam results remain available in your student space." />} />
             <Route path="/planning" element={<PlanningPage schools={schools} preferences={workspace.preferences} onPreferencesChange={updatePreferences}
               checklists={workspace.checklists} onChecklistChange={updateChecklist} />} />
             <Route path="*" element={<Navigate to="/schools" replace />} />
