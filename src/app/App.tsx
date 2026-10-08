@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useDisclosure } from '@mantine/hooks';
 import { ActionIcon, Burger, Button, Divider, Drawer, Modal, NavLink, Popover, Text, TextInput } from '@mantine/core';
@@ -30,6 +30,66 @@ const sideGroups = [
     { label: 'Planning', path: '/planning', icon: IconCalendar },
   ] },
 ];
+
+function SidebarNavigation({ pathname, search, schoolCount, onNavigate, mobileNavOpened }: {
+  pathname: string;
+  search: string;
+  schoolCount: number;
+  onNavigate: (path: string) => void;
+  mobileNavOpened: boolean;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [indicator, setIndicator] = useState<{ top: number; left: number; width: number; height: number } | null>(null);
+
+  useLayoutEffect(() => {
+    const updateIndicator = () => {
+      const container = containerRef.current;
+      const activeLink = container?.querySelector<HTMLElement>('.side-link[data-active]');
+      if (!container || !activeLink) {
+        setIndicator(null);
+        return;
+      }
+
+      const containerRect = container.getBoundingClientRect();
+      const linkRect = activeLink.getBoundingClientRect();
+      setIndicator({
+        top: linkRect.top - containerRect.top,
+        left: linkRect.left - containerRect.left,
+        width: linkRect.width,
+        height: linkRect.height,
+      });
+    };
+
+    updateIndicator();
+    const container = containerRef.current;
+    if (!container) return;
+    const observer = new ResizeObserver(updateIndicator);
+    observer.observe(container);
+    window.addEventListener('resize', updateIndicator);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateIndicator);
+    };
+  }, [pathname, search, mobileNavOpened]);
+
+  return <div className="sidebar-inner" ref={containerRef}>
+    {indicator && <span className="sidebar-active-indicator" aria-hidden="true" style={indicator} />}
+    {sideGroups.map((group) => <section className="nav-group" key={group.title}>
+      <div className="nav-caption">{group.title}</div>
+      {group.links.map((item) => {
+        const Icon = item.icon;
+        const active = item.path.includes('?')
+          ? pathname + search === item.path
+          : (pathname === item.path && !(item.path === '/schools' && search.includes('view=saved'))) ||
+            (item.path === '/schools' && pathname.startsWith('/schools/'));
+        return <NavLink key={item.path} className="side-link" active={active} label={item.label}
+          leftSection={<Icon size={15} stroke={1.8} />} onClick={() => onNavigate(item.path)} />;
+      })}
+    </section>)}
+    <div className="sidebar-foot"><div className="sidebar-foot-mark"><span>MYA</span><span>INTERNATIONAL</span></div>
+      <span className="sidebar-version">PARTNER NETWORK · {schoolCount || '—'} SCHOOLS</span></div>
+  </div>;
+}
 
 export default function App() {
   const navigate = useNavigate();
@@ -98,22 +158,8 @@ export default function App() {
   });
   const go = (path: string) => { navigate(path); mobileNav.close(); setSearchOpened(false); setQuery(''); };
 
-  const sidebar = <div className="sidebar-inner">
-    {sideGroups.map((group) => <section className="nav-group" key={group.title}>
-      <div className="nav-caption">{group.title}</div>
-      {group.links.map((item) => {
-        const Icon = item.icon;
-        const active = item.path.includes('?')
-          ? location.pathname + location.search === item.path
-          : (location.pathname === item.path && !(item.path === '/schools' && location.search.includes('view=saved'))) ||
-            (item.path === '/schools' && location.pathname.startsWith('/schools/'));
-        return <NavLink key={item.path} className="side-link" active={active} label={item.label}
-          leftSection={<Icon size={15} stroke={1.8} />} onClick={() => go(item.path)} />;
-      })}
-    </section>)}
-    <div className="sidebar-foot"><div className="sidebar-foot-mark"><span>MYA</span><span>INTERNATIONAL</span></div>
-      <span className="sidebar-version">PARTNER NETWORK · {schools.length || '—'} SCHOOLS</span></div>
-  </div>;
+  const sidebar = <SidebarNavigation pathname={location.pathname} search={location.search} schoolCount={schools.length}
+    onNavigate={go} mobileNavOpened={mobileNavOpened} />;
 
   return <div className="app-frame catalog-frame">
     <header className="topbar">
