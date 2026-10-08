@@ -8,6 +8,7 @@ import {
 } from '@tabler/icons-react';
 import { ComparisonTray } from '../components/schools/ComparisonTray';
 import { StudentSummary } from '../components/schools/StudentSummary';
+import { EpitechLoader } from '../components/ui/EpitechLoader';
 import { InfoPage } from '../features/student-space/InfoPage';
 import { fetchSchools } from '../features/schools/data/schools';
 import { readStudentWorkspace, writeStudentWorkspace } from '../features/schools/data/studentWorkspace';
@@ -46,10 +47,17 @@ export default function App() {
   const [noticeOpened, notice] = useDisclosure(false);
 
   useEffect(() => {
+    const startedAt = performance.now();
+    let cancelled = false;
+    let hideLoaderTimeout = 0;
     fetchSchools()
-      .then(setSchools)
-      .catch((error: unknown) => setDataError(error instanceof Error ? error.message : 'Could not load school data.'))
-      .finally(() => setDataLoading(false));
+      .then((result) => { if (!cancelled) setSchools(result); })
+      .catch((error: unknown) => { if (!cancelled) setDataError(error instanceof Error ? error.message : 'Could not load school data.'); })
+      .finally(() => {
+        const remaining = Math.max(0, 320 - (performance.now() - startedAt));
+        hideLoaderTimeout = window.setTimeout(() => { if (!cancelled) setDataLoading(false); }, remaining);
+      });
+    return () => { cancelled = true; window.clearTimeout(hideLoaderTimeout); };
   }, []);
 
   const countries = useMemo(() => [...new Set(schools.map((school) => school.country))].sort((a, b) => a.localeCompare(b)), [schools]);
@@ -153,7 +161,7 @@ export default function App() {
           </button>
           <span className="catalog-tabs-note">GLOBAL MOBILITY · 2026/27</span>
         </div>
-        {dataLoading ? <div className="catalog-loading"><span className="loading-mark" /> Loading partner schools…</div> : dataError ?
+        {dataLoading ? <EpitechLoader label="Loading partner schools" overlay /> : dataError ?
           <div className="catalog-load-error"><strong>School directory unavailable</strong><span>{dataError}</span><Button size="xs" variant="default" onClick={() => window.location.reload()}>Retry</Button></div> :
           <Routes>
             <Route path="/" element={<Navigate to="/schools" replace />} />

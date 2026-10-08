@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Badge, Button, Tabs } from '@mantine/core';
 import { IconArrowLeft, IconBook2, IconBuildingCommunity, IconCalendar, IconCurrencyEuro, IconFileText, IconGitCompare, IconHeart, IconLanguage, IconMapPin, IconUsers, IconWorld } from '@tabler/icons-react';
+import { EpitechLoader } from '../../../components/ui/EpitechLoader';
 import type { SchoolRecord } from '../types';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
 import { fetchSchoolDetails } from '../data/schools';
@@ -54,7 +55,7 @@ export function SchoolDetail({ schools, saved, toggleSaved, compared, toggleComp
 
   if (!summary) return <section className="page-section"><div className="empty-results"><h3>School not found</h3><Button onClick={() => navigate('/schools')}>Back to schools</Button></div></section>;
   if (loadError) return <section className="page-section"><div className="catalog-load-error"><strong>School profile unavailable</strong><span>{loadError}</span><Button size="xs" variant="default" onClick={() => setRetryCount((count) => count + 1)}>Retry</Button></div></section>;
-  if (loading || !school || school.id !== summary.id) return <div className="catalog-loading"><span className="loading-mark" /> Loading school profile…</div>;
+  if (loading || !school || school.id !== summary.id) return <EpitechLoader label="Loading school profile" overlay />;
 
   const images = (school.images || []).map((src, index) => ({ src, index })).filter(({ index }) => !failedImages.includes(index));
   const savedThis = saved.includes(school.id);

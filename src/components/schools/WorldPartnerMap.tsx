@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { EpitechLoader } from '../ui/EpitechLoader';
 
 interface WorldMapLocation {
   id: string;
@@ -80,7 +81,7 @@ export function WorldPartnerMap({ countries, countByCountry }: { countries: stri
     </div>
     <div className="partner-map-layout">
       <div className="world-map-wrap">
-        {!map && !mapError && <div className="map-loading" role="status">Loading country map…</div>}
+        {!map && !mapError && <EpitechLoader label="Loading country map" inline />}
         {map && <svg className="world-map" viewBox={map.viewBox} role="group" aria-labelledby="world-map-title" preserveAspectRatio="xMidYMid meet">
           <title id="world-map-title">World map. Select a highlighted country to view partner universities.</title>
           {map.locations.map((location) => {
