@@ -166,7 +166,7 @@ export default function App() {
       <div className="brand">
         <Burger opened={mobileNavOpened} onClick={mobileNav.toggle} hiddenFrom="sm" size="sm" aria-label="Open navigation" />
         <button className="brand-wordmark" onClick={() => go('/schools')} aria-label="Epitech home">
-          <span className="brand-brace">{'{'}</span>EPITECH<span className="brand-brace">{'}'}</span>
+          <img className="brand-logo" src={`${import.meta.env.BASE_URL}images/epitech-logo.svg`} alt="EPITECH" />
         </button>
       </div>
       <button className="search-trigger" onClick={() => setSearchOpened(true)}>
