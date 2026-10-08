@@ -66,7 +66,7 @@ export function SchoolDetail({ schools, saved, toggleSaved, compared, toggleComp
     <div className="detail-heading">
       <div><div className="eyebrow">PARTNER DIRECTORY <span>/</span> {school.country.toUpperCase()} <span>/</span> PROFILE</div>
         <h2>{school.name.toUpperCase()}<span className="title-caret">_</span></h2>
-        <div className="detail-badges"><Badge variant="light" color="blue"><IconMapPin size={12} />{school.country}</Badge>
+        <div className="detail-badges"><Badge variant="light" color="blue" leftSection={<IconMapPin size={11} />}>{school.country}</Badge>
           {school.erasmus === 'YES' && <Badge variant="light" color="teal">ERASMUS+</Badge>}
           <Badge variant="light" color="gray">{school.semester || 'Duration not specified'}</Badge>
           <Badge variant="light" color={school.updatedAt && Number.isFinite(new Date(school.updatedAt).getTime()) ? 'gray' : 'orange'}>

@@ -157,7 +157,7 @@ button { font: inherit; }
 .command-empty { color: #858e98; font-size: 12px; padding: 20px 10px; }
 .command-hint { align-items: center; border-top: 1px solid #eceef1; color: #9ba3ac; display: flex; font-size: 9px; justify-content: space-between; margin-top: 7px; padding-top: 10px; }
 .mobile-drawer { border-radius: 0; }
-.mobile-drawer-header { background: var(--epitech-blue); color: white; }
+.mobile-drawer-header { background: var(--epitech-blue); color: white; padding-inline: 14px; }
 .mobile-drawer-header .mantine-Drawer-close { color: white; }
 .drawer-title { font-family: var(--mono); font-size: 10px; letter-spacing: 1px; }
 .mobile-drawer-body { padding: 0; }
@@ -165,7 +165,8 @@ button { font: inherit; }
 .mantine-Burger-root { color: white; }
 :focus-visible { outline: 2px solid var(--accent-sky); outline-offset: 2px; }
 @media (max-width: 1200px) {
-  .topbar, .app-body { grid-template-columns: 220px minmax(0, 1fr); }
+  .app-body { grid-template-columns: 220px minmax(0, 1fr); }
+  .topbar { grid-template-columns: 220px minmax(0, 1fr) auto; }
   .academic-nav { grid-template-columns: repeat(5, minmax(0, 1fr)); }
   .academic-tab { min-height: 36px; }
   .exam-grid { grid-template-columns: minmax(260px, .8fr) minmax(360px, 1.35fr); }
@@ -177,6 +178,14 @@ button { font: inherit; }
   .exam-grid { grid-template-columns: minmax(220px, .75fr) minmax(300px, 1.25fr); }
   .academic-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .academic-tab span { font-size: 11px; }
+}
+/* Mantine's `sm` breakpoint is 48rem (768px), so switch the shell to
+   drawer navigation at the same width as the header's mobile Burger. */
+@media (max-width: 767px) {
+  .app-body { display: block; }
+  .sidebar { display: none; }
+  .sidebar-inner { display: none; }
+  .mobile-drawer-body .sidebar-inner { display: flex; }
 }
 @media (max-width: 700px) {
   .topbar { display: flex; gap: 10px; height: 54px; justify-content: space-between; padding: 0 12px; }

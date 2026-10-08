@@ -35,7 +35,7 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
   const [specialization, setSpecialization] = useState(params.getAll('specialization'));
   const [strictStudyAreas, setStrictStudyAreas] = useState(false);
   const [semester, setSemester] = useState<string[]>([]);
-  const [sort, setSort] = useState<'name' | 'spots' | 'cost'>('name');
+  const [sort, setSort] = useState<'name' | 'spots' | 'cost' | 'gpa' | 'gpa-desc'>('name');
   const [page, setPage] = useState(1);
   const pageSize = 12;
   const schoolOptions = useMemo(() => schools.map((school) => ({ value: String(school.id), label: school.name })), [schools]);
@@ -60,7 +60,18 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
         ? specialization.every((area) => school.specializations?.includes(area))
         : specialization.some((area) => school.specializations?.includes(area)))) &&
       (!semester.length || semester.includes(school.semester));
-  }).sort((a, b) => sort === 'spots' ? b.spots - a.spots || a.name.localeCompare(b.name) : sort === 'cost' ? a.extracharge - b.extracharge || a.name.localeCompare(b.name) : a.name.localeCompare(b.name)),
+  }).sort((a, b) => {
+    const byName = a.name.localeCompare(b.name);
+    if (sort === 'spots') return b.spots - a.spots || byName;
+    if (sort === 'cost') return a.extracharge - b.extracharge || byName;
+    if (sort === 'gpa' || sort === 'gpa-desc') {
+      const aOpen = a.gpa <= 0;
+      const bOpen = b.gpa <= 0;
+      if (aOpen !== bOpen) return aOpen ? 1 : -1;
+      return (sort === 'gpa' ? a.gpa - b.gpa : b.gpa - a.gpa) || byName;
+    }
+    return byName;
+  }),
   [savedOnly, saved, schoolIds, search, country, specialization, strictStudyAreas, semester, sort]);
 
   useEffect(() => setPage(1), [savedOnly, schoolIds, search, country, specialization, strictStudyAreas, semester, sort]);
@@ -96,7 +107,7 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
         headerAction={<Checkbox className="strict-study-checkbox" size="xs" color="epitech" label="Require all" checked={strictStudyAreas}
           onChange={(event) => setStrictStudyAreas(event.currentTarget.checked)} disabled={!specialization.length} aria-label="Require all selected study areas" />} />
       <MultiFilter placeholder="Duration" options={studyOptions} value={semester} onChange={setSemester} searchable={false} />
-      <Select className="sort-select" data={[{ value: 'name', label: 'A–Z' }, { value: 'spots', label: 'Most places' }, { value: 'cost', label: 'Lowest extra cost' }]}
+      <Select className="sort-select" data={[{ value: 'name', label: 'A–Z' }, { value: 'spots', label: 'Most places' }, { value: 'cost', label: 'Lowest extra cost' }, { value: 'gpa', label: 'Lowest GPA' }, { value: 'gpa-desc', label: 'Highest GPA' }]}
         value={sort} onChange={(value) => setSort((value as typeof sort | null) || 'name')} aria-label="Sort schools" />
       {activeCount > 0 && <Button className="clear-filters" variant="subtle" size="xs" leftSection={<IconX size={13} />} onClick={clearFilters}>Clear ({activeCount})</Button>}
     </div>
