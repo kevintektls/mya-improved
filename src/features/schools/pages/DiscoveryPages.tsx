@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IconArrowRight, IconSparkles } from '@tabler/icons-react';
+import { WorldPartnerMap } from '../../../components/schools/WorldPartnerMap';
 import type { SchoolRecord } from '../types';
 
 export function CountriesPage({ schools, countries }: { schools: SchoolRecord[]; countries: string[] }) {
@@ -9,10 +10,7 @@ export function CountriesPage({ schools, countries }: { schools: SchoolRecord[];
   return <section className="page-section discovery-page">
     <div className="section-heading"><div><div className="eyebrow">INTERNATIONAL MOBILITY <span>/</span> DESTINATIONS</div><h2>EXPLORE BY COUNTRY<span className="title-caret">_</span></h2>
       <p className="section-deck">Choose a destination to see its partner schools and exchange options.</p></div><div className="directory-result-count"><strong>{countries.length}</strong><span>COUNTRIES</span></div></div>
-    <div className="country-grid">{countries.map((country, index) => <button className="country-card" key={country} onClick={() => navigate('/schools?country=' + encodeURIComponent(country))}>
-      <span className="country-index">{String(index + 1).padStart(2, '0')}</span><span className="country-name">{country}</span>
-      <span className="country-school-count">{countByCountry[country]} {countByCountry[country] === 1 ? 'SCHOOL' : 'SCHOOLS'}</span><IconArrowRight size={16} />
-    </button>)}</div>
+    <WorldPartnerMap countries={countries} countByCountry={countByCountry} />
   </section>;
 }
 

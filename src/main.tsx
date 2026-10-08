@@ -6,6 +6,7 @@ import '@mantine/core/styles.css';
 import App from './app/App';
 import './styles/global.css';
 import './styles/schools.css';
+import './styles/mobility-tools.css';
 
 const theme = createTheme({
   primaryColor: 'epitech',

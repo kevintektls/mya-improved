@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Badge, Button, Tabs } from '@mantine/core';
-import { IconArrowLeft, IconBook2, IconBuildingCommunity, IconCalendar, IconCurrencyEuro, IconFileText, IconHeart, IconLanguage, IconMapPin, IconUsers, IconWorld } from '@tabler/icons-react';
+import { IconArrowLeft, IconBook2, IconBuildingCommunity, IconCalendar, IconCurrencyEuro, IconFileText, IconGitCompare, IconHeart, IconLanguage, IconMapPin, IconUsers, IconWorld } from '@tabler/icons-react';
 import type { SchoolRecord } from '../types';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
 import { fetchSchoolDetails } from '../data/schools';
@@ -15,7 +15,7 @@ const detailSections: { key: DetailSectionKey; label: string; icon: typeof IconW
   { key: 'cost', label: 'Cost of living', icon: IconCurrencyEuro },
 ];
 
-export function SchoolDetail({ schools, saved, toggleSaved }: { schools: SchoolRecord[]; saved: number[]; toggleSaved: (id: number) => void }) {
+export function SchoolDetail({ schools, saved, toggleSaved, compared, toggleCompared }: { schools: SchoolRecord[]; saved: number[]; toggleSaved: (id: number) => void; compared: number[]; toggleCompared: (id: number) => void }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const summary = schools.find((item) => String(item.id) === id);
@@ -68,12 +68,21 @@ export function SchoolDetail({ schools, saved, toggleSaved }: { schools: SchoolR
         <div className="detail-badges"><Badge variant="light" color="blue"><IconMapPin size={12} />{school.country}</Badge>
           {school.erasmus === 'YES' && <Badge variant="light" color="teal">ERASMUS+</Badge>}
           <Badge variant="light" color="gray">{school.semester || 'Duration not specified'}</Badge>
+          <Badge variant="light" color={school.updatedAt && Number.isFinite(new Date(school.updatedAt).getTime()) ? 'gray' : 'orange'}>
+            {school.updatedAt && Number.isFinite(new Date(school.updatedAt).getTime()) ? `DATA UPDATED ${new Date(school.updatedAt).toLocaleDateString('en-GB')}` : 'DATA DATE NOT PROVIDED'}
+          </Badge>
         </div>
       </div>
-      <Button className={'save-detail ' + (savedThis ? 'saved' : '')} variant={savedThis ? 'filled' : 'default'}
-        leftSection={<IconHeart size={15} fill={savedThis ? 'currentColor' : 'none'} />} onClick={() => toggleSaved(school.id)}>
-        {savedThis ? 'Saved' : 'Save school'}
-      </Button>
+      <div className="detail-actions">
+        <Button className={'compare-detail ' + (compared.includes(school.id) ? 'selected' : '')} variant="default"
+          leftSection={<IconGitCompare size={15} />} onClick={() => toggleCompared(school.id)} disabled={compared.length >= 4 && !compared.includes(school.id)} aria-pressed={compared.includes(school.id)}>
+          {compared.includes(school.id) ? 'In comparison' : 'Compare'}
+        </Button>
+        <Button className={'save-detail ' + (savedThis ? 'saved' : '')} variant={savedThis ? 'filled' : 'default'}
+          leftSection={<IconHeart size={15} fill={savedThis ? 'currentColor' : 'none'} />} onClick={() => toggleSaved(school.id)}>
+          {savedThis ? 'Saved' : 'Save school'}
+        </Button>
+      </div>
     </div>
 
     <div className="detail-layout">
@@ -86,7 +95,7 @@ export function SchoolDetail({ schools, saved, toggleSaved }: { schools: SchoolR
         </div>
         <section className="panel detail-copy-panel">
           <div className="detail-tabs-header"><div className="panel-label">SCHOOL INFORMATION<span>_</span></div>
-            <span className="last-updated">UPDATED {school.updatedAt ? new Date(school.updatedAt).toLocaleDateString('en-GB') : '—'}</span></div>
+          <span className="last-updated">Data source · Epitech</span></div>
         <Tabs value={activeTab} onChange={(value) => setActiveTab((value as DetailSectionKey | null) || 'overview')} variant="outline" className="detail-tabs">
             <Tabs.List>{detailSections.map((section) => { const Icon = section.icon; return <Tabs.Tab key={section.key} value={section.key} leftSection={<Icon size={14} />}>{section.label}</Tabs.Tab>; })}</Tabs.List>
             <Tabs.Panel value={activeTab} pt="lg"><div className="detail-rich-text" dangerouslySetInnerHTML={{ __html: sanitizeHtml(detailHtml) }} /></Tabs.Panel>
