@@ -8,8 +8,10 @@
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit",
     "preview": "vite preview --host 0.0.0.0",
+    "test": "bun test",
     "data:split": "bun run scripts/split-universities.ts",
-    "images:download": "bun run scripts/download-university-images.ts"
+    "images:download": "bun run scripts/download-university-images.ts",
+    "map:export": "bun run scripts/export-world-map.ts"
   },
   "dependencies": {
     "@mantine/core": "^9.7.1",
@@ -20,6 +22,7 @@
     "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
+    "@svg-maps/world": "^2.0.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",

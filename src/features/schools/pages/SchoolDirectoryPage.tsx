@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Button, Checkbox, Pagination, Select, TextInput } from '@mantine/core';
-import { IconFilter, IconSearch, IconX } from '@tabler/icons-react';
+import { IconDownload, IconFilter, IconPrinter, IconSearch, IconX } from '@tabler/icons-react';
 import { MultiFilter } from '../../../components/schools/MultiFilter';
 import { SchoolCard } from '../../../components/schools/SchoolCard';
-import type { SchoolRecord } from '../types';
+import { defaultFavoriteDetails } from '../data/studentWorkspace';
+import { downloadSavedSchoolsCsv } from '../utils/schoolExports';
+import type { FavoriteDetails, SchoolRecord } from '../types';
 
 const studyOptions: { value: string; label: string }[] = [
   { value: 'Full-year only', label: 'Full year' },
@@ -18,9 +20,13 @@ interface SchoolDirectoryProps {
   specializations: string[];
   saved: number[];
   toggleSaved: (id: number) => void;
+  compared: number[];
+  toggleCompared: (id: number) => void;
+  favoriteDetails: Record<number, FavoriteDetails>;
+  updateFavoriteDetails: (id: number, details: FavoriteDetails) => void;
 }
 
-export function SchoolDirectory({ schools, countries, specializations, saved, toggleSaved }: SchoolDirectoryProps) {
+export function SchoolDirectory({ schools, countries, specializations, saved, toggleSaved, compared, toggleCompared, favoriteDetails, updateFavoriteDetails }: SchoolDirectoryProps) {
   const [params, setParams] = useSearchParams();
   const savedOnly = params.get('view') === 'saved';
   const [search, setSearch] = useState('');
@@ -60,6 +66,7 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
   useEffect(() => setPage(1), [savedOnly, schoolIds, search, country, specialization, strictStudyAreas, semester, sort]);
   const pageCount = Math.ceil(filtered.length / pageSize);
   const visibleSchools = filtered.slice((page - 1) * pageSize, page * pageSize);
+  const savedSchools = schools.filter((school) => saved.includes(school.id));
 
   const clearFilters = () => { setSearch(''); setSchoolIds([]); setCountry([]); setSpecialization([]); setStrictStudyAreas(false); setSemester([]); setSort('name'); setParams(savedOnly ? { view: 'saved' } : {}); };
   const activeCount = country.length + specialization.length + semester.length + schoolIds.length + (search ? 1 : 0);
@@ -72,6 +79,12 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
       </div>
       <div className="directory-result-count"><strong>{filtered.length.toString().padStart(2, '0')}</strong><span>RESULTS</span></div>
     </div>
+
+    {savedOnly && savedSchools.length > 0 && <div className="saved-export-actions">
+      <span>{savedSchools.length} saved {savedSchools.length === 1 ? 'school' : 'schools'} · stored in this browser</span>
+      <Button variant="default" size="xs" leftSection={<IconDownload size={14} />} onClick={() => downloadSavedSchoolsCsv(savedSchools, favoriteDetails)}>Export CSV</Button>
+      <Button variant="default" size="xs" leftSection={<IconPrinter size={14} />} onClick={() => window.print()}>Print / save PDF</Button>
+    </div>}
 
     <div className="filters-panel">
       <TextInput className="school-search" leftSection={<IconSearch size={16} />} placeholder="Search schools or destinations" value={search}
@@ -90,7 +103,9 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
 
     {filtered.length ? <>
       <div className="school-grid">{visibleSchools.map((school, index) =>
-      <SchoolCard key={school.id} school={school} saved={saved.includes(school.id)} onToggleSaved={toggleSaved} index={index} />)}</div>
+      <SchoolCard key={school.id} school={school} saved={saved.includes(school.id)} onToggleSaved={toggleSaved}
+        compared={compared.includes(school.id)} compareDisabled={compared.length >= 4} onToggleCompare={toggleCompared}
+        showFavoriteEditor={savedOnly} favoriteDetails={favoriteDetails[school.id] || defaultFavoriteDetails()} onFavoriteDetailsChange={updateFavoriteDetails} index={index} />)}</div>
       {pageCount > 1 && <div className="directory-pagination">
         <span>SHOWING {((page - 1) * pageSize + 1).toString().padStart(2, '0')}–{Math.min(page * pageSize, filtered.length).toString().padStart(2, '0')} OF {filtered.length} SCHOOLS</span>
         <Pagination total={pageCount} value={page} onChange={setPage} size="sm" siblings={1} boundaries={1} withEdges aria-label="School directory pages" />
@@ -99,5 +114,12 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
       : <div className="empty-results"><IconFilter size={25} /><h3>{savedOnly && saved.length === 0 ? 'Your shortlist is empty' : 'No schools found'}</h3>
         <p>{savedOnly && saved.length === 0 ? 'Save a partner school with the heart button to keep it here.' : 'Try a different search or clear one of your filters.'}</p>
         {activeCount > 0 && <Button variant="default" size="xs" onClick={clearFilters}>Clear filters</Button>}</div>}
+    {savedOnly && savedSchools.length > 0 && <div className="saved-print-document">
+      <h1>My Epitech mobility shortlist</h1><p>{savedSchools.length} saved partner schools</p>
+      <table><thead><tr><th>University</th><th>Country</th><th>Study areas</th><th>Places</th><th>Minimum GPA</th><th>Extra cost</th><th>Language</th><th>Duration</th><th>Priority / note</th></tr></thead>
+        <tbody>{savedSchools.map((school) => <tr key={school.id}><td>{school.name}</td><td>{school.country}</td><td>{school.specializations.join(', ') || '—'}</td>
+          <td>{school.spots || '—'}</td><td>{school.gpa ? school.gpa.toFixed(1) : 'Open'}</td><td>{school.extracharge ? `€${school.extracharge.toLocaleString('en-US')}` : 'None listed'}</td>
+          <td>{school.language || '—'}</td><td>{school.semester || '—'}</td><td>{(favoriteDetails[school.id]?.priority || 'medium').toUpperCase()} · {favoriteDetails[school.id]?.note || '—'}</td></tr>)}</tbody></table>
+    </div>}
   </section>;
 }

@@ -3,23 +3,27 @@ import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-
 import { useDisclosure } from '@mantine/hooks';
 import { ActionIcon, Burger, Button, Divider, Drawer, Modal, NavLink, Popover, Text, TextInput } from '@mantine/core';
 import {
-  IconBookmark, IconBuildingCommunity, IconCalendar, IconChevronRight, IconFileText,
+  IconBookmark, IconBuildingCommunity, IconCalendar, IconChevronRight, IconFileText, IconGitCompare,
   IconMapPin, IconSearch, IconSparkles, IconWorld, IconX,
 } from '@tabler/icons-react';
+import { ComparisonTray } from '../components/schools/ComparisonTray';
 import { StudentSummary } from '../components/schools/StudentSummary';
 import { InfoPage } from '../features/student-space/InfoPage';
 import { fetchSchools } from '../features/schools/data/schools';
-import { readSavedSchools, writeSavedSchools } from '../features/schools/data/savedSchools';
+import { readStudentWorkspace, writeStudentWorkspace } from '../features/schools/data/studentWorkspace';
 import { CountriesPage, SpecializationsPage } from '../features/schools/pages/DiscoveryPages';
+import { PlanningPage } from '../features/schools/pages/PlanningPage';
+import { SchoolComparePage } from '../features/schools/pages/SchoolComparePage';
 import { SchoolDirectory } from '../features/schools/pages/SchoolDirectoryPage';
 import { SchoolDetail } from '../features/schools/pages/SchoolDetailPage';
-import type { SchoolRecord } from '../features/schools/types';
+import type { ChecklistTask, FavoriteDetails, SchoolRecord, StudentWorkspace } from '../features/schools/types';
 
 const sideGroups = [
   { title: '< OVERVIEW />', links: [
     { label: 'Partner schools', path: '/schools', icon: IconWorld },
     { label: 'Countries', path: '/countries', icon: IconMapPin },
     { label: 'Specializations', path: '/specializations', icon: IconSparkles },
+    { label: 'Compare schools', path: '/compare', icon: IconGitCompare },
   ] },
   { title: '< MY JOURNEY />', links: [
     { label: 'Saved schools', path: '/schools?view=saved', icon: IconBookmark },
@@ -32,7 +36,8 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileNavOpened, mobileNav] = useDisclosure(false);
-  const [saved, setSaved] = useState<number[]>(readSavedSchools);
+  const [workspace, setWorkspace] = useState<StudentWorkspace>(readStudentWorkspace);
+  const saved = workspace.savedSchoolIds;
   const [schools, setSchools] = useState<SchoolRecord[]>([]);
   const [dataLoading, setDataLoading] = useState(true);
   const [dataError, setDataError] = useState('');
@@ -62,10 +67,29 @@ export default function App() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
-  useEffect(() => writeSavedSchools(saved), [saved]);
+  useEffect(() => writeStudentWorkspace(workspace), [workspace]);
 
-  const toggleSaved = (id: number) => setSaved((current) => current.includes(id)
-    ? current.filter((savedId) => savedId !== id) : [...current, id]);
+  const toggleSaved = (id: number) => setWorkspace((current) => ({
+    ...current,
+    savedSchoolIds: current.savedSchoolIds.includes(id) ? current.savedSchoolIds.filter((savedId) => savedId !== id) : [...current.savedSchoolIds, id],
+  }));
+  const toggleCompared = (id: number) => setWorkspace((current) => {
+    if (current.comparedSchoolIds.includes(id)) return { ...current, comparedSchoolIds: current.comparedSchoolIds.filter((schoolId) => schoolId !== id) };
+    if (current.comparedSchoolIds.length >= 4) return current;
+    return { ...current, comparedSchoolIds: [...current.comparedSchoolIds, id] };
+  });
+  const updateFavoriteDetails = (id: number, details: FavoriteDetails) => setWorkspace((current) => ({
+    ...current, favoriteDetails: { ...current.favoriteDetails, [id]: details },
+  }));
+  const updatePreferences = (preferences: StudentWorkspace['preferences']) => setWorkspace((current) => ({ ...current, preferences }));
+  const updateChecklist = (id: number, tasks: ChecklistTask[]) => setWorkspace((current) => ({
+    ...current, checklists: { ...current.checklists, [id]: tasks },
+  }));
+  const clearCompared = () => setWorkspace((current) => ({ ...current, comparedSchoolIds: [] }));
+  const comparedSchools = workspace.comparedSchoolIds.flatMap((id) => {
+    const school = schools.find((item) => item.id === id);
+    return school ? [school] : [];
+  });
   const go = (path: string) => { navigate(path); mobileNav.close(); setSearchOpened(false); setQuery(''); };
 
   const sidebar = <div className="sidebar-inner">
@@ -124,20 +148,27 @@ export default function App() {
           <button className={location.search.includes('view=saved') ? 'active' : ''} onClick={() => go('/schools?view=saved')}>
             <IconBookmark size={15} /> Saved <span>{saved.length}</span>
           </button>
+          <button className={location.pathname === '/compare' ? 'active' : ''} onClick={() => go('/compare')}>
+            <IconGitCompare size={15} /> Compare <span>{workspace.comparedSchoolIds.length}</span>
+          </button>
           <span className="catalog-tabs-note">GLOBAL MOBILITY · 2026/27</span>
         </div>
         {dataLoading ? <div className="catalog-loading"><span className="loading-mark" /> Loading partner schools…</div> : dataError ?
           <div className="catalog-load-error"><strong>School directory unavailable</strong><span>{dataError}</span><Button size="xs" variant="default" onClick={() => window.location.reload()}>Retry</Button></div> :
           <Routes>
             <Route path="/" element={<Navigate to="/schools" replace />} />
-            <Route path="/schools" element={<SchoolDirectory schools={schools} countries={countries} specializations={specializations} saved={saved} toggleSaved={toggleSaved} />} />
-            <Route path="/schools/:id" element={<SchoolDetail schools={schools} saved={saved} toggleSaved={toggleSaved} />} />
+            <Route path="/schools" element={<SchoolDirectory schools={schools} countries={countries} specializations={specializations} saved={saved} toggleSaved={toggleSaved}
+              compared={workspace.comparedSchoolIds} toggleCompared={toggleCompared} favoriteDetails={workspace.favoriteDetails} updateFavoriteDetails={updateFavoriteDetails} />} />
+            <Route path="/schools/:id" element={<SchoolDetail schools={schools} saved={saved} toggleSaved={toggleSaved} compared={workspace.comparedSchoolIds} toggleCompared={toggleCompared} />} />
+            <Route path="/compare" element={<SchoolComparePage schools={comparedSchools} onRemove={toggleCompared} onClear={clearCompared} />} />
             <Route path="/countries" element={<CountriesPage schools={schools} countries={countries} />} />
             <Route path="/specializations" element={<SpecializationsPage schools={schools} specializations={specializations} />} />
             <Route path="/academic/*" element={<InfoPage title="Academic details" copy="Academic records and exam results remain available in your student space." />} />
-            <Route path="/planning" element={<InfoPage title="Planning" copy="Your mobility planning workspace is ready for your shortlist and application dates." />} />
+            <Route path="/planning" element={<PlanningPage schools={schools} preferences={workspace.preferences} onPreferencesChange={updatePreferences}
+              checklists={workspace.checklists} onChecklistChange={updateChecklist} />} />
             <Route path="*" element={<Navigate to="/schools" replace />} />
           </Routes>}
+        {!dataLoading && !dataError && <ComparisonTray schools={comparedSchools} onRemove={toggleCompared} onClear={clearCompared} />}
       </main>
     </div>
 
