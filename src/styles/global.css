@@ -161,7 +161,7 @@ button { font: inherit; }
 .mobile-drawer-header .mantine-Drawer-close { color: white; }
 .drawer-title { font-family: var(--mono); font-size: 10px; letter-spacing: 1px; }
 .mobile-drawer-body { padding: 0; }
-.mobile-drawer-body .sidebar-inner { height: calc(100vh - 75px); min-height: 0; position: static; }
+.mobile-drawer-body .sidebar-inner { height: calc(100vh - 75px); min-height: 0; position: relative; top: 0; }
 .mantine-Burger-root { color: white; }
 :focus-visible { outline: 2px solid var(--accent-sky); outline-offset: 2px; }
 @media (max-width: 1200px) {

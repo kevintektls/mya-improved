@@ -29,6 +29,21 @@
   box-shadow: 0 1px 0 var(--epitech-border);
 }
 
+:root[data-mantine-color-scheme='dark'] .mobile-drawer-header {
+  background: var(--epitech-surface);
+  border-bottom: 1px solid var(--epitech-border);
+}
+
+:root[data-mantine-color-scheme='dark'] .mobile-drawer-header .mantine-Drawer-close {
+  color: var(--epitech-text);
+}
+
+:root[data-mantine-color-scheme='dark'] .mobile-drawer,
+:root[data-mantine-color-scheme='dark'] .mobile-drawer-body,
+:root[data-mantine-color-scheme='dark'] .mobile-drawer-body .sidebar-inner {
+  background: var(--epitech-ink);
+}
+
 :root[data-mantine-color-scheme='dark'] .sidebar {
   background: var(--epitech-ink);
   border-color: var(--epitech-border);
