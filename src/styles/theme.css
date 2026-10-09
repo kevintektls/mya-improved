@@ -1,0 +1,383 @@
+:root[data-mantine-color-scheme='dark'] {
+  color-scheme: dark;
+  --epitech-page: #181818;
+  --epitech-ink: #141414;
+  --epitech-surface: #242424;
+  --epitech-surface-raised: #2e2e2e;
+  --epitech-border: #424242;
+  --epitech-text: #c9c9c9;
+  --epitech-muted: #828282;
+  --epitech-blue: #809dfd;
+  --accent-blue: #a4bbff;
+  --accent-green: #70d89b;
+  --accent-coral: #ff9980;
+  --accent-violet: #da77f2;
+  --accent-sky: #748ffc;
+  --accent-lime: #70d89b;
+  --magenta: #ff86f6;
+  --muted: #828282;
+  --line: #424242;
+}
+
+:root[data-mantine-color-scheme='dark'] body {
+  background: var(--epitech-page);
+  color: var(--epitech-text);
+}
+
+:root[data-mantine-color-scheme='dark'] .topbar {
+  background: var(--epitech-surface);
+  box-shadow: 0 1px 0 var(--epitech-border);
+}
+
+:root[data-mantine-color-scheme='dark'] .sidebar {
+  background: var(--epitech-ink);
+  border-color: var(--epitech-border);
+}
+
+:root[data-mantine-color-scheme='dark'] .nav-caption,
+:root[data-mantine-color-scheme='dark'] .student-name-line span,
+:root[data-mantine-color-scheme='dark'] .student-meta,
+:root[data-mantine-color-scheme='dark'] .student-metric > span,
+:root[data-mantine-color-scheme='dark'] .catalog-tabs-note,
+:root[data-mantine-color-scheme='dark'] .section-deck,
+:root[data-mantine-color-scheme='dark'] .eyebrow,
+:root[data-mantine-color-scheme='dark'] .panel-label,
+:root[data-mantine-color-scheme='dark'] .sync-label,
+:root[data-mantine-color-scheme='dark'] .school-country,
+:root[data-mantine-color-scheme='dark'] .school-card-footer > span,
+:root[data-mantine-color-scheme='dark'] .directory-result-count span,
+:root[data-mantine-color-scheme='dark'] .last-updated,
+:root[data-mantine-color-scheme='dark'] .map-total,
+:root[data-mantine-color-scheme='dark'] .planner-help,
+:root[data-mantine-color-scheme='dark'] .checklist-topline p,
+:root[data-mantine-color-scheme='dark'] .source-note {
+  color: var(--epitech-muted);
+}
+
+:root[data-mantine-color-scheme='dark'] .sidebar-active-indicator {
+  background: var(--accent-blue);
+}
+
+:root[data-mantine-color-scheme='dark'] .side-link {
+  color: var(--epitech-text);
+}
+
+:root[data-mantine-color-scheme='dark'] .side-link .mantine-NavLink-section,
+:root[data-mantine-color-scheme='dark'] .sidebar-foot-mark span:first-child {
+  color: var(--accent-blue);
+}
+
+:root[data-mantine-color-scheme='dark'] .side-link[data-active] {
+  color: var(--epitech-ink);
+}
+
+:root[data-mantine-color-scheme='dark'] .side-link[data-active] .mantine-NavLink-section {
+  color: var(--epitech-ink);
+}
+
+:root[data-mantine-color-scheme='dark'] .side-link:hover:not([data-active]),
+:root[data-mantine-color-scheme='dark'] .academic-tab:hover,
+:root[data-mantine-color-scheme='dark'] .catalog-tabs button:hover {
+  background: #303030;
+  color: #f3f3f3;
+}
+
+:root[data-mantine-color-scheme='dark'] .sidebar-foot {
+  border-color: var(--epitech-border);
+}
+
+:root[data-mantine-color-scheme='dark'] .main-content {
+  background-color: var(--epitech-ink);
+  background-image: radial-gradient(#292929 0.72px, transparent 0.72px);
+}
+
+:root[data-mantine-color-scheme='dark'] .student-card,
+:root[data-mantine-color-scheme='dark'] .academic-nav,
+:root[data-mantine-color-scheme='dark'] .panel,
+:root[data-mantine-color-scheme='dark'] .catalog-tabs,
+:root[data-mantine-color-scheme='dark'] .filters-panel,
+:root[data-mantine-color-scheme='dark'] .school-card,
+:root[data-mantine-color-scheme='dark'] .empty-results,
+:root[data-mantine-color-scheme='dark'] .catalog-load-error,
+:root[data-mantine-color-scheme='dark'] .country-card,
+:root[data-mantine-color-scheme='dark'] .specialization-card,
+:root[data-mantine-color-scheme='dark'] .saved-export-actions,
+:root[data-mantine-color-scheme='dark'] .compare-toolbar,
+:root[data-mantine-color-scheme='dark'] .comparison-table-wrap,
+:root[data-mantine-color-scheme='dark'] .planning-tabs .mantine-Tabs-list,
+:root[data-mantine-color-scheme='dark'] .planner-results-heading,
+:root[data-mantine-color-scheme='dark'] .planner-match,
+:root[data-mantine-color-scheme='dark'] .planner-pagination {
+  background: var(--epitech-surface);
+  border-color: var(--epitech-border);
+  color: var(--epitech-text);
+}
+
+:root[data-mantine-color-scheme='dark'] .student-info h1,
+:root[data-mantine-color-scheme='dark'] .section-heading h2,
+:root[data-mantine-color-scheme='dark'] .detail-heading h2,
+:root[data-mantine-color-scheme='dark'] .school-card h3 button,
+:root[data-mantine-color-scheme='dark'] .school-card-stats strong,
+:root[data-mantine-color-scheme='dark'] .empty-results h3,
+:root[data-mantine-color-scheme='dark'] .catalog-load-error strong,
+:root[data-mantine-color-scheme='dark'] .fact-score > strong,
+:root[data-mantine-color-scheme='dark'] .country-name,
+:root[data-mantine-color-scheme='dark'] .specialization-card span,
+:root[data-mantine-color-scheme='dark'] .partner-map-heading h3,
+:root[data-mantine-color-scheme='dark'] .planner-results-heading h3,
+:root[data-mantine-color-scheme='dark'] .checklist-topline h3,
+:root[data-mantine-color-scheme='dark'] .planner-match h4,
+:root[data-mantine-color-scheme='dark'] .comparison-school-name {
+  color: #e4e4e4;
+}
+
+:root[data-mantine-color-scheme='dark'] .student-metric strong,
+:root[data-mantine-color-scheme='dark'] .fact-row strong,
+:root[data-mantine-color-scheme='dark'] .target-line strong {
+  color: #e4e4e4;
+}
+
+:root[data-mantine-color-scheme='dark'] .academic-tab,
+:root[data-mantine-color-scheme='dark'] .catalog-tabs button,
+:root[data-mantine-color-scheme='dark'] .detail-tabs .mantine-Tabs-tab,
+:root[data-mantine-color-scheme='dark'] .planning-tabs .mantine-Tabs-tab {
+  color: #a0a0a0;
+}
+
+:root[data-mantine-color-scheme='dark'] .academic-tab.is-active,
+:root[data-mantine-color-scheme='dark'] .catalog-tabs button.active,
+:root[data-mantine-color-scheme='dark'] .detail-tabs .mantine-Tabs-tab[data-active],
+:root[data-mantine-color-scheme='dark'] .planning-tabs .mantine-Tabs-tab[data-active] {
+  background: #303030;
+  color: #f0f0f0;
+}
+
+:root[data-mantine-color-scheme='dark'] .academic-tab.is-active {
+  border-bottom-color: var(--accent-blue);
+}
+
+:root[data-mantine-color-scheme='dark'] .student-metric.status .mantine-Badge-root,
+:root[data-mantine-color-scheme='dark'] .mobile-status {
+  background: rgba(255, 153, 128, .1);
+  color: var(--accent-coral);
+}
+
+:root[data-mantine-color-scheme='dark'] .student-avatar,
+:root[data-mantine-color-scheme='dark'] .preview-icon {
+  background: #303030;
+  color: var(--accent-blue);
+}
+
+:root[data-mantine-color-scheme='dark'] .filters-panel .mantine-Input-input,
+:root[data-mantine-color-scheme='dark'] .filters-panel .mantine-Select-input,
+:root[data-mantine-color-scheme='dark'] .filters-panel .mantine-MultiSelect-input,
+:root[data-mantine-color-scheme='dark'] .multi-filter-trigger,
+:root[data-mantine-color-scheme='dark'] .multi-filter-search .mantine-Input-input,
+:root[data-mantine-color-scheme='dark'] .planner-field-grid .mantine-NumberInput-input,
+:root[data-mantine-color-scheme='dark'] .saved-card-details select,
+:root[data-mantine-color-scheme='dark'] .saved-card-details .mantine-Textarea-input,
+:root[data-mantine-color-scheme='dark'] .checklist-school-select,
+:root[data-mantine-color-scheme='dark'] .checklist-date {
+  background: #1f1f1f;
+  border-color: var(--epitech-border);
+  color: var(--epitech-text);
+}
+
+:root[data-mantine-color-scheme='dark'] input::placeholder,
+:root[data-mantine-color-scheme='dark'] textarea::placeholder {
+  color: #828282;
+}
+
+:root[data-mantine-color-scheme='dark'] .multi-filter-trigger > span.has-selection,
+:root[data-mantine-color-scheme='dark'] .multi-filter-heading strong,
+:root[data-mantine-color-scheme='dark'] .planner-field-grid .mantine-NumberInput-label,
+:root[data-mantine-color-scheme='dark'] .planner-field-label {
+  color: var(--epitech-text);
+}
+
+:root[data-mantine-color-scheme='dark'] .multi-filter-option,
+:root[data-mantine-color-scheme='dark'] .fact-row strong,
+:root[data-mantine-color-scheme='dark'] .detail-rich-text,
+:root[data-mantine-color-scheme='dark'] .comparison-table td {
+  color: #c9c9c9;
+}
+
+:root[data-mantine-color-scheme='dark'] .multi-filter-option:hover,
+:root[data-mantine-color-scheme='dark'] .map-country-link:hover,
+:root[data-mantine-color-scheme='dark'] .map-country-link:focus-visible {
+  background: #303030;
+  color: var(--accent-blue);
+}
+
+:root[data-mantine-color-scheme='dark'] .multi-filter-trigger small,
+:root[data-mantine-color-scheme='dark'] .catalog-tabs button span {
+  background: #303030;
+  border-color: #424242;
+  color: #c9c9c9;
+}
+
+:root[data-mantine-color-scheme='dark'] .multi-filter-trigger .multi-filter-mode-badge {
+  background: rgba(255, 134, 246, .12);
+  border-color: rgba(255, 134, 246, .35);
+  color: var(--magenta);
+}
+
+:root[data-mantine-color-scheme='dark'] .school-tags span,
+:root[data-mantine-color-scheme='dark'] .detail-specializations span {
+  background: #303030;
+  border-color: #424242;
+  color: #c9c9c9;
+}
+
+:root[data-mantine-color-scheme='dark'] .school-tags span:nth-child(4n + 1),
+:root[data-mantine-color-scheme='dark'] .detail-specializations span:nth-child(4n + 1) {
+  background: rgba(164, 187, 255, .11);
+  border-color: rgba(164, 187, 255, .3);
+  color: #a4bbff;
+}
+
+:root[data-mantine-color-scheme='dark'] .school-tags span:nth-child(4n + 2),
+:root[data-mantine-color-scheme='dark'] .detail-specializations span:nth-child(4n + 2) {
+  background: rgba(112, 216, 155, .1);
+  border-color: rgba(112, 216, 155, .28);
+  color: #70d89b;
+}
+
+:root[data-mantine-color-scheme='dark'] .school-tags span:nth-child(4n + 3),
+:root[data-mantine-color-scheme='dark'] .detail-specializations span:nth-child(4n + 3) {
+  background: rgba(255, 153, 128, .1);
+  border-color: rgba(255, 153, 128, .3);
+  color: #ff9980;
+}
+
+:root[data-mantine-color-scheme='dark'] .school-tags .tag-more {
+  background: rgba(218, 119, 242, .1);
+  border-color: rgba(218, 119, 242, .3);
+  color: #da77f2;
+}
+
+:root[data-mantine-color-scheme='dark'] .school-card-stats,
+:root[data-mantine-color-scheme='dark'] .school-card-stats > div + div,
+:root[data-mantine-color-scheme='dark'] .saved-card-details,
+:root[data-mantine-color-scheme='dark'] .directory-pagination,
+:root[data-mantine-color-scheme='dark'] .detail-tabs .mantine-Tabs-list,
+:root[data-mantine-color-scheme='dark'] .checklist-topline,
+:root[data-mantine-color-scheme='dark'] .checklist-task,
+:root[data-mantine-color-scheme='dark'] .fact-row,
+:root[data-mantine-color-scheme='dark'] .fact-score {
+  border-color: var(--epitech-border);
+}
+
+:root[data-mantine-color-scheme='dark'] .empty-results,
+:root[data-mantine-color-scheme='dark'] .empty-results h3,
+:root[data-mantine-color-scheme='dark'] .catalog-load-error,
+:root[data-mantine-color-scheme='dark'] .map-unavailable {
+  color: #a0a0a0;
+}
+
+:root[data-mantine-color-scheme='dark'] .detail-gallery .gallery-image,
+:root[data-mantine-color-scheme='dark'] .gallery-empty,
+:root[data-mantine-color-scheme='dark'] .comparison-school-head img {
+  background: #303030;
+}
+
+:root[data-mantine-color-scheme='dark'] .detail-rich-text h1,
+:root[data-mantine-color-scheme='dark'] .detail-rich-text h2,
+:root[data-mantine-color-scheme='dark'] .detail-rich-text h3,
+:root[data-mantine-color-scheme='dark'] .detail-rich-text h4,
+:root[data-mantine-color-scheme='dark'] .country-card,
+:root[data-mantine-color-scheme='dark'] .specialization-card {
+  color: #e4e4e4;
+}
+
+:root[data-mantine-color-scheme='dark'] .detail-rich-text a,
+:root[data-mantine-color-scheme='dark'] .back-link:hover,
+:root[data-mantine-color-scheme='dark'] .school-card h3 button:hover,
+:root[data-mantine-color-scheme='dark'] .comparison-school-name:hover {
+  color: var(--accent-blue);
+}
+
+:root[data-mantine-color-scheme='dark'] .detail-rich-text td,
+:root[data-mantine-color-scheme='dark'] .detail-rich-text th,
+:root[data-mantine-color-scheme='dark'] .comparison-table th,
+:root[data-mantine-color-scheme='dark'] .comparison-table td {
+  border-color: var(--epitech-border);
+}
+
+:root[data-mantine-color-scheme='dark'] .comparison-table th:first-child {
+  background: #1f1f1f;
+  color: #a0a0a0;
+}
+
+:root[data-mantine-color-scheme='dark'] .comparison-table td {
+  background: var(--epitech-surface);
+}
+
+:root[data-mantine-color-scheme='dark'] .comparison-tray {
+  background: #1f1f1f;
+  border-color: var(--epitech-border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .35);
+}
+
+:root[data-mantine-color-scheme='dark'] .comparison-tray-school {
+  background: #303030;
+  color: var(--epitech-text);
+}
+
+:root[data-mantine-color-scheme='dark'] .planner-match-reasons span {
+  color: var(--accent-green);
+}
+
+:root[data-mantine-color-scheme='dark'] .checklist-progress > div {
+  background: #3a3a3a;
+}
+
+:root[data-mantine-color-scheme='dark'] .world-map-wrap,
+:root[data-mantine-color-scheme='dark'] .map-country-list {
+  background: #1f1f1f;
+  border-color: var(--epitech-border);
+}
+
+:root[data-mantine-color-scheme='dark'] .world-map-country {
+  fill: #3a3a3a;
+  stroke: #242424;
+}
+
+:root[data-mantine-color-scheme='dark'] .world-map-country.has-partners {
+  fill: #809dfd;
+}
+
+:root[data-mantine-color-scheme='dark'] .world-map-country.has-partners:hover,
+:root[data-mantine-color-scheme='dark'] .world-map-country.has-partners:focus {
+  fill: #a4bbff;
+}
+
+:root[data-mantine-color-scheme='dark'] .map-country-link {
+  background: #242424;
+  border-color: #424242;
+  color: #c9c9c9;
+}
+
+:root[data-mantine-color-scheme='dark'] .map-country-link strong {
+  color: #e4e4e4;
+}
+
+:root[data-mantine-color-scheme='dark'] .epitech-loader--overlay {
+  background: rgba(20, 20, 20, .88);
+}
+
+:root[data-mantine-color-scheme='dark'] .epitech-loader-bars i {
+  background: var(--accent-blue);
+}
+
+:root[data-mantine-color-scheme='dark'] :focus-visible {
+  outline-color: var(--accent-blue);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-mantine-color-scheme='dark'] *,
+  :root[data-mantine-color-scheme='dark'] *::before,
+  :root[data-mantine-color-scheme='dark'] *::after {
+    scroll-behavior: auto;
+  }
+}

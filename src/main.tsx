@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { MantineProvider, createTheme } from '@mantine/core';
+import { MantineProvider, createTheme, localStorageColorSchemeManager } from '@mantine/core';
 import '@mantine/core/styles.css';
 import App from './app/App';
 import './styles/global.css';
 import './styles/schools.css';
 import './styles/mobility-tools.css';
+import './styles/theme.css';
 
 const theme = createTheme({
   primaryColor: 'epitech',
@@ -23,7 +24,7 @@ if (!rootElement) throw new Error('Root element not found.');
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} defaultColorScheme="dark" colorSchemeManager={localStorageColorSchemeManager({ key: 'mya-color-scheme' })}>
       <BrowserRouter basename={import.meta.env.BASE_URL}><App /></BrowserRouter>
     </MantineProvider>
   </React.StrictMode>,

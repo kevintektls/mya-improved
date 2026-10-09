@@ -1,10 +1,10 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useDisclosure } from '@mantine/hooks';
-import { ActionIcon, Burger, Button, Divider, Drawer, Modal, NavLink, Popover, Text, TextInput } from '@mantine/core';
+import { ActionIcon, Burger, Button, Divider, Drawer, Modal, NavLink, Popover, Text, TextInput, useMantineColorScheme } from '@mantine/core';
 import {
   IconBookmark, IconBuildingCommunity, IconCalendar, IconChevronRight, IconFileText, IconGitCompare,
-  IconMapPin, IconSearch, IconSparkles, IconWorld, IconX,
+  IconMapPin, IconMoon, IconSearch, IconSparkles, IconSun, IconWorld, IconX,
 } from '@tabler/icons-react';
 import { ComparisonTray } from '../components/schools/ComparisonTray';
 import { StudentSummary } from '../components/schools/StudentSummary';
@@ -103,6 +103,7 @@ export default function App() {
   const [searchOpened, setSearchOpened] = useState(false);
   const [query, setQuery] = useState('');
   const [noticeOpened, notice] = useDisclosure(false);
+  const { colorScheme, setColorScheme } = useMantineColorScheme();
 
   useEffect(() => {
     const startedAt = performance.now();
@@ -173,6 +174,10 @@ export default function App() {
         <IconSearch size={16} stroke={1.8} /><span>Find a school or destination…</span><kbd>CTRL + K</kbd>
       </button>
       <div className="top-actions">
+        <ActionIcon variant="subtle" color="white" className="top-icon theme-toggle" aria-label={colorScheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+          title={colorScheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'} onClick={() => setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')}>
+          {colorScheme === 'dark' ? <IconSun size={18} stroke={1.8} /> : <IconMoon size={18} stroke={1.8} />}
+        </ActionIcon>
         <Popover opened={noticeOpened} onChange={(opened) => opened ? notice.open() : notice.close()} position="bottom-end" shadow="md" width={290}>
           <Popover.Target><ActionIcon variant="subtle" color="white" className="top-icon" aria-label="Notifications" onClick={notice.toggle}>
             <IconFileText size={18} stroke={1.8} /><i className="notification-dot" />
