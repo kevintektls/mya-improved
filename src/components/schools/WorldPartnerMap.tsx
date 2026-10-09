@@ -93,7 +93,9 @@ export function WorldPartnerMap({ countries, countByCountry }: { countries: stri
               onClick={country ? () => openCountry(country) : undefined}
               onKeyDown={country ? (event) => {
                 if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openCountry(country); }
-              } : undefined} />;
+              } : undefined}>
+              <title>{country ?? location.name}</title>
+            </path>;
           })}
         </svg>}
         {mapError && <div className="map-unavailable" role="status">The map could not be loaded. Use the country list to explore destinations.</div>}
