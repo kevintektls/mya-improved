@@ -2,7 +2,7 @@
   "id": 143,
   "name": "Sripatum University",
   "country": "Thailand",
-  "gpa": 0,
+  "gpa": 2.5,
   "spots": 5,
   "diploma": "NO",
   "language": "English",
@@ -18,7 +18,7 @@
   "erasmus": "NO",
   "semester": "Full-year only",
   "display": "YES",
-  "updatedAt": "2026-07-27T14:05:39.533Z",
+  "updatedAt": "2026-10-13T09:10:41.039Z",
   "specializations": [
     "Artificial Intelligence",
     "Robotics",

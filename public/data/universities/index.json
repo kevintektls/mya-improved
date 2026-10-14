@@ -41,7 +41,7 @@
         "Video Games",
         "Web Development"
       ],
-      "coverImage": "images/universities/ca826bf7b4b4b86a74a5918d.webp"
+      "coverImage": "images/universities/aaa88471e4c78707bc854fe7.webp"
     },
     {
       "id": 144,
@@ -1749,7 +1749,7 @@
       "id": 143,
       "name": "Sripatum University",
       "country": "Thailand",
-      "gpa": 0,
+      "gpa": 2.5,
       "spots": 5,
       "diploma": "NO",
       "language": "English",
@@ -1975,7 +1975,7 @@
       "gpa": 0,
       "spots": 2,
       "diploma": "NO",
-      "language": "Japanese",
+      "language": "English",
       "extracharge": 0,
       "erasmus": "NO",
       "semester": "Full-year only",
@@ -1986,7 +1986,7 @@
         "Networks",
         "Business"
       ],
-      "coverImage": "images/universities/4fbbc817dd09b41a81dcb302.webp"
+      "coverImage": "images/universities/151cf312da8d1287414f273c.webp"
     },
     {
       "id": 115,
