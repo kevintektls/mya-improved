@@ -72,11 +72,12 @@ The selected schools, durations, sort order, and strict study area mode are loca
 
 ## School data
 
-The runtime data is split across `public/data/universities/index.json` and `public/data/universities/details/<id>.json`. The index contains fields used for cards, search, filters, and pagination. The app fetches a university's full record only when its profile is opened. Images are committed under `public/images/universities/` and loaded from this site. The current snapshot contains **137 school records**, **44 countries**, and **37 study areas** (retrieved on 2026-10-07).
+The runtime data is split across `public/data/universities/index.json` and `public/data/universities/details/<id>.json`. The index contains fields used for cards, search, filters, and pagination. The app fetches a university's full record only when its profile is opened. Images are committed under `public/images/universities/` and loaded from this site. The current snapshot contains **138 school records**, **44 countries**, and **37 study areas** (retrieved on 2026-10-21).
 
 Each detail file includes:
 
-- Identity and mobility details: `id`, `name`, `country`, `gpa`, `spots`, `diploma`, `language`, `extracharge`, `erasmus`, `semester`, `display`, and `updatedAt`.
+- Identity and mobility details: `id`, `name`, `country`, `gpa`, `spots`, `diploma`, `language`, `extracharge`, `erasmus`, `semester`, `display`, suspension status, and `updatedAt`.
+- French names and profile content when provided: `nameFr`, `overviewFr`, `administrativeFr`, `accomodationFr`, `coursesFr`, and `costFr`.
 - Study areas in `specializations`.
 - Local WebP paths in `images`; original MYA filenames are retained in `sourceImages` so missing assets can be downloaded again. Legacy `image1`, `image2`, and `image3` filename fields are retained too.
 - The profile's `updatedAt` timestamp is shown as the Epitech data update date when present.

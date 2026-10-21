@@ -12,6 +12,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [
         "Databases",
         "Graphics Programming",
@@ -33,6 +36,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Data Mining",
@@ -55,6 +61,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [],
       "coverImage": "images/universities/f531a075444d3c44101c3e18.webp"
     },
@@ -70,6 +79,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Databases",
@@ -89,6 +101,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Software Development"
@@ -107,6 +122,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Data Mining",
@@ -128,6 +146,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Data Mining",
@@ -151,6 +172,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Cloud Computing",
@@ -174,6 +198,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Databases",
@@ -195,6 +222,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Cloud Computing",
         "Databases",
@@ -215,6 +245,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Economics",
         "On-Board",
@@ -235,6 +268,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Software Development",
         "Networks",
@@ -255,6 +291,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Video Games"
@@ -273,6 +312,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Software Development"
       ],
@@ -290,6 +332,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Project Management",
@@ -310,6 +355,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Intelligence",
         "Databases",
@@ -330,6 +378,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [
         "Project Management",
         "Ergonomics",
@@ -352,6 +403,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [],
       "coverImage": "images/universities/2f131ce4a0059c942d549298.webp"
     },
@@ -367,6 +421,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Big Data",
@@ -378,7 +435,7 @@
     },
     {
       "id": 140,
-      "name": "CSU San Marcos - Deferred Start (SUSPENDED)",
+      "name": "CSU San Marcos - Deferred Start",
       "country": "USA",
       "gpa": 0,
       "spots": 4,
@@ -388,6 +445,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "YES",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [
         "Business Science",
         "Distributed Computing",
@@ -411,6 +471,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Networks",
         "Robotics",
@@ -432,6 +495,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Big Data"
@@ -450,6 +516,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Mobile Development",
         "Software Development"
@@ -468,6 +537,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Mobile Development",
@@ -489,6 +561,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Intelligence",
         "Business Science",
@@ -508,6 +583,9 @@
       "erasmus": "YES",
       "semester": "Semester only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Management"
       ],
@@ -525,6 +603,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Distributed Computing",
         "Graphics Programming",
@@ -548,6 +629,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Networks",
@@ -568,6 +652,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Management",
@@ -590,6 +677,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "3D Modeling",
         "Management",
@@ -611,6 +701,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Security"
@@ -619,7 +712,7 @@
     },
     {
       "id": 135,
-      "name": "Feng Chia University (SUSPENDED)",
+      "name": "Feng Chia University",
       "country": "Taiwan",
       "gpa": 2.1,
       "spots": 4,
@@ -629,6 +722,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "YES",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [
         "Artificial Intelligence",
         "Cloud Computing",
@@ -653,6 +749,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Intelligence",
         "Databases",
@@ -680,6 +779,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Databases",
@@ -700,6 +802,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Economics",
@@ -723,6 +828,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Data Mining",
@@ -744,6 +852,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Project Management",
         "Software Development",
@@ -763,6 +874,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Software Development"
       ],
@@ -780,6 +894,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Software Development",
         "Artificial Intelligence",
@@ -799,6 +916,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Robotics"
       ],
@@ -816,6 +936,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Data Mining",
         "Software Development",
@@ -835,6 +958,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Databases",
@@ -863,6 +989,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Big Data",
@@ -882,6 +1011,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Project Management",
@@ -905,6 +1037,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Big Data",
@@ -926,6 +1061,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Cloud Computing",
@@ -947,6 +1085,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Mobile Development",
@@ -969,6 +1110,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Mathematics",
@@ -990,6 +1134,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Software Development",
         "Artificial Intelligence",
@@ -1010,6 +1157,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Graphics Programming",
         "Software Development",
@@ -1029,6 +1179,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Big Data",
@@ -1048,6 +1201,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Data Mining",
@@ -1070,6 +1226,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Security"
       ],
@@ -1087,6 +1246,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Business Science",
@@ -1110,6 +1272,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Artificial Intelligence",
@@ -1131,6 +1296,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Big Data",
@@ -1155,6 +1323,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Management",
@@ -1176,6 +1347,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Software Development"
       ],
@@ -1193,6 +1367,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [
         "Management",
         "Project Management"
@@ -1211,6 +1388,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Networks",
@@ -1234,6 +1414,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Economics",
         "Business Science",
@@ -1255,6 +1438,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Mobile Development",
@@ -1278,6 +1464,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Data Mining",
@@ -1299,6 +1488,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Data Mining",
@@ -1322,6 +1514,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Management",
         "Project Management",
@@ -1341,6 +1536,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Intelligence",
         "Business Science",
@@ -1365,6 +1563,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Distributed Computing",
         "Mathematics",
@@ -1384,6 +1585,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Multimédia",
@@ -1404,6 +1608,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence"
       ],
@@ -1421,6 +1628,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Distributed Computing",
         "Artificial Intelligence"
@@ -1439,6 +1649,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Economics",
         "Networks",
@@ -1460,6 +1673,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Mathematics",
@@ -1481,6 +1697,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Big Data",
@@ -1505,6 +1724,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Project Management",
         "Ergonomics",
@@ -1530,6 +1752,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "3D Modeling",
         "Management",
@@ -1549,6 +1774,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Business Science",
@@ -1589,6 +1817,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Cloud Computing",
         "Mobile Development",
@@ -1609,6 +1840,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Economics",
         "International Business",
@@ -1628,6 +1862,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Graphics Programming",
@@ -1648,6 +1885,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "3D Modeling",
         "Multimédia",
@@ -1667,6 +1907,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "3D Modeling",
         "Cloud Computing",
@@ -1696,6 +1939,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "E-Commerce",
         "International Business",
@@ -1715,6 +1961,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Management",
@@ -1738,6 +1987,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Mobile Development",
         "Software Development",
@@ -1757,6 +2009,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Robotics",
@@ -1779,6 +2034,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Software Development"
       ],
@@ -1796,6 +2054,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Management",
         "Artificial Intelligence",
@@ -1817,6 +2078,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Software Development",
@@ -1836,6 +2100,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "Project Management",
@@ -1856,6 +2123,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Artificial Intelligence"
@@ -1874,6 +2144,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Cloud Computing",
@@ -1896,6 +2169,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Computer Science",
         "Economics",
@@ -1918,6 +2194,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Project Management",
         "Multimédia"
@@ -1936,6 +2215,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Management",
         "Databases",
@@ -1961,6 +2243,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Databases",
@@ -1980,6 +2265,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Multimédia",
@@ -2000,6 +2288,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Networks",
         "Software Development"
@@ -2018,6 +2309,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Robotics",
         "Software Development",
@@ -2037,6 +2331,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Ergonomics",
@@ -2059,6 +2356,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Management",
         "Project Management"
@@ -2077,6 +2377,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Software Architecture",
@@ -2099,6 +2402,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Project Management",
         "Quality",
@@ -2122,6 +2428,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Data Mining",
         "Databases",
@@ -2144,6 +2453,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Software Architecture",
@@ -2163,6 +2475,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Management",
         "Project Management",
@@ -2183,6 +2498,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Distributed Computing",
         "Management",
@@ -2205,6 +2523,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Security"
       ],
@@ -2222,6 +2543,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Project Management",
         "Telecommunications",
@@ -2243,6 +2567,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Networks",
         "On-Board",
@@ -2263,6 +2590,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "3D Modeling",
         "Artificial Intelligence",
@@ -2286,6 +2616,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Software Development",
@@ -2306,6 +2639,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Intelligence",
         "Graphics Programming",
@@ -2328,23 +2664,50 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence"
       ],
       "coverImage": "images/universities/993f89e36b7d9b76674bf077.webp"
     },
     {
+      "id": 148,
+      "name": "Université du Québec à Chicoutimi - DESS en informatique appliquée",
+      "country": "Canada",
+      "gpa": 2.6,
+      "spots": 2,
+      "diploma": "YES",
+      "language": "French",
+      "extracharge": 0,
+      "erasmus": "NO",
+      "semester": "Full-year only",
+      "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
+      "specializations": [
+        "Computer Science",
+        "Software Development"
+      ],
+      "coverImage": null
+    },
+    {
       "id": 93,
       "name": "Universite du Quebec Chicoutimi",
       "country": "Canada",
       "gpa": 0,
-      "spots": 5,
+      "spots": 4,
       "diploma": "NO",
       "language": "French",
       "extracharge": 0,
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [
         "Databases",
         "Graphics Programming",
@@ -2365,6 +2728,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [
         "Business Science",
         "Databases",
@@ -2384,6 +2750,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [
         "Business Science",
         "Project Management",
@@ -2406,6 +2775,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": 9,
+      "suspendedYear": 2026,
       "specializations": [],
       "coverImage": "images/universities/683bc3be720eebdb285a34c7.webp"
     },
@@ -2421,6 +2793,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Databases",
@@ -2440,6 +2815,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Data Mining",
         "Databases",
@@ -2468,6 +2846,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Management",
         "Project Management"
@@ -2486,6 +2867,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Networks",
@@ -2506,6 +2890,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Networks",
@@ -2526,6 +2913,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Intelligence",
         "Databases",
@@ -2548,6 +2938,9 @@
       "erasmus": "NO",
       "semester": "Semester only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Multimédia",
@@ -2568,6 +2961,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Cloud Computing",
         "Mobile Development",
@@ -2591,6 +2987,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Web Development",
@@ -2610,6 +3009,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Project Management",
         "Ergonomics",
@@ -2635,6 +3037,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Networks",
@@ -2655,6 +3060,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Data Mining",
         "Project Management",
@@ -2677,6 +3085,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Databases",
         "Networks",
@@ -2696,6 +3107,9 @@
       "erasmus": "YES",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Ergonomics",
         "Quality",
@@ -2724,6 +3138,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Artificial Intelligence",
         "Mobile Development",
@@ -2745,6 +3162,9 @@
       "erasmus": "NO",
       "semester": "Full-year or semester",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Security",
         "Bioinformatics",
@@ -2770,6 +3190,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Security",
         "Video Games",
@@ -2789,6 +3212,9 @@
       "erasmus": "YES",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Big Data",
         "Data Mining",
@@ -2809,6 +3235,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Project Management",
         "Databases",
@@ -2830,6 +3259,9 @@
       "erasmus": "NO",
       "semester": "Full-year only",
       "display": "YES",
+      "suspended": "NO",
+      "suspendedMonth": null,
+      "suspendedYear": null,
       "specializations": [
         "Business Science",
         "International Business",

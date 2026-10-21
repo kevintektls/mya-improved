@@ -70,6 +70,9 @@ for (const source of schools) {
     erasmus: source.erasmus,
     semester: source.semester,
     display: source.display,
+    suspended: source.suspended,
+    suspendedMonth: source.suspendedMonth,
+    suspendedYear: source.suspendedYear,
     specializations: Array.isArray(source.specializations) ? source.specializations : [],
     coverImage: images[0] ?? null,
   });

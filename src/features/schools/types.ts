@@ -11,6 +11,9 @@ interface SchoolMetadata {
   semester: string;
   display: string;
   specializations: string[];
+  suspended?: string;
+  suspendedMonth?: number | null;
+  suspendedYear?: number | null;
 }
 
 export interface SchoolRecord extends SchoolMetadata {
@@ -18,11 +21,17 @@ export interface SchoolRecord extends SchoolMetadata {
 }
 
 export interface SchoolDetailRecord extends SchoolMetadata {
+  nameFr?: string;
   overview: string;
+  overviewFr?: string;
   administrative: string;
+  administrativeFr?: string;
   accomodation: string;
+  accomodationFr?: string;
   courses: string;
+  coursesFr?: string;
   cost: string;
+  costFr?: string;
   image1?: string;
   image2?: string;
   image3?: string;
