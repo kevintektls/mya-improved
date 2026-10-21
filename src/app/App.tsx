@@ -12,6 +12,7 @@ import { EpitechLoader } from '../components/ui/EpitechLoader';
 import { fetchSchools } from '../features/schools/data/schools';
 import { readStudentWorkspace, writeStudentWorkspace } from '../features/schools/data/studentWorkspace';
 import { CountriesPage, SpecializationsPage } from '../features/schools/pages/DiscoveryPages';
+import { ContactPage, FaqPage, ResourceDetailPage, ResourcesPage } from '../features/schools/pages/AnnexPages';
 import { PlanningPage } from '../features/schools/pages/PlanningPage';
 import { SchoolComparePage } from '../features/schools/pages/SchoolComparePage';
 import { SchoolDirectory } from '../features/schools/pages/SchoolDirectoryPage';
@@ -28,6 +29,11 @@ const sideGroups = [
   { title: '< MY JOURNEY />', links: [
     { label: 'Saved schools', path: '/schools?view=saved', icon: IconBookmark },
     { label: 'Planning', path: '/planning', icon: IconCalendar },
+  ] },
+  { title: '< MOBILITY INFO />', links: [
+    { label: 'FAQ', path: '/faq', icon: IconFileText },
+    { label: 'Useful resources', path: '/resources', icon: IconSparkles },
+    { label: 'Contact', path: '/contact', icon: IconMapPin },
   ] },
 ];
 
@@ -81,7 +87,8 @@ function SidebarNavigation({ pathname, search, schoolCount, onNavigate, mobileNa
         const active = item.path.includes('?')
           ? pathname + search === item.path
           : (pathname === item.path && !(item.path === '/schools' && search.includes('view=saved'))) ||
-            (item.path === '/schools' && pathname.startsWith('/schools/'));
+            (item.path === '/schools' && pathname.startsWith('/schools/')) ||
+            (item.path === '/resources' && pathname.startsWith('/resources/'));
         return <NavLink key={item.path} className="side-link" active={active} label={item.label}
           leftSection={<Icon size={15} stroke={1.8} />} onClick={() => onNavigate(item.path)} />;
       })}
@@ -222,6 +229,10 @@ export default function App() {
             <Route path="/specializations" element={<SpecializationsPage schools={schools} specializations={specializations} />} />
             <Route path="/planning" element={<PlanningPage schools={schools} preferences={workspace.preferences} onPreferencesChange={updatePreferences}
               checklists={workspace.checklists} onChecklistChange={updateChecklist} />} />
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="/resources" element={<ResourcesPage />} />
+            <Route path="/resources/:slug" element={<ResourceDetailPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<Navigate to="/schools" replace />} />
           </Routes>}
         {!dataLoading && !dataError && <ComparisonTray schools={comparedSchools} onRemove={toggleCompared} onClear={clearCompared} />}

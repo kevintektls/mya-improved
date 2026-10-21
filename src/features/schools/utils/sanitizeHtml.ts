@@ -14,7 +14,8 @@ function sanitizeHtml(html: string): string {
     });
     if (element.tagName === 'A') {
       const href = element.getAttribute('href') || '';
-      if (!/^(https?:|mailto:)/i.test(href)) element.removeAttribute('href');
+      const safeLocalPath = /^\/(?![\\/])/.test(href);
+      if (!/^(https?:|mailto:)/i.test(href) && !safeLocalPath) element.removeAttribute('href');
       element.setAttribute('target', '_blank');
       element.setAttribute('rel', 'noopener noreferrer');
     }

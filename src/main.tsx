@@ -7,6 +7,7 @@ import App from './app/App';
 import './styles/global.css';
 import './styles/schools.css';
 import './styles/mobility-tools.css';
+import './styles/annex-pages.css';
 import './styles/theme.css';
 
 const theme = createTheme({
