@@ -7,6 +7,7 @@ import { SchoolCard } from '../../../components/schools/SchoolCard';
 import { defaultFavoriteDetails } from '../data/studentWorkspace';
 import { downloadSavedSchoolsCsv } from '../utils/schoolExports';
 import type { FavoriteDetails, SchoolRecord } from '../types';
+import { translatedData, translatedLanguageList, translatedSchoolName, useLanguage } from '../i18n';
 
 const studyOptions: { value: string; label: string }[] = [
   { value: 'Full-year only', label: 'Full year' },
@@ -27,6 +28,7 @@ interface SchoolDirectoryProps {
 }
 
 export function SchoolDirectory({ schools, countries, specializations, saved, toggleSaved, compared, toggleCompared, favoriteDetails, updateFavoriteDetails }: SchoolDirectoryProps) {
+  const { language, t } = useLanguage();
   const [params, setParams] = useSearchParams();
   const savedOnly = params.get('view') === 'saved';
   const [search, setSearch] = useState('');
@@ -38,7 +40,7 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
   const [sort, setSort] = useState<'name' | 'spots' | 'cost' | 'gpa' | 'gpa-desc'>('name');
   const [page, setPage] = useState(1);
   const pageSize = 12;
-  const schoolOptions = useMemo(() => schools.map((school) => ({ value: String(school.id), label: school.name })), [schools]);
+  const schoolOptions = useMemo(() => schools.map((school) => ({ value: String(school.id), label: translatedSchoolName(school.name, school.nameFr, language) })), [schools, language]);
 
   useEffect(() => {
     setCountry(params.getAll('country'));
@@ -51,7 +53,8 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
     setParams(next);
   };
   const filtered = useMemo(() => schools.filter((school) => {
-    const text = (school.name + ' ' + school.country + ' ' + (school.specializations || []).join(' ')).toLowerCase();
+    const searchableValues = [school.name, school.nameFr, school.country, translatedData(school.country, 'countries', language), ...(school.specializations || []), ...(school.specializations || []).map((area) => translatedData(area, 'specializations', language))];
+    const text = searchableValues.filter(Boolean).join(' ').toLowerCase();
     return (!savedOnly || saved.includes(school.id)) &&
       (!schoolIds.length || schoolIds.includes(String(school.id))) &&
       (!search || text.includes(search.toLowerCase())) &&
@@ -72,7 +75,7 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
     }
     return byName;
   }),
-  [savedOnly, saved, schoolIds, search, country, specialization, strictStudyAreas, semester, sort]);
+  [savedOnly, saved, schoolIds, search, country, specialization, strictStudyAreas, semester, sort, language]);
 
   useEffect(() => setPage(1), [savedOnly, schoolIds, search, country, specialization, strictStudyAreas, semester, sort]);
   const pageCount = Math.ceil(filtered.length / pageSize);
@@ -81,35 +84,39 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
 
   const clearFilters = () => { setSearch(''); setSchoolIds([]); setCountry([]); setSpecialization([]); setStrictStudyAreas(false); setSemester([]); setSort('name'); setParams(savedOnly ? { view: 'saved' } : {}); };
   const activeCount = country.length + specialization.length + semester.length + schoolIds.length + (search ? 1 : 0);
+  const directoryTitle = savedOnly ? t('SAVED SCHOOLS') : country.length === 1
+    ? `${language === 'fr' ? 'UNIVERSITÉS EN' : 'SCHOOLS IN'} ${translatedData(country[0], 'countries', language).toLocaleUpperCase()}`
+    : country.length > 1 ? (language === 'fr' ? `UNIVERSITÉS DANS ${country.length} PAYS` : `SCHOOLS IN ${country.length} COUNTRIES`) : t('PARTNER SCHOOLS');
 
   return <section className="page-section school-directory">
     <div className="section-heading directory-heading">
-      <div><div className="eyebrow">INTERNATIONAL MOBILITY <span>/</span> {savedOnly ? 'YOUR SHORTLIST' : 'PARTNER DIRECTORY'}</div>
-        <h2>{savedOnly ? 'SAVED SCHOOLS' : country.length === 1 ? 'SCHOOLS IN ' + country[0].toUpperCase() : country.length > 1 ? 'SCHOOLS IN ' + country.length + ' COUNTRIES' : 'PARTNER SCHOOLS'}<span className="title-caret">_</span></h2>
-        <p className="section-deck">Compare destinations, study options and application details for your exchange.</p>
+      <div><div className="eyebrow">{t('INTERNATIONAL MOBILITY')} <span>/</span> {savedOnly ? t('YOUR SHORTLIST') : t('PARTNER DIRECTORY')}</div>
+        <h2>{directoryTitle}<span className="title-caret">_</span></h2>
+        <p className="section-deck">{t('Compare destinations, study options and application details for your exchange.')}</p>
       </div>
-      <div className="directory-result-count"><strong>{filtered.length.toString().padStart(2, '0')}</strong><span>RESULTS</span></div>
+      <div className="directory-result-count"><strong>{filtered.length.toString().padStart(2, '0')}</strong><span>{t('RESULTS')}</span></div>
     </div>
 
     {savedOnly && savedSchools.length > 0 && <div className="saved-export-actions">
-      <span>{savedSchools.length} saved {savedSchools.length === 1 ? 'school' : 'schools'} · stored in this browser</span>
-      <Button variant="default" size="xs" leftSection={<IconDownload size={14} />} onClick={() => downloadSavedSchoolsCsv(savedSchools, favoriteDetails)}>Export CSV</Button>
-      <Button variant="default" size="xs" leftSection={<IconPrinter size={14} />} onClick={() => window.print()}>Print / save PDF</Button>
+      <span>{language === 'fr' ? `${savedSchools.length} université${savedSchools.length > 1 ? 's' : ''} enregistrée${savedSchools.length > 1 ? 's' : ''} · conservée${savedSchools.length > 1 ? 's' : ''} dans ce navigateur` : `${savedSchools.length} saved ${savedSchools.length === 1 ? 'school' : 'schools'} · stored in this browser`}</span>
+      <Button variant="default" size="xs" leftSection={<IconDownload size={14} />} onClick={() => downloadSavedSchoolsCsv(savedSchools, favoriteDetails)}>{t('Export CSV')}</Button>
+      <Button variant="default" size="xs" leftSection={<IconPrinter size={14} />} onClick={() => window.print()}>{t('Print / save PDF')}</Button>
     </div>}
 
     <div className="filters-panel">
-      <TextInput className="school-search" leftSection={<IconSearch size={16} />} placeholder="Search schools or destinations" value={search}
-        onChange={(event) => setSearch(event.currentTarget.value)} aria-label="Search schools or destinations" />
+      <TextInput className="school-search" leftSection={<IconSearch size={16} />} placeholder={t('Search schools or destinations')} value={search}
+        onChange={(event) => setSearch(event.currentTarget.value)} aria-label={t('Search schools or destinations')} />
       <MultiFilter placeholder="Partner schools" options={schoolOptions} value={schoolIds} onChange={setSchoolIds} />
       <MultiFilter placeholder="Countries" options={countries} value={country} onChange={(value) => { setCountry(value); updateParamValues('country', value); }} />
       <MultiFilter placeholder="Study areas" options={specializations} value={specialization}
         onChange={(value) => { setSpecialization(value); updateParamValues('specialization', value); }} badge={strictStudyAreas && specialization.length ? 'ALL' : null}
-        headerAction={<Checkbox className="strict-study-checkbox" size="xs" color="epitech" label="Require all" checked={strictStudyAreas}
-          onChange={(event) => setStrictStudyAreas(event.currentTarget.checked)} disabled={!specialization.length} aria-label="Require all selected study areas" />} />
+        headerAction={<Checkbox className="strict-study-checkbox" size="xs" color="epitech" label={t('Require all')} checked={strictStudyAreas}
+          onChange={(event) => setStrictStudyAreas(event.currentTarget.checked)} disabled={!specialization.length} aria-label={t('Require all selected study areas')} />}
+      />
       <MultiFilter placeholder="Duration" options={studyOptions} value={semester} onChange={setSemester} searchable={false} />
-      <Select className="sort-select" data={[{ value: 'name', label: 'A–Z' }, { value: 'spots', label: 'Most places' }, { value: 'cost', label: 'Lowest extra cost' }, { value: 'gpa', label: 'Lowest GPA' }, { value: 'gpa-desc', label: 'Highest GPA' }]}
-        value={sort} onChange={(value) => setSort((value as typeof sort | null) || 'name')} aria-label="Sort schools" />
-      {activeCount > 0 && <Button className="clear-filters" variant="subtle" size="xs" leftSection={<IconX size={13} />} onClick={clearFilters}>Clear ({activeCount})</Button>}
+      <Select className="sort-select" data={[{ value: 'name', label: t('A–Z') }, { value: 'spots', label: t('Most places') }, { value: 'cost', label: t('Lowest extra cost') }, { value: 'gpa', label: t('Lowest GPA') }, { value: 'gpa-desc', label: t('Highest GPA') }]}
+        value={sort} onChange={(value) => setSort((value as typeof sort | null) || 'name')} aria-label={language === 'fr' ? 'Trier les universités' : 'Sort schools'} />
+      {activeCount > 0 && <Button className="clear-filters" variant="subtle" size="xs" leftSection={<IconX size={13} />} onClick={clearFilters}>{language === 'fr' ? `Effacer (${activeCount})` : `Clear (${activeCount})`}</Button>}
     </div>
 
     {filtered.length ? <>
@@ -118,19 +125,19 @@ export function SchoolDirectory({ schools, countries, specializations, saved, to
         compared={compared.includes(school.id)} compareDisabled={compared.length >= 4} onToggleCompare={toggleCompared}
         showFavoriteEditor={savedOnly} favoriteDetails={favoriteDetails[school.id] || defaultFavoriteDetails()} onFavoriteDetailsChange={updateFavoriteDetails} index={index} />)}</div>
       {pageCount > 1 && <div className="directory-pagination">
-        <span>SHOWING {((page - 1) * pageSize + 1).toString().padStart(2, '0')}–{Math.min(page * pageSize, filtered.length).toString().padStart(2, '0')} OF {filtered.length} SCHOOLS</span>
+        <span>{language === 'fr' ? `${((page - 1) * pageSize + 1).toString().padStart(2, '0')}–${Math.min(page * pageSize, filtered.length).toString().padStart(2, '0')} SUR ${filtered.length} UNIVERSITÉS` : `SHOWING ${((page - 1) * pageSize + 1).toString().padStart(2, '0')}–${Math.min(page * pageSize, filtered.length).toString().padStart(2, '0')} OF ${filtered.length} SCHOOLS`}</span>
         <Pagination total={pageCount} value={page} onChange={setPage} size="sm" siblings={1} boundaries={1} withEdges aria-label="School directory pages" />
       </div>}
     </>
-      : <div className="empty-results"><IconFilter size={25} /><h3>{savedOnly && saved.length === 0 ? 'Your shortlist is empty' : 'No schools found'}</h3>
-        <p>{savedOnly && saved.length === 0 ? 'Save a partner school with the heart button to keep it here.' : 'Try a different search or clear one of your filters.'}</p>
-        {activeCount > 0 && <Button variant="default" size="xs" onClick={clearFilters}>Clear filters</Button>}</div>}
+      : <div className="empty-results"><IconFilter size={25} /><h3>{savedOnly && saved.length === 0 ? t('Your shortlist is empty') : t('No schools found')}</h3>
+        <p>{savedOnly && saved.length === 0 ? t('Save a partner school with the heart button to keep it here.') : t('Try a different search or clear one of your filters.')}</p>
+        {activeCount > 0 && <Button variant="default" size="xs" onClick={clearFilters}>{t('Clear filters')}</Button>}</div>}
     {savedOnly && savedSchools.length > 0 && <div className="saved-print-document">
-      <h1>My Epitech mobility shortlist</h1><p>{savedSchools.length} saved partner schools</p>
-      <table><thead><tr><th>University</th><th>Country</th><th>Study areas</th><th>Places</th><th>Minimum GPA</th><th>Extra cost</th><th>Language</th><th>Duration</th><th>Priority / note</th></tr></thead>
-        <tbody>{savedSchools.map((school) => <tr key={school.id}><td>{school.name}</td><td>{school.country}</td><td>{school.specializations.join(', ') || '—'}</td>
-          <td>{school.spots || '—'}</td><td>{school.gpa ? school.gpa.toFixed(1) : 'Open'}</td><td>{school.extracharge ? `€${school.extracharge.toLocaleString('en-US')}` : 'None listed'}</td>
-          <td>{school.language || '—'}</td><td>{school.semester || '—'}</td><td>{(favoriteDetails[school.id]?.priority || 'medium').toUpperCase()} · {favoriteDetails[school.id]?.note || '—'}</td></tr>)}</tbody></table>
+      <h1>{t('My Epitech mobility shortlist')}</h1><p>{savedSchools.length} {t('saved partner schools')}</p>
+      <table><thead><tr><th>{t('University')}</th><th>{t('Country')}</th><th>{t('Study areas')}</th><th>{t('Places')}</th><th>{t('Minimum GPA')}</th><th>{t('Extra cost')}</th><th>{t('Language')}</th><th>{t('Duration')}</th><th>{t('Priority / note')}</th></tr></thead>
+        <tbody>{savedSchools.map((school) => <tr key={school.id}><td>{translatedSchoolName(school.name, school.nameFr, language)}</td><td>{translatedData(school.country, 'countries', language)}</td><td>{school.specializations.map((area) => translatedData(area, 'specializations', language)).join(', ') || '—'}</td>
+          <td>{school.spots || '—'}</td><td>{school.gpa ? school.gpa.toFixed(1) : t('Open')}</td><td>{school.extracharge ? `€${school.extracharge.toLocaleString(language === 'fr' ? 'fr-FR' : 'en-US')}` : t('None listed')}</td>
+          <td>{translatedLanguageList(school.language, language) || '—'}</td><td>{t(school.semester)}</td><td>{t((favoriteDetails[school.id]?.priority || 'medium').toUpperCase())} · {favoriteDetails[school.id]?.note || '—'}</td></tr>)}</tbody></table>
     </div>}
   </section>;
 }

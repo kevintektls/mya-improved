@@ -1,6 +1,7 @@
 interface SchoolMetadata {
   id: number;
   name: string;
+  nameFr?: string;
   country: string;
   gpa: number;
   spots: number;
@@ -21,7 +22,6 @@ export interface SchoolRecord extends SchoolMetadata {
 }
 
 export interface SchoolDetailRecord extends SchoolMetadata {
-  nameFr?: string;
   overview: string;
   overviewFr?: string;
   administrative: string;

@@ -6,6 +6,7 @@ import {
   IconBookmark, IconBuildingCommunity, IconCalendar, IconChevronRight, IconFileText, IconGitCompare,
   IconMapPin, IconMoon, IconSearch, IconSparkles, IconSun, IconWorld, IconX,
 } from '@tabler/icons-react';
+import { translatedData, translatedSchoolName, useLanguage } from '../features/schools/i18n';
 import { ComparisonTray } from '../components/schools/ComparisonTray';
 import { StudentSummary } from '../components/schools/StudentSummary';
 import { EpitechLoader } from '../components/ui/EpitechLoader';
@@ -37,12 +38,13 @@ const sideGroups = [
   ] },
 ];
 
-function SidebarNavigation({ pathname, search, schoolCount, onNavigate, mobileNavOpened }: {
+function SidebarNavigation({ pathname, search, schoolCount, onNavigate, mobileNavOpened, t }: {
   pathname: string;
   search: string;
   schoolCount: number;
   onNavigate: (path: string) => void;
   mobileNavOpened: boolean;
+  t: (key: string) => string;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [indicator, setIndicator] = useState<{ top: number; left: number; width: number; height: number } | null>(null);
@@ -81,7 +83,7 @@ function SidebarNavigation({ pathname, search, schoolCount, onNavigate, mobileNa
   return <div className="sidebar-inner" ref={containerRef}>
     {indicator && <span className="sidebar-active-indicator" aria-hidden="true" style={indicator} />}
     {sideGroups.map((group) => <section className="nav-group" key={group.title}>
-      <div className="nav-caption">{group.title}</div>
+      <div className="nav-caption">{t(group.title)}</div>
       {group.links.map((item) => {
         const Icon = item.icon;
         const active = item.path.includes('?')
@@ -89,12 +91,12 @@ function SidebarNavigation({ pathname, search, schoolCount, onNavigate, mobileNa
           : (pathname === item.path && !(item.path === '/schools' && search.includes('view=saved'))) ||
             (item.path === '/schools' && pathname.startsWith('/schools/')) ||
             (item.path === '/resources' && pathname.startsWith('/resources/'));
-        return <NavLink key={item.path} className="side-link" active={active} label={item.label}
+        return <NavLink key={item.path} className="side-link" active={active} label={t(item.label)}
           leftSection={<Icon size={15} stroke={1.8} />} onClick={() => onNavigate(item.path)} />;
       })}
     </section>)}
     <div className="sidebar-foot"><div className="sidebar-foot-mark"><span>MYA</span><span>INTERNATIONAL</span></div>
-      <span className="sidebar-version">PARTNER NETWORK · {schoolCount || '—'} SCHOOLS</span></div>
+      <span className="sidebar-version">{t('PARTNER NETWORK · {n} SCHOOLS').replace('{n}', String(schoolCount || '—'))}</span></div>
   </div>;
 }
 
@@ -111,6 +113,7 @@ export default function App() {
   const [query, setQuery] = useState('');
   const [noticeOpened, notice] = useDisclosure(false);
   const { colorScheme, setColorScheme } = useMantineColorScheme();
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const startedAt = performance.now();
@@ -167,31 +170,35 @@ export default function App() {
   const go = (path: string) => { navigate(path); mobileNav.close(); setSearchOpened(false); setQuery(''); };
 
   const sidebar = <SidebarNavigation pathname={location.pathname} search={location.search} schoolCount={schools.length}
-    onNavigate={go} mobileNavOpened={mobileNavOpened} />;
+    onNavigate={go} mobileNavOpened={mobileNavOpened} t={t} />;
 
   return <div className="app-frame catalog-frame">
     <header className="topbar">
       <div className="brand">
-        <Burger opened={mobileNavOpened} onClick={mobileNav.toggle} hiddenFrom="sm" size="sm" aria-label="Open navigation" />
-        <button className="brand-wordmark" onClick={() => go('/schools')} aria-label="Epitech home">
+        <Burger opened={mobileNavOpened} onClick={mobileNav.toggle} hiddenFrom="sm" size="sm" aria-label={t('Open navigation')} />
+        <button className="brand-wordmark" onClick={() => go('/schools')} aria-label={t('Epitech home')}>
           <img className="brand-logo" src={`${import.meta.env.BASE_URL}images/epitech-logo.svg`} alt="EPITECH" />
         </button>
       </div>
-      <button className="search-trigger" onClick={() => setSearchOpened(true)}>
-        <IconSearch size={16} stroke={1.8} /><span>Find a school or destination…</span><kbd>CTRL + K</kbd>
+      <button className="search-trigger" onClick={() => setSearchOpened(true)} aria-label={t('Find a school or destination…')}>
+        <IconSearch size={16} stroke={1.8} /><span>{t('Find a school or destination…')}</span><kbd>CTRL + K</kbd>
       </button>
       <div className="top-actions">
-        <ActionIcon variant="subtle" color="white" className="top-icon theme-toggle" aria-label={colorScheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
-          title={colorScheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'} onClick={() => setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')}>
+        <div className="language-switch" role="group" aria-label={language === 'fr' ? 'Choisir la langue' : 'Choose language'}>
+          <button type="button" className={language === 'en' ? 'active' : ''} onClick={() => setLanguage('en')} aria-label="English" aria-pressed={language === 'en'}><span className="language-flag flag-en" aria-hidden="true" />EN</button>
+          <button type="button" className={language === 'fr' ? 'active' : ''} onClick={() => setLanguage('fr')} aria-label="Français" aria-pressed={language === 'fr'}><span className="language-flag flag-fr" aria-hidden="true" />FR</button>
+        </div>
+        <ActionIcon variant="subtle" color="white" className="top-icon theme-toggle" aria-label={t(colorScheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme')}
+          title={t(colorScheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme')} onClick={() => setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')}>
           {colorScheme === 'dark' ? <IconSun size={18} stroke={1.8} /> : <IconMoon size={18} stroke={1.8} />}
         </ActionIcon>
         <Popover opened={noticeOpened} onChange={(opened) => opened ? notice.open() : notice.close()} position="bottom-end" shadow="md" width={290}>
-          <Popover.Target><ActionIcon variant="subtle" color="white" className="top-icon" aria-label="Notifications" onClick={notice.toggle}>
+          <Popover.Target><ActionIcon variant="subtle" color="white" className="top-icon" aria-label={t('Notifications')} onClick={notice.toggle}>
             <IconFileText size={18} stroke={1.8} /><i className="notification-dot" />
           </ActionIcon></Popover.Target>
-          <Popover.Dropdown className="popover-panel"><Text fw={700} size="sm">Partner network</Text><Divider my="sm" />
-            <Text size="sm">Browse {schools.length} partner school profiles.</Text>
-            <Text size="xs" c="dimmed" mt={6}>Data source · MYA Epitech</Text>
+          <Popover.Dropdown className="popover-panel"><Text fw={700} size="sm">{t('Partner network')}</Text><Divider my="sm" />
+            <Text size="sm">{t('Browse {n} partner school profiles.').replace('{n}', String(schools.length))}</Text>
+            <Text size="xs" c="dimmed" mt={6}>{t('Data source · MYA Epitech')}</Text>
           </Popover.Dropdown>
         </Popover>
       </div>
@@ -199,26 +206,26 @@ export default function App() {
 
     <div className="app-body">
       <aside className="sidebar">{sidebar}</aside>
-      <Drawer opened={mobileNavOpened} onClose={mobileNav.close} title={<span className="drawer-title">EPITECH · MENU</span>}
+      <Drawer opened={mobileNavOpened} onClose={mobileNav.close} title={<span className="drawer-title">EPITECH · {t('Menu')}</span>}
         size={280} padding={0} hiddenFrom="sm" classNames={{ content: 'mobile-drawer', header: 'mobile-drawer-header', body: 'mobile-drawer-body' }}>
         {sidebar}
       </Drawer>
       <main className="main-content">
         <StudentSummary schoolCount={schools.length} countryCount={countries.length} areaCount={specializations.length} />
-        <div className="catalog-tabs" role="navigation" aria-label="School directory">
+        <div className="catalog-tabs" role="navigation" aria-label={t('School directory')}>
           <button className={location.pathname === '/schools' && !location.search.includes('view=saved') ? 'active' : ''} onClick={() => go('/schools')}>
-            <IconWorld size={15} /> All schools <span>{schools.length}</span>
+            <IconWorld size={15} /> {t('All schools')} <span>{schools.length}</span>
           </button>
           <button className={location.search.includes('view=saved') ? 'active' : ''} onClick={() => go('/schools?view=saved')}>
-            <IconBookmark size={15} /> Saved <span>{saved.length}</span>
+            <IconBookmark size={15} /> {t('Saved')} <span>{saved.length}</span>
           </button>
           <button className={location.pathname === '/compare' ? 'active' : ''} onClick={() => go('/compare')}>
-            <IconGitCompare size={15} /> Compare <span>{workspace.comparedSchoolIds.length}</span>
+            <IconGitCompare size={15} /> {t('Compare')} <span>{workspace.comparedSchoolIds.length}</span>
           </button>
-          <span className="catalog-tabs-note">GLOBAL MOBILITY · 2026/27</span>
+          <span className="catalog-tabs-note">{language === 'fr' ? 'MOBILITÉ INTERNATIONALE · 2026/27' : 'GLOBAL MOBILITY · 2026/27'}</span>
         </div>
-        {dataLoading ? <EpitechLoader label="Loading partner schools" overlay /> : dataError ?
-          <div className="catalog-load-error"><strong>School directory unavailable</strong><span>{dataError}</span><Button size="xs" variant="default" onClick={() => window.location.reload()}>Retry</Button></div> :
+        {dataLoading ? <EpitechLoader label={t('Loading partner schools')} overlay /> : dataError ?
+          <div className="catalog-load-error"><strong>{t('School directory unavailable')}</strong><span>{dataError}</span><Button size="xs" variant="default" onClick={() => window.location.reload()}>{t('Retry')}</Button></div> :
           <Routes>
             <Route path="/" element={<Navigate to="/schools" replace />} />
             <Route path="/schools" element={<SchoolDirectory schools={schools} countries={countries} specializations={specializations} saved={saved} toggleSaved={toggleSaved}
@@ -239,19 +246,19 @@ export default function App() {
       </main>
     </div>
 
-    <Modal opened={searchOpened} onClose={() => setSearchOpened(false)} title={<div className="search-modal-title"><IconSearch size={17} /> Find a partner school</div>}
+    <Modal opened={searchOpened} onClose={() => setSearchOpened(false)} title={<div className="search-modal-title"><IconSearch size={17} /> {t('Find a partner school')}</div>}
       centered size="md" classNames={{ content: 'search-modal', header: 'search-modal-header', body: 'search-modal-body' }}>
-      <TextInput autoFocus leftSection={<IconSearch size={16} />} placeholder="Type a school, country or specialization…" value={query}
-        onChange={(event) => setQuery(event.currentTarget.value)} rightSection={<ActionIcon variant="subtle" aria-label="Clear search" onClick={() => setQuery('')}><IconX size={15} /></ActionIcon>} />
+      <TextInput autoFocus leftSection={<IconSearch size={16} />} placeholder={t('Type a school, country or specialization…')} value={query}
+        onChange={(event) => setQuery(event.currentTarget.value)} rightSection={<ActionIcon variant="subtle" aria-label={t('Clear search')} onClick={() => setQuery('')}><IconX size={15} /></ActionIcon>} />
       <div className="command-results">
-        {schools.filter((school) => (school.name + ' ' + school.country + ' ' + school.specializations.join(' ')).toLowerCase().includes(query.toLowerCase())).slice(0, 7).map((school) =>
+        {schools.filter((school) => [school.name, school.nameFr, school.country, translatedData(school.country, 'countries', language), ...school.specializations, ...school.specializations.map((area) => translatedData(area, 'specializations', language))].filter(Boolean).join(' ').toLowerCase().includes(query.toLowerCase())).slice(0, 7).map((school) =>
           <button className="command-result" key={school.id} onClick={() => go('/schools/' + school.id)}>
-            <IconBuildingCommunity size={16} /><span>{school.name}</span><small>{school.country}</small><IconChevronRight size={15} />
+            <IconBuildingCommunity size={16} /><span>{translatedSchoolName(school.name, school.nameFr, language)}</span><small>{translatedData(school.country, 'countries', language)}</small><IconChevronRight size={15} />
           </button>)}
-        {query && !schools.some((school) => (school.name + ' ' + school.country + ' ' + school.specializations.join(' ')).toLowerCase().includes(query.toLowerCase())) &&
-          <div className="command-empty">No partner schools match “{query}”.</div>}
+        {query && !schools.some((school) => [school.name, school.nameFr, school.country, translatedData(school.country, 'countries', language), ...school.specializations, ...school.specializations.map((area) => translatedData(area, 'specializations', language))].filter(Boolean).join(' ').toLowerCase().includes(query.toLowerCase())) &&
+          <div className="command-empty">{language === 'fr' ? `Aucune université partenaire ne correspond à « ${query} ».` : `No partner schools match “${query}”.`}</div>}
       </div>
-      <div className="command-hint"><span>Searches names, countries and study areas</span><kbd>ESC</kbd></div>
+      <div className="command-hint"><span>{t('Searches names, countries and study areas')}</span><kbd>ESC</kbd></div>
     </Modal>
   </div>;
 }

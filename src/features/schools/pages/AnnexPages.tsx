@@ -8,6 +8,7 @@ import {
 } from '@tabler/icons-react';
 import annexData from '../data/annex-pages.json';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
+import { useLanguage } from '../i18n';
 
 type CmsPage = {
   id: number;
@@ -95,32 +96,26 @@ function parseFaq(content: string) {
 }
 
 function PageHeading({ eyebrow, title, description, color = 'blue' }: { eyebrow: string; title: string; description: string; color?: string }) {
+  const { t } = useLanguage();
   return <div className="annex-heading">
-    <div className="eyebrow">INTERNATIONAL MOBILITY <span>/</span> {eyebrow.toUpperCase()}</div>
+    <div className="eyebrow">{t('INTERNATIONAL MOBILITY')} <span>/</span> {t(eyebrow).toUpperCase()}</div>
     <h2>{title.toUpperCase()}<span className={`title-caret annex-caret-${color}`}>_</span></h2>
     <p>{description}</p>
   </div>;
 }
 
-function LanguageSwitch({ language, onChange }: { language: 'en' | 'fr'; onChange: (next: 'en' | 'fr') => void }) {
-  return <div className="annex-language" role="group" aria-label="Page language">
-    <IconLanguage size={15} />
-    <button type="button" className={language === 'en' ? 'active' : ''} onClick={() => onChange('en')} aria-pressed={language === 'en'}>EN</button>
-    <button type="button" className={language === 'fr' ? 'active' : ''} onClick={() => onChange('fr')} aria-pressed={language === 'fr'}>FR</button>
-  </div>;
-}
 
 export function ResourcesPage() {
-  const [language, setLanguage] = useState<'en' | 'fr'>('en');
+  const { language } = useLanguage();
   const resources = useMemo(() => cmsPages.filter((page) => page.id >= 4 && page.id <= 10), []);
   return <section className="page-section annex-page">
     <div className="annex-topline"><PageHeading eyebrow="Useful resources" title={language === 'fr' ? 'Ressources utiles' : 'Useful resources'} description={language === 'fr' ? 'Guides et informations pratiques pour préparer votre mobilité internationale.' : 'Guides and practical information to prepare your international mobility.'} />
-      <LanguageSwitch language={language} onChange={setLanguage} /></div>
+      </div>
     <div className="annex-feature-links">
       <Link to="/faq" className="annex-feature-link annex-feature-link--faq"><span className="annex-feature-icon"><IconQuestionMark size={21} /></span><span><small>{language === 'fr' ? 'DES RÉPONSES À VOS QUESTIONS' : 'ANSWERS TO COMMON QUESTIONS'}</small><strong>FAQ</strong></span><IconArrowRight size={18} /></Link>
       <Link to="/contact" className="annex-feature-link annex-feature-link--contact"><span className="annex-feature-icon"><IconMail size={19} /></span><span><small>{language === 'fr' ? 'BESOIN D’UN CONTACT ?' : 'NEED TO REACH THE TEAM?'}</small><strong>{language === 'fr' ? 'Relations internationales' : 'International Affairs'}</strong></span><IconArrowRight size={18} /></Link>
     </div>
-    <div className="annex-section-title"><div><span className="eyebrow">REFERENCE LIBRARY <span>/</span> {resources.length} PAGES</span><h3>{language === 'fr' ? 'Guides de mobilité' : 'Mobility guides'}</h3></div><span className="annex-updated-label">{language === 'fr' ? 'SOURCE : MYA EPITECH' : 'SOURCE: MYA EPITECH'}</span></div>
+    <div className="annex-section-title"><div><span className="eyebrow">{language === 'fr' ? 'BIBLIOTHÈQUE DE RESSOURCES' : 'REFERENCE LIBRARY'} <span>/</span> {resources.length} {language === 'fr' ? 'PAGES' : 'PAGES'}</span><h3>{language === 'fr' ? 'Guides de mobilité' : 'Mobility guides'}</h3></div><span className="annex-updated-label">{language === 'fr' ? 'SOURCE : MYA EPITECH' : 'SOURCE: MYA EPITECH'}</span></div>
     <div className="annex-resource-grid">
       {resources.map((page, index) => {
         const Icon = iconById[page.id as keyof typeof iconById] || IconFileText;
@@ -138,7 +133,7 @@ export function ResourcesPage() {
 
 export function FaqPage() {
   const page = cmsPages.find((item) => item.id === 1)!;
-  const [language, setLanguage] = useState<'en' | 'fr'>('en');
+  const { language } = useLanguage();
   const [query, setQuery] = useState('');
   const source = language === 'fr' && page.contentFr ? page.contentFr : page.content;
   const parsed = useMemo(() => parseFaq(source), [source]);
@@ -148,12 +143,12 @@ export function FaqPage() {
   })).filter((group) => group.items.length);
   const total = parsed.groups.reduce((count, group) => count + group.items.length, 0);
   return <section className="page-section annex-page">
-    <div className="annex-topline"><div><PageHeading eyebrow="FAQ" title={language === 'fr' ? 'Questions fréquentes' : 'Frequently asked questions'} description={language === 'fr' ? 'Les réponses aux questions courantes sur votre mobilité internationale.' : 'Answers to common questions about your international mobility.'} /></div><LanguageSwitch language={language} onChange={setLanguage} /></div>
+    <div className="annex-topline"><div><PageHeading eyebrow="FAQ" title={language === 'fr' ? 'Questions fréquentes' : 'Frequently asked questions'} description={language === 'fr' ? 'Les réponses aux questions courantes sur votre mobilité internationale.' : 'Answers to common questions about your international mobility.'} /></div></div>
     <div className="faq-toolbar"><TextInput leftSection={<IconQuestionMark size={16} />} placeholder={language === 'fr' ? 'Rechercher dans la FAQ' : 'Search the FAQ'} value={query} onChange={(event) => setQuery(event.currentTarget.value)} aria-label={language === 'fr' ? 'Rechercher dans la FAQ' : 'Search the FAQ'} />
       <span>{query ? `${filteredGroups.reduce((count, group) => count + group.items.length, 0)} / ` : ''}{total} {language === 'fr' ? 'questions' : 'questions'}</span></div>
     {parsed.intro && <div className="annex-rich-content faq-intro"><RichContent content={parsed.intro} /></div>}
     <div className="faq-layout">
-      <nav className="faq-index" aria-label={language === 'fr' ? 'Sections de la FAQ' : 'FAQ sections'}><span className="eyebrow">ON THIS PAGE</span>{filteredGroups.map((group, index) => <a href={`#faq-section-${index}`} key={`${group.title}-${index}`}>{group.title}<small>{group.items.length.toString().padStart(2, '0')}</small></a>)}</nav>
+      <nav className="faq-index" aria-label={language === 'fr' ? 'Sections de la FAQ' : 'FAQ sections'}><span className="eyebrow">{language === 'fr' ? 'DANS CETTE PAGE' : 'ON THIS PAGE'}</span>{filteredGroups.map((group, index) => <a href={`#faq-section-${index}`} key={`${group.title}-${index}`}>{group.title}<small>{group.items.length.toString().padStart(2, '0')}</small></a>)}</nav>
       <div className="faq-content">{filteredGroups.map((group, index) => <section className="faq-section" id={`faq-section-${index}`} key={`${group.title}-${index}`}>
         <div className="faq-section-heading"><span>0{index + 1}</span><h3>{group.title}</h3></div>
         {group.items.map((item, questionIndex) => <details className="faq-item" key={`${item.question}-${questionIndex}`}>
@@ -170,13 +165,13 @@ export function FaqPage() {
 export function ResourceDetailPage() {
   const { slug } = useParams();
   const page = cmsPages.find((item) => slugById[item.id] === slug);
-  const [language, setLanguage] = useState<'en' | 'fr'>('en');
-  if (!page) return <section className="page-section annex-page"><PageHeading eyebrow="RESOURCE" title="Page not found" description="This resource is not available." /><Button component={Link} to="/resources" leftSection={<IconArrowLeft size={15} />}>Back to resources</Button></section>;
+  const { language } = useLanguage();
+  if (!page) return <section className="page-section annex-page"><PageHeading eyebrow="RESOURCE" title={language === 'fr' ? 'Page introuvable' : 'Page not found'} description={language === 'fr' ? 'Cette ressource est indisponible.' : 'This resource is not available.'} /><Button component={Link} to="/resources" leftSection={<IconArrowLeft size={15} />}>{language === 'fr' ? 'Retour aux ressources' : 'Back to resources'}</Button></section>;
   const french = language === 'fr' && Boolean(page.contentFr);
   const name = french ? page.nameFr || page.name : page.name;
   const date = page.updatedAt ? new Intl.DateTimeFormat(language === 'fr' ? 'fr-FR' : 'en-GB', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(page.updatedAt)) : null;
   return <section className="page-section annex-page">
-    <div className="annex-article-topline"><Button component={Link} to="/resources" variant="subtle" size="xs" leftSection={<IconArrowLeft size={14} />}>{french ? 'Toutes les ressources' : 'All resources'}</Button><LanguageSwitch language={language} onChange={setLanguage} /></div>
+    <div className="annex-article-topline"><Button component={Link} to="/resources" variant="subtle" size="xs" leftSection={<IconArrowLeft size={14} />}>{french ? 'Toutes les ressources' : 'All resources'}</Button></div>
     <div className="annex-article-heading"><div className="eyebrow">INTERNATIONAL MOBILITY <span>/</span> {french ? 'RESSOURCES UTILES' : 'USEFUL RESOURCES'}</div><h2>{name.toUpperCase()}<span className="title-caret">_</span></h2><div className="annex-article-meta"><span><IconBook2 size={13} />{french ? 'GUIDE DE MOBILITÉ' : 'MOBILITY GUIDE'}</span>{date && <span><IconCalendarEvent size={13} />{french ? 'MIS À JOUR LE' : 'UPDATED'} {date}</span>}</div></div>
     <article className="annex-article"><RichContent content={french ? page.contentFr || page.content : page.content} /></article>
     <p className="annex-source-note"><IconFileText size={14} />{french ? 'Contenu repris de MYA. Certaines dates et conditions dépendent de l’année de mobilité ; vérifiez les échéances actuelles auprès des relations internationales.' : 'Content reproduced from MYA. Some dates and conditions depend on the mobility year; confirm current deadlines with International Affairs.'}</p>
@@ -185,9 +180,9 @@ export function ResourceDetailPage() {
 }
 
 export function ContactPage() {
-  const [language, setLanguage] = useState<'en' | 'fr'>('en');
+  const { language } = useLanguage();
   return <section className="page-section annex-page">
-    <div className="annex-topline"><PageHeading eyebrow="CONTACT" title={language === 'fr' ? 'Relations internationales' : 'International Affairs'} description={language === 'fr' ? 'Les interlocuteurs de l’équipe des relations internationales.' : 'Reach the right people in the International Affairs team.'} /><LanguageSwitch language={language} onChange={setLanguage} /></div>
+    <div className="annex-topline"><PageHeading eyebrow="CONTACT" title={language === 'fr' ? 'Relations internationales' : 'International Affairs'} description={language === 'fr' ? 'Les interlocuteurs de l’équipe des relations internationales.' : 'Reach the right people in the International Affairs team.'} /></div>
     <div className="contact-group-grid">{contactGroups.map((group, groupIndex) => <section className={`contact-group-card annex-accent-${groupIndex % 4}`} key={group.id}>
       <div className="contact-group-heading"><span>0{groupIndex + 1}</span><h3>{language === 'fr' ? group.nameFr || group.name : group.name}</h3></div>
       {group.contacts.map((person) => <article className="contact-person" key={person.id}>

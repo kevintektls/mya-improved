@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { EpitechLoader } from '../ui/EpitechLoader';
+import { translatedData, useLanguage } from '../../features/schools/i18n';
 
 interface WorldMapLocation {
   id: string;
@@ -48,6 +49,7 @@ function mapCountryCode(country: string, locations: WorldMapLocation[]): string 
 
 export function WorldPartnerMap({ countries, countByCountry }: { countries: string[]; countByCountry: Record<string, number> }) {
   const navigate = useNavigate();
+  const { language, t } = useLanguage();
   const [map, setMap] = useState<WorldMapData | null>(null);
   const [mapError, setMapError] = useState(false);
 
@@ -76,34 +78,34 @@ export function WorldPartnerMap({ countries, countByCountry }: { countries: stri
 
   return <section className="panel partner-map-panel" aria-labelledby="partner-map-title">
     <div className="partner-map-heading">
-      <div><div className="panel-label">DESTINATION COVERAGE<span>_</span></div><h3 id="partner-map-title">Partner network by country</h3></div>
-      <span className="map-total">{countries.length} COUNTRIES</span>
+      <div><div className="panel-label">{language === 'fr' ? 'DESTINATIONS COUVERTES' : 'DESTINATION COVERAGE'}<span>_</span></div><h3 id="partner-map-title">{t('Partner network by country')}</h3></div>
+      <span className="map-total">{countries.length} {t('COUNTRIES')}</span>
     </div>
     <div className="partner-map-layout">
       <div className="world-map-wrap">
-        {!map && !mapError && <EpitechLoader label="Loading country map" inline />}
+        {!map && !mapError && <EpitechLoader label={t('Loading country map')} inline />}
         {map && <svg className="world-map" viewBox={map.viewBox} role="group" aria-labelledby="world-map-title" preserveAspectRatio="xMidYMid meet">
-          <title id="world-map-title">World map. Select a highlighted country to view partner universities.</title>
+          <title id="world-map-title">{t('University map. Select a highlighted country to view partner universities.')}</title>
           {map.locations.map((location) => {
             const country = countryLinks.get(location.id);
             const count = country ? countByCountry[country] : 0;
             return <path key={location.id} d={location.path} className={country ? 'world-map-country has-partners' : 'world-map-country'}
               role={country ? 'button' : undefined} tabIndex={country ? 0 : -1}
-              aria-label={country ? `${country}, ${count} partner ${count === 1 ? 'school' : 'schools'}` : undefined}
+              aria-label={country ? `${translatedData(country, 'countries', language)}, ${count} ${count === 1 ? t('school') : t('schools')}` : undefined}
               onClick={country ? () => openCountry(country) : undefined}
               onKeyDown={country ? (event) => {
                 if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openCountry(country); }
               } : undefined}>
-              <title>{country ?? location.name}</title>
+              <title>{country ? translatedData(country, 'countries', language) : location.name}</title>
             </path>;
           })}
         </svg>}
-        {mapError && <div className="map-unavailable" role="status">The map could not be loaded. Use the country list to explore destinations.</div>}
+        {mapError && <div className="map-unavailable" role="status">{t('The map could not be loaded. Use the country list to explore destinations.')}</div>}
         <a className="map-attribution" href="https://github.com/VictorCazanave/svg-maps" target="_blank" rel="noreferrer">Map shapes: svg-maps · CC BY 4.0</a>
       </div>
-      <div className="map-country-list" aria-label="Countries with partner universities">
+      <div className="map-country-list" aria-label={t('Countries with partner universities')}>
         {countries.map((country) => <button key={country} className="map-country-link" onClick={() => openCountry(country)}>
-          <span>{country}</span><strong>{countByCountry[country]}</strong>
+          <span>{translatedData(country, 'countries', language)}</span><strong>{countByCountry[country]}</strong>
         </button>)}
       </div>
     </div>

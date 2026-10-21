@@ -12,6 +12,13 @@ button { font: inherit; }
 .search-trigger span { flex: 1; font-size: 13px; }
 .search-trigger kbd, .command-hint kbd { border: 1px solid #e0e3e8; color: #9299a3; font-family: var(--mono); font-size: 9px; padding: 3px 5px; }
 .top-actions { align-items: center; display: flex; gap: 17px; height: 100%; justify-content: flex-end; min-width: 38px; }
+.language-switch { align-items: center; border: 1px solid rgba(255,255,255,.32); border-radius: 3px; display: inline-flex; gap: 2px; padding: 2px; }
+.language-switch button { align-items: center; background: transparent; border: 0; border-radius: 2px; color: rgba(255,255,255,.78); cursor: pointer; display: inline-flex; font-family: var(--mono); font-size: 10px; gap: 5px; justify-content: center; min-height: 25px; min-width: 43px; padding: 0 6px; }
+.language-switch button.active { background: rgba(255,255,255,.18); color: #fff; font-weight: 700; }
+.language-switch button:hover:not(.active) { background: rgba(255,255,255,.1); color: #fff; }
+.language-flag { border-radius: 50%; display: inline-block; height: 12px; overflow: hidden; width: 12px; }
+.flag-fr { background: linear-gradient(90deg, #1b3f91 0 33.33%, #fff 33.33% 66.66%, #e43a43 66.66%); }
+.flag-en { background: linear-gradient(135deg, #fff 0 37%, #d7283c 37% 45%, #fff 45% 53%, #234078 53%); }
 .top-icon { color: white; position: relative; }
 .notification-dot { background: var(--accent-lime); border: 1.5px solid var(--epitech-blue); border-radius: 50%; height: 6px; position: absolute; right: 5px; top: 6px; width: 6px; }
 .student-avatar { font-family: var(--mono); font-weight: 600; }
